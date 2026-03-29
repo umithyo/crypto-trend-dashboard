@@ -47,13 +47,17 @@ async function fetchWithFallback(fsym, tsym) {
   return null;
 }
 
-function computeTrend(bars) {
-  if (!bars || bars.length < 2) return null;
+// Returns { trend, gapPct } where gapPct = (current - sma) / sma * 100
+function computeTrendAndGap(bars) {
+  if (!bars || bars.length < 2) return { trend: null, gapPct: null };
   const closes = bars.map(b => b.close);
   const current = closes[closes.length - 1];
-  if (current === 0) return null;
+  if (current === 0) return { trend: null, gapPct: null };
   const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
-  return current >= sma(prior);
+  const avg = sma(prior);
+  if (avg === 0) return { trend: null, gapPct: null };
+  const gapPct = ((current - avg) / avg) * 100;
+  return { trend: current >= avg, gapPct: Math.round(gapPct * 100) / 100 };
 }
 
 async function main() {
@@ -69,9 +73,9 @@ async function main() {
   // BTC row
   const btcCloses = btcUsdBars.map(b => b.close);
   const btcPrice = btcCloses[btcCloses.length - 1];
-  const btcPrior = btcCloses.length > 50 ? btcCloses.slice(-51, -1) : btcCloses.slice(0, -1);
-  results.push({ symbol: 'BTC', price: btcPrice, usdTrend: btcPrice >= sma(btcPrior), btcTrend: null });
-  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcPrice >= sma(btcPrior) ? 'GREEN' : 'RED'}`);
+  const btcUsd = computeTrendAndGap(btcUsdBars);
+  results.push({ symbol: 'BTC', price: btcPrice, usdTrend: btcUsd.trend, usdGapPct: btcUsd.gapPct, btcTrend: null, btcGapPct: null });
+  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcUsd.trend ? 'GREEN' : 'RED'} (${btcUsd.gapPct > 0 ? '+' : ''}${btcUsd.gapPct}%)`);
 
   // Step 2: Fetch each altcoin sequentially (one at a time, 2s gap)
   // This avoids rate limits: ~200 calls over ~7 minutes
@@ -86,8 +90,8 @@ async function main() {
 
     await sleep(2000);
 
-    // Compute USD trend and price
-    const usdTrend = computeTrend(usdBars);
+    // Compute USD trend, gap, and price
+    const usdResult = computeTrendAndGap(usdBars);
     let price = null;
     if (usdBars && usdBars.length >= 1) {
       price = usdBars[usdBars.length - 1].close;
@@ -96,6 +100,7 @@ async function main() {
 
     // Compute BTC trend from synthetic ratio (coin_usd / btc_usd)
     let btcTrend = null;
+    let btcGapPct = null;
     if (usdBars && usdBars.length >= 2) {
       const coinCloses = usdBars.map(b => b.close);
       const minLen = Math.min(coinCloses.length, btcCloses.length);
@@ -111,19 +116,22 @@ async function main() {
         if (ratios.length >= 2) {
           const current = ratios[ratios.length - 1];
           const prior = ratios.length > 50 ? ratios.slice(-51, -1) : ratios.slice(0, -1);
-          btcTrend = current >= sma(prior);
+          const avg = sma(prior);
+          btcTrend = current >= avg;
+          btcGapPct = avg > 0 ? Math.round(((current - avg) / avg) * 10000) / 100 : null;
         }
       }
     }
 
-    if (price === null && usdTrend === null && btcTrend === null) {
+    if (price === null && usdResult.trend === null && btcTrend === null) {
       console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: SKIPPED (no data)`);
       continue;
     }
 
-    results.push({ symbol: coin, price, usdTrend, btcTrend });
+    results.push({ symbol: coin, price, usdTrend: usdResult.trend, usdGapPct: usdResult.gapPct, btcTrend, btcGapPct });
     const fmt = (v) => v === null ? 'N/A' : v ? 'GREEN' : 'RED';
-    console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdTrend)} | BTC: ${fmt(btcTrend)}`);
+    const fmtGap = (v) => v === null ? '' : ` (${v > 0 ? '+' : ''}${v}%)`;
+    console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdResult.trend)}${fmtGap(usdResult.gapPct)} | BTC: ${fmt(btcTrend)}${fmtGap(btcGapPct)}`);
   }
 
   // Fetch market cap ranks from CoinGecko (free, one call, up to 250 coins)

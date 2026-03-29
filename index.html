@@ -9,29 +9,34 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
   h1 { text-align: center; margin-bottom: 8px; font-size: 1.6rem; }
   .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 16px; }
-  .filters { max-width: 850px; margin: 0 auto 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .filters { max-width: 1100px; margin: 0 auto 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
   .filters button { background: #21262d; color: #8b949e; border: 1px solid #30363d; border-radius: 6px; padding: 6px 14px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
   .filters button:hover { border-color: #58a6ff; color: #e6edf3; }
   .filters button.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
-  table { width: 100%; max-width: 850px; margin: 0 auto; border-collapse: collapse; }
-  th, td { border: 1px solid #30363d; padding: 12px 14px; text-align: center; }
-  th { background: #161b22; font-weight: 600; font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; white-space: nowrap; }
+  table { width: 100%; max-width: 1100px; margin: 0 auto; border-collapse: collapse; }
+  th, td { border: 1px solid #30363d; padding: 10px 12px; text-align: center; }
+  th { background: #161b22; font-weight: 600; font-size: 0.75rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; white-space: nowrap; }
   th:hover { color: #e6edf3; }
-  th .arrow { font-size: 0.65rem; margin-left: 3px; opacity: 0.4; }
+  th .arrow { font-size: 0.6rem; margin-left: 3px; opacity: 0.4; }
   th.active .arrow { opacity: 1; color: #58a6ff; }
-  td { font-size: 0.95rem; }
+  td { font-size: 0.9rem; }
   tr:hover td { background: #161b22; }
   td.coin { font-weight: 700; text-align: left; }
   td.price { font-family: 'SF Mono', 'Courier New', monospace; }
   td.rank { color: #8b949e; font-size: 0.85rem; }
-  .dot { width: 26px; height: 26px; border-radius: 50%; display: inline-block; }
+  td.gap { font-family: 'SF Mono', 'Courier New', monospace; font-size: 0.82rem; }
+  td.gap.pos { color: #2ea043; }
+  td.gap.neg { color: #da3633; }
+  td.gap.near { color: #d29922; }
+  .dot { width: 24px; height: 24px; border-radius: 50%; display: inline-block; }
   .green { background: #2ea043; box-shadow: 0 0 8px rgba(46,160,67,0.4); }
   .red { background: #da3633; box-shadow: 0 0 8px rgba(218,54,51,0.4); }
+  .yellow { background: #d29922; box-shadow: 0 0 8px rgba(210,153,34,0.4); }
   .gray { background: #30363d; }
   #status { text-align: center; padding: 40px; color: #8b949e; font-size: 0.95rem; }
-  .legend { max-width: 850px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
+  .legend { max-width: 1100px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
   .error { color: #f85149; }
-  .count { text-align: center; color: #8b949e; font-size: 0.8rem; margin-bottom: 8px; max-width: 850px; margin-left: auto; margin-right: auto; }
+  .count { text-align: center; color: #8b949e; font-size: 0.8rem; margin-bottom: 8px; max-width: 1100px; margin-left: auto; margin-right: auto; }
 </style>
 </head>
 <body>
@@ -55,8 +60,10 @@
       <th data-col="rank"># <span class="arrow"></span></th>
       <th data-col="symbol">Coin <span class="arrow"></span></th>
       <th data-col="price">Price <span class="arrow"></span></th>
-      <th data-col="usdTrend">Trend vs USD <span class="arrow"></span></th>
-      <th data-col="btcTrend">Trend vs BTC <span class="arrow"></span></th>
+      <th data-col="usdTrend">vs USD <span class="arrow"></span></th>
+      <th data-col="usdGapPct">USD Gap <span class="arrow"></span></th>
+      <th data-col="btcTrend">vs BTC <span class="arrow"></span></th>
+      <th data-col="btcGapPct">BTC Gap <span class="arrow"></span></th>
     </tr>
   </thead>
   <tbody id="tbody"></tbody>
@@ -66,10 +73,10 @@
 
 <div class="legend">
   <strong>How it works:</strong><br>
-  <span style="color:#2ea043;">Green</span> = price is above its 50-day Simple Moving Average (bullish).<br>
-  <span style="color:#da3633;">Red</span> = price is below its 50-day Simple Moving Average (bearish).<br>
-  Trend vs USD: coin/USDT price vs its 50-day SMA.<br>
-  Trend vs BTC: (coin price / BTC price) ratio vs its 50-day SMA.<br>
+  <span style="color:#2ea043;">Green</span> = price is above its 50-day SMA (bullish).
+  <span style="color:#d29922;">Yellow</span> = within 10% of the 50-day SMA.
+  <span style="color:#da3633;">Red</span> = price is below its 50-day SMA (bearish).<br>
+  <strong>Gap</strong> = % distance from the 50-day SMA. Positive = above, negative = below.<br>
   Data updated daily at 06:00 UTC via GitHub Actions.
 </div>
 
@@ -95,9 +102,17 @@ function formatPrice(p) {
   return '$' + p.toFixed(6);
 }
 
-function dot(val) {
+function dot(val, gapPct) {
   if (val === null) return '<span class="dot gray" title="No data"></span>';
+  if (gapPct !== null && Math.abs(gapPct) <= 10) return '<span class="dot yellow" title="Within 10% of SMA"></span>';
   return `<span class="dot ${val ? 'green' : 'red'}"></span>`;
+}
+
+function formatGap(pct) {
+  if (pct === null) return '-';
+  const sign = pct >= 0 ? '+' : '';
+  const cls = Math.abs(pct) <= 10 ? 'near' : (pct >= 0 ? 'pos' : 'neg');
+  return `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
 }
 
 function defaultScore(c) {
@@ -121,7 +136,7 @@ function getFiltered() {
 }
 
 function getSorted() {
-  const arr = getFiltered();
+  const arr = [...getFiltered()];
   const dir = sortDir === 'asc' ? 1 : -1;
 
   if (sortCol === 'default' || sortCol === 'usdTrend' || sortCol === 'btcTrend') {
@@ -142,6 +157,8 @@ function getSorted() {
     arr.sort((a, b) => ((a.price || 0) - (b.price || 0)) * dir);
   } else if (sortCol === 'rank') {
     arr.sort((a, b) => ((a.rank || 999) - (b.rank || 999)) * dir);
+  } else if (sortCol === 'usdGapPct' || sortCol === 'btcGapPct') {
+    arr.sort((a, b) => ((a[sortCol] ?? -999) - (b[sortCol] ?? -999)) * dir);
   }
 
   return arr;
@@ -158,8 +175,10 @@ function render() {
       <td class="rank">${coin.rank || '-'}</td>
       <td class="coin">$${coin.symbol}</td>
       <td class="price">${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
-      <td>${dot(coin.usdTrend)}</td>
-      <td>${dot(coin.btcTrend)}</td>
+      <td>${dot(coin.usdTrend, coin.usdGapPct)}</td>
+      <td class="gap">${formatGap(coin.usdGapPct)}</td>
+      <td>${dot(coin.btcTrend, coin.btcGapPct)}</td>
+      <td class="gap">${formatGap(coin.btcGapPct)}</td>
     `;
     tbody.appendChild(row);
   }
@@ -190,7 +209,7 @@ document.querySelectorAll('th').forEach(th => {
       sortDir = sortDir === 'desc' ? 'asc' : 'desc';
     } else {
       sortCol = col;
-      sortDir = (col === 'symbol') ? 'asc' : (col === 'rank') ? 'asc' : 'desc';
+      sortDir = (col === 'symbol' || col === 'rank') ? 'asc' : 'desc';
     }
     saveCookie('sort', `${sortCol}:${sortDir}`);
     render();
@@ -212,10 +231,8 @@ async function main() {
     if (!r.ok) throw new Error('data.json not found');
     const data = await r.json();
     coins = data.coins;
-
     activeFilter = loadCookie('filter', 'all');
     render();
-
     const updated = new Date(data.updated);
     status.textContent = `Last updated: ${updated.toLocaleString()}`;
   } catch (e) {
