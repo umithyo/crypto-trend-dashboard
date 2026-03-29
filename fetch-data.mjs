@@ -134,22 +134,24 @@ async function main() {
     console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdResult.trend)}${fmtGap(usdResult.gapPct)} | BTC: ${fmt(btcTrend)}${fmtGap(btcGapPct)}`);
   }
 
-  // Fetch market cap ranks from CoinGecko (free, one call, up to 250 coins)
-  console.log('\nFetching market cap ranks from CoinGecko...');
+  // Fetch market cap ranks from CryptoCompare (sorted by mcap, index = rank)
+  console.log('\nFetching market cap ranks...');
   const rankMap = {};
   try {
-    // Fetch top 250 coins by market cap
-    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1';
-    const r = await fetch(url);
-    if (r.ok) {
-      const list = await r.json();
-      for (const c of list) {
-        rankMap[c.symbol.toUpperCase()] = c.market_cap_rank;
+    // Fetch top 100 in two pages (max 100 per request)
+    for (let page = 0; page < 5; page++) {
+      const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&page=${page}`;
+      const r = await fetch(url);
+      if (!r.ok) { console.warn(`  Page ${page} returned ${r.status}`); break; }
+      const json = await r.json();
+      if (!json.Data || json.Data.length === 0) break;
+      for (let j = 0; j < json.Data.length; j++) {
+        const sym = json.Data[j].CoinInfo?.Name;
+        if (sym) rankMap[sym] = page * 100 + j + 1;
       }
-      console.log(`  Got ranks for ${Object.keys(rankMap).length} coins`);
-    } else {
-      console.warn(`  CoinGecko returned ${r.status}, skipping ranks`);
+      await sleep(1500);
     }
+    console.log(`  Got ranks for ${Object.keys(rankMap).length} coins`);
   } catch (e) {
     console.warn(`  Failed to fetch ranks: ${e.message}`);
   }
