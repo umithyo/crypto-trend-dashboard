@@ -1,39 +1,49 @@
-// CryptoCompare (CoinDesk) Data Fetcher
-// Runs daily via GitHub Actions, writes data.json for the static frontend
-// Dynamically fetches top 500 coins by market cap — no hardcoded list
+// Crypto Trend Dashboard Data Fetcher
+// - CoinDesk API for top coins list + ranks (authoritative, no symbol collisions)
+// - CryptoCompare API for historical daily data (50-day SMA calculation)
 
 const TARGET_COINS = 500;
-const API = 'https://min-api.cryptocompare.com/data/v2/histoday';
+const COINDESK_API = 'https://data-api.coindesk.com';
+const HISTODAY_API = 'https://min-api.cryptocompare.com/data/v2/histoday';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function sma(arr) { return arr.reduce((s, v) => s + v, 0) / arr.length; }
 
+// Fetch top coins from CoinDesk's asset top list (sorted by circulating market cap)
 async function fetchTopCoins() {
-  const coins = []; // { symbol, rank }
-  const pages = Math.ceil(TARGET_COINS / 100);
-  console.log(`Fetching top ${TARGET_COINS} coins by market cap...`);
+  const coins = []; // { symbol, rank, name }
+  const pageSize = 100; // min 10, max 100
+  const pages = Math.ceil(TARGET_COINS / pageSize);
+  console.log(`Fetching top ${TARGET_COINS} coins from CoinDesk...`);
 
-  for (let page = 0; page < pages; page++) {
-    const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&page=${page}`;
+  for (let page = 1; page <= pages; page++) {
+    const url = `${COINDESK_API}/asset/v1/top/list?page=${page}&page_size=${pageSize}`;
     const r = await fetch(url);
     if (!r.ok) { console.warn(`  Page ${page} failed: HTTP ${r.status}`); break; }
     const json = await r.json();
-    if (!json.Data || json.Data.length === 0) break;
+    if (json.Err?.message) { console.warn(`  Page ${page} error: ${json.Err.message}`); break; }
+    const list = json.Data?.LIST;
+    if (!list || list.length === 0) break;
 
-    for (let j = 0; j < json.Data.length; j++) {
-      const sym = json.Data[j].CoinInfo?.Name;
-      if (sym) coins.push({ symbol: sym, rank: page * 100 + j + 1 });
+    for (const asset of list) {
+      const rank = asset.TOPLIST_BASE_RANK?.CIRCULATING_MKT_CAP_USD;
+      if (asset.SYMBOL && rank) {
+        coins.push({ symbol: asset.SYMBOL, rank, name: asset.NAME });
+      }
     }
-    console.log(`  Page ${page + 1}/${pages}: ${coins.length} coins so far`);
-    if (page < pages - 1) await sleep(1500);
+    console.log(`  Page ${page}/${pages}: ${coins.length} coins`);
+    if (page < pages) await sleep(1500);
   }
 
+  // Sort by rank to ensure correct order
+  coins.sort((a, b) => a.rank - b.rank);
   console.log(`  Total: ${coins.length} coins\n`);
   return coins;
 }
 
+// Fetch historical daily OHLCV from CryptoCompare
 async function fetchDaily(fsym, tsym, limit = 55) {
-  const url = `${API}?fsym=${fsym}&tsym=${tsym}&limit=${limit}`;
+  const url = `${HISTODAY_API}?fsym=${fsym}&tsym=${tsym}&limit=${limit}`;
   const r = await fetch(url);
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const json = await r.json();
@@ -70,14 +80,12 @@ function computeTrendAndGap(bars) {
 }
 
 async function main() {
-  // Step 1: Get the coin list dynamically from market cap rankings
+  // Step 1: Get authoritative coin list + ranks from CoinDesk
   const topCoins = await fetchTopCoins();
-  const rankMap = {};
-  for (const c of topCoins) rankMap[c.symbol] = c.rank;
 
   await sleep(2000);
 
-  // Step 2: Fetch BTC/USD first (needed for synthetic BTC ratios)
+  // Step 2: Fetch BTC/USD historical data
   console.log('Fetching BTC/USD...');
   const btcUsdBars = await fetchWithFallback('BTC', 'USD');
   if (!btcUsdBars) { console.error('FATAL: Could not fetch BTC/USD'); process.exit(1); }
@@ -86,9 +94,10 @@ async function main() {
   const btcPrice = btcCloses[btcCloses.length - 1];
   const btcUsd = computeTrendAndGap(btcUsdBars);
 
+  const btcEntry = topCoins.find(c => c.symbol === 'BTC');
   const results = [];
   results.push({
-    symbol: 'BTC', rank: 1, price: btcPrice,
+    symbol: 'BTC', rank: btcEntry?.rank || 1, price: btcPrice,
     usdTrend: btcUsd.trend, usdGapPct: btcUsd.gapPct,
     btcTrend: null, btcGapPct: null,
   });
