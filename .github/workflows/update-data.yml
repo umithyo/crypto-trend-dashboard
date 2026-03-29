@@ -15,7 +15,7 @@ jobs:
           node-version: 20
       - name: Fetch data from CryptoCompare
         run: node fetch-data.mjs
-        timeout-minutes: 10
+        timeout-minutes: 45
       - name: Commit and push data.json
         run: |
           git config user.name "github-actions[bot]"

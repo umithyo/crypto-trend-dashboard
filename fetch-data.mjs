@@ -1,24 +1,36 @@
 // CryptoCompare (CoinDesk) Data Fetcher
 // Runs daily via GitHub Actions, writes data.json for the static frontend
-// No API key required for basic endpoints
+// Dynamically fetches top 500 coins by market cap — no hardcoded list
 
-const COINS = [
-  'BTC', 'ETH', 'SOL', 'BNB', 'XRP', 'DOGE', 'ADA', 'AVAX', 'LINK', 'DOT',
-  'LTC', 'SUI', 'NEAR', 'ATOM', 'UNI', 'AAVE', 'APT', 'ARB', 'OP', 'RENDER',
-  'INJ', 'TRX', 'MATIC', 'SHIB', 'TON', 'BCH', 'XLM', 'HBAR', 'FIL', 'ICP',
-  'ETC', 'VET', 'ALGO', 'FTM', 'SAND', 'MANA', 'THETA', 'AXS', 'EOS', 'FLOW',
-  'XTZ', 'CHZ', 'CRV', 'GALA', 'LDO', 'RNDR', 'SNX', 'ENS', 'COMP', 'MKR',
-  'IMX', 'GRT', 'STX', 'RPL', 'PENDLE', 'FET', 'WLD', 'TIA', 'SEI', 'BONK',
-  'JUP', 'STRK', 'PYTH', 'WIF', 'PEPE', 'FLOKI', 'ORDI', 'RUNE', 'KAS',
-  'TAO', 'ONDO', 'JTO', 'BEAM', 'AR', 'JASMY', 'ROSE', 'ZIL', 'ENJ', 'BAT',
-  'ONE', 'CELO', 'SKL', 'ANKR', 'LRC', 'CKB', 'ZEC', 'DASH', 'NEO', 'WAVES',
-  'KAVA', 'IOTA', '1INCH', 'SUSHI', 'YFI', 'DYDX', 'UMA', 'CELR', 'AUDIO', 'RAY',
-];
-
+const TARGET_COINS = 500;
 const API = 'https://min-api.cryptocompare.com/data/v2/histoday';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function sma(arr) { return arr.reduce((s, v) => s + v, 0) / arr.length; }
+
+async function fetchTopCoins() {
+  const coins = []; // { symbol, rank }
+  const pages = Math.ceil(TARGET_COINS / 100);
+  console.log(`Fetching top ${TARGET_COINS} coins by market cap...`);
+
+  for (let page = 0; page < pages; page++) {
+    const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&page=${page}`;
+    const r = await fetch(url);
+    if (!r.ok) { console.warn(`  Page ${page} failed: HTTP ${r.status}`); break; }
+    const json = await r.json();
+    if (!json.Data || json.Data.length === 0) break;
+
+    for (let j = 0; j < json.Data.length; j++) {
+      const sym = json.Data[j].CoinInfo?.Name;
+      if (sym) coins.push({ symbol: sym, rank: page * 100 + j + 1 });
+    }
+    console.log(`  Page ${page + 1}/${pages}: ${coins.length} coins so far`);
+    if (page < pages - 1) await sleep(1500);
+  }
+
+  console.log(`  Total: ${coins.length} coins\n`);
+  return coins;
+}
 
 async function fetchDaily(fsym, tsym, limit = 55) {
   const url = `${API}?fsym=${fsym}&tsym=${tsym}&limit=${limit}`;
@@ -27,7 +39,6 @@ async function fetchDaily(fsym, tsym, limit = 55) {
   const json = await r.json();
   if (json.Response !== 'Success') throw new Error(json.Message || 'API error');
   const bars = json.Data.Data;
-  // Check if data is real (not all zeros)
   if (bars.every(b => b.close === 0)) return null;
   return bars;
 }
@@ -37,7 +48,6 @@ async function fetchWithFallback(fsym, tsym) {
     const bars = await fetchDaily(fsym, tsym);
     if (bars) return bars;
   } catch {}
-  // Try USDT as fallback for USD pairs
   if (tsym === 'USD') {
     try {
       const bars = await fetchDaily(fsym, 'USDT');
@@ -47,7 +57,6 @@ async function fetchWithFallback(fsym, tsym) {
   return null;
 }
 
-// Returns { trend, gapPct } where gapPct = (current - sma) / sma * 100
 function computeTrendAndGap(bars) {
   if (!bars || bars.length < 2) return { trend: null, gapPct: null };
   const closes = bars.map(b => b.close);
@@ -61,36 +70,42 @@ function computeTrendAndGap(bars) {
 }
 
 async function main() {
-  const altcoins = COINS.filter(c => c !== 'BTC');
+  // Step 1: Get the coin list dynamically from market cap rankings
+  const topCoins = await fetchTopCoins();
+  const rankMap = {};
+  for (const c of topCoins) rankMap[c.symbol] = c.rank;
 
-  // Step 1: Fetch BTC/USD
+  await sleep(2000);
+
+  // Step 2: Fetch BTC/USD first (needed for synthetic BTC ratios)
   console.log('Fetching BTC/USD...');
   const btcUsdBars = await fetchWithFallback('BTC', 'USD');
   if (!btcUsdBars) { console.error('FATAL: Could not fetch BTC/USD'); process.exit(1); }
 
-  const results = [];
-
-  // BTC row
   const btcCloses = btcUsdBars.map(b => b.close);
   const btcPrice = btcCloses[btcCloses.length - 1];
   const btcUsd = computeTrendAndGap(btcUsdBars);
-  results.push({ symbol: 'BTC', price: btcPrice, usdTrend: btcUsd.trend, usdGapPct: btcUsd.gapPct, btcTrend: null, btcGapPct: null });
-  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcUsd.trend ? 'GREEN' : 'RED'} (${btcUsd.gapPct > 0 ? '+' : ''}${btcUsd.gapPct}%)`);
 
-  // Step 2: Fetch each altcoin sequentially (one at a time, 2s gap)
-  // This avoids rate limits: ~200 calls over ~7 minutes
+  const results = [];
+  results.push({
+    symbol: 'BTC', rank: 1, price: btcPrice,
+    usdTrend: btcUsd.trend, usdGapPct: btcUsd.gapPct,
+    btcTrend: null, btcGapPct: null,
+  });
+  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcUsd.trend ? 'GREEN' : 'RED'} (${btcUsd.gapPct > 0 ? '+' : ''}${btcUsd.gapPct}%)\n`);
+
+  // Step 3: Fetch each altcoin sequentially
+  const altcoins = topCoins.filter(c => c.symbol !== 'BTC');
+  let skipped = 0;
+
   for (let i = 0; i < altcoins.length; i++) {
-    const coin = altcoins[i];
-    process.stdout.write(`\r[${i + 1}/${altcoins.length}] ${coin}...          `);
+    const { symbol: coin, rank } = altcoins[i];
+    process.stdout.write(`\r[${i + 1}/${altcoins.length}] #${rank} ${coin}...          `);
 
     await sleep(2000);
-
-    // Fetch USD data
     const usdBars = await fetchWithFallback(coin, 'USD');
-
     await sleep(2000);
 
-    // Compute USD trend, gap, and price
     const usdResult = computeTrendAndGap(usdBars);
     let price = null;
     if (usdBars && usdBars.length >= 1) {
@@ -98,7 +113,7 @@ async function main() {
       if (price === 0) price = null;
     }
 
-    // Compute BTC trend from synthetic ratio (coin_usd / btc_usd)
+    // Synthetic BTC ratio
     let btcTrend = null;
     let btcGapPct = null;
     if (usdBars && usdBars.length >= 2) {
@@ -124,47 +139,19 @@ async function main() {
     }
 
     if (price === null && usdResult.trend === null && btcTrend === null) {
-      console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: SKIPPED (no data)`);
+      skipped++;
       continue;
     }
 
-    results.push({ symbol: coin, price, usdTrend: usdResult.trend, usdGapPct: usdResult.gapPct, btcTrend, btcGapPct });
-    const fmt = (v) => v === null ? 'N/A' : v ? 'GREEN' : 'RED';
-    const fmtGap = (v) => v === null ? '' : ` (${v > 0 ? '+' : ''}${v}%)`;
-    console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdResult.trend)}${fmtGap(usdResult.gapPct)} | BTC: ${fmt(btcTrend)}${fmtGap(btcGapPct)}`);
+    results.push({ symbol: coin, rank, price, usdTrend: usdResult.trend, usdGapPct: usdResult.gapPct, btcTrend, btcGapPct });
   }
 
-  // Fetch market cap ranks from CryptoCompare (sorted by mcap, index = rank)
-  console.log('\nFetching market cap ranks...');
-  const rankMap = {};
-  try {
-    // Fetch top 100 in two pages (max 100 per request)
-    for (let page = 0; page < 5; page++) {
-      const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&page=${page}`;
-      const r = await fetch(url);
-      if (!r.ok) { console.warn(`  Page ${page} returned ${r.status}`); break; }
-      const json = await r.json();
-      if (!json.Data || json.Data.length === 0) break;
-      for (let j = 0; j < json.Data.length; j++) {
-        const sym = json.Data[j].CoinInfo?.Name;
-        if (sym) rankMap[sym] = page * 100 + j + 1;
-      }
-      await sleep(1500);
-    }
-    console.log(`  Got ranks for ${Object.keys(rankMap).length} coins`);
-  } catch (e) {
-    console.warn(`  Failed to fetch ranks: ${e.message}`);
-  }
-
-  // Attach rank to results
-  for (const coin of results) {
-    coin.rank = rankMap[coin.symbol] || null;
-  }
+  console.log(`\n\nDone. ${results.length} coins with data, ${skipped} skipped.`);
 
   const output = { updated: new Date().toISOString(), coins: results };
   const { writeFileSync } = await import('fs');
   writeFileSync('data.json', JSON.stringify(output, null, 2));
-  console.log(`Done. Wrote data.json with ${results.length} coins.`);
+  console.log(`Wrote data.json`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
