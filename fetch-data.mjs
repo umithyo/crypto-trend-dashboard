@@ -16,8 +16,6 @@ const COINS = [
 ];
 
 const API = 'https://min-api.cryptocompare.com/data/v2/histoday';
-const BATCH_SIZE = 5;
-const BATCH_DELAY = 1500;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function sma(arr) { return arr.reduce((s, v) => s + v, 0) / arr.length; }
@@ -28,114 +26,78 @@ async function fetchDaily(fsym, tsym, limit = 55) {
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const json = await r.json();
   if (json.Response !== 'Success') throw new Error(json.Message || 'API error');
-  return json.Data.Data;
-}
-
-// Returns bars with non-zero closes, or null
-function validBars(bars) {
-  if (!bars || bars.length < 2) return null;
-  const closes = bars.map(b => b.close);
-  if (closes.every(c => c === 0)) return null;
+  const bars = json.Data.Data;
+  // Check if data is real (not all zeros)
+  if (bars.every(b => b.close === 0)) return null;
   return bars;
 }
 
+async function fetchWithFallback(fsym, tsym) {
+  try {
+    const bars = await fetchDaily(fsym, tsym);
+    if (bars) return bars;
+  } catch {}
+  // Try USDT as fallback for USD pairs
+  if (tsym === 'USD') {
+    try {
+      const bars = await fetchDaily(fsym, 'USDT');
+      if (bars) return bars;
+    } catch {}
+  }
+  return null;
+}
+
 function computeTrend(bars) {
-  const valid = validBars(bars);
-  if (!valid) return null;
-  const closes = valid.map(b => b.close);
+  if (!bars || bars.length < 2) return null;
+  const closes = bars.map(b => b.close);
   const current = closes[closes.length - 1];
   if (current === 0) return null;
   const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
   return current >= sma(prior);
 }
 
-function getPrice(bars) {
-  const valid = validBars(bars);
-  if (!valid) return null;
-  const price = valid[valid.length - 1].close;
-  return price === 0 ? null : price;
-}
-
-async function fetchWithFallback(coin, primaryTsym, fallbackTsym) {
-  try {
-    const bars = await fetchDaily(coin, primaryTsym);
-    if (validBars(bars)) return bars;
-  } catch {}
-  // Fallback
-  try {
-    const bars = await fetchDaily(coin, fallbackTsym);
-    if (validBars(bars)) return bars;
-  } catch {}
-  return null;
-}
-
-async function processBatchWithFallback(coins, primaryTsym, fallbackTsym, label) {
-  const results = {};
-  for (let i = 0; i < coins.length; i += BATCH_SIZE) {
-    const batch = coins.slice(i, i + BATCH_SIZE);
-    await Promise.all(batch.map(async (coin) => {
-      results[coin] = await fetchWithFallback(coin, primaryTsym, fallbackTsym);
-    }));
-
-    const done = Math.min(i + BATCH_SIZE, coins.length);
-    process.stdout.write(`\r  ${label}: ${done}/${coins.length}`);
-    if (i + BATCH_SIZE < coins.length) await sleep(BATCH_DELAY);
-  }
-  console.log();
-  return results;
-}
-
 async function main() {
   const altcoins = COINS.filter(c => c !== 'BTC');
 
-  // Fetch BTC/USD first (needed for synthetic BTC ratios)
+  // Step 1: Fetch BTC/USD
   console.log('Fetching BTC/USD...');
-  let btcUsdBars = null;
-  try { btcUsdBars = await fetchDaily('BTC', 'USD'); } catch (e) {
-    try { btcUsdBars = await fetchDaily('BTC', 'USDT'); } catch {}
-  }
-
-  await sleep(BATCH_DELAY);
-
-  // Fetch altcoin/USD data (fallback to USDT)
-  console.log(`Fetching USD data for ${altcoins.length} coins...`);
-  const usdData = await processBatchWithFallback(altcoins, 'USD', 'USDT', 'USD pairs');
-
-  await sleep(2000);
-
-  // Fetch altcoin/BTC data (fallback: compute synthetic from USD prices)
-  console.log(`Fetching BTC data for ${altcoins.length} coins...`);
-  const btcData = await processBatchWithFallback(altcoins, 'BTC', 'BTC', 'BTC pairs');
+  const btcUsdBars = await fetchWithFallback('BTC', 'USD');
+  if (!btcUsdBars) { console.error('FATAL: Could not fetch BTC/USD'); process.exit(1); }
 
   const results = [];
 
   // BTC row
-  if (btcUsdBars && validBars(btcUsdBars)) {
-    const closes = btcUsdBars.map(b => b.close);
-    const current = closes[closes.length - 1];
-    const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
-    results.push({
-      symbol: 'BTC',
-      price: current,
-      usdTrend: current >= sma(prior),
-      btcTrend: null,
-    });
-    console.log(`  BTC: $${current.toFixed(2)} | USD: ${current >= sma(prior) ? 'GREEN' : 'RED'}`);
-  }
+  const btcCloses = btcUsdBars.map(b => b.close);
+  const btcPrice = btcCloses[btcCloses.length - 1];
+  const btcPrior = btcCloses.length > 50 ? btcCloses.slice(-51, -1) : btcCloses.slice(0, -1);
+  results.push({ symbol: 'BTC', price: btcPrice, usdTrend: btcPrice >= sma(btcPrior), btcTrend: null });
+  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcPrice >= sma(btcPrior) ? 'GREEN' : 'RED'}`);
 
-  // Altcoin rows
-  for (const coin of altcoins) {
-    const usd = usdData[coin];
-    const btc = btcData[coin];
+  // Step 2: Fetch each altcoin sequentially (one at a time, 2s gap)
+  // This avoids rate limits: ~200 calls over ~7 minutes
+  for (let i = 0; i < altcoins.length; i++) {
+    const coin = altcoins[i];
+    process.stdout.write(`\r[${i + 1}/${altcoins.length}] ${coin}...          `);
 
-    const price = getPrice(usd);
-    const usdTrend = computeTrend(usd);
-    let btcTrend = computeTrend(btc);
+    await sleep(2000);
 
-    // If no direct BTC pair, compute synthetic BTC ratio from USD prices
-    if (btcTrend === null && validBars(usd) && validBars(btcUsdBars)) {
-      const coinCloses = usd.map(b => b.close);
-      const btcCloses = btcUsdBars.map(b => b.close);
+    // Fetch USD data
+    const usdBars = await fetchWithFallback(coin, 'USD');
+
+    await sleep(2000);
+
+    // Compute USD trend and price
+    const usdTrend = computeTrend(usdBars);
+    let price = null;
+    if (usdBars && usdBars.length >= 1) {
+      price = usdBars[usdBars.length - 1].close;
+      if (price === 0) price = null;
+    }
+
+    // Compute BTC trend from synthetic ratio (coin_usd / btc_usd)
+    let btcTrend = null;
+    if (usdBars && usdBars.length >= 2) {
+      const coinCloses = usdBars.map(b => b.close);
       const minLen = Math.min(coinCloses.length, btcCloses.length);
       if (minLen >= 2) {
         const ratios = [];
@@ -154,15 +116,14 @@ async function main() {
       }
     }
 
-    // Skip coins with no data at all
     if (price === null && usdTrend === null && btcTrend === null) {
-      console.log(`  ${coin}: SKIPPED (no data)`);
+      console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: SKIPPED (no data)`);
       continue;
     }
 
     results.push({ symbol: coin, price, usdTrend, btcTrend });
     const fmt = (v) => v === null ? 'N/A' : v ? 'GREEN' : 'RED';
-    console.log(`  ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdTrend)} | BTC: ${fmt(btcTrend)}`);
+    console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdTrend)} | BTC: ${fmt(btcTrend)}`);
   }
 
   const output = { updated: new Date().toISOString(), coins: results };
