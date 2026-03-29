@@ -1,23 +1,21 @@
-// Crypto Trend Dashboard Data Fetcher
-// - CoinDesk API for top coins list + ranks (authoritative, no symbol collisions)
-// - CryptoCompare API for historical daily data (50-day SMA calculation)
+// Crypto Trend Dashboard — 100% CoinDesk API
+// - Top list + ranks from /asset/v1/top/list
+// - Historical daily data from /index/cc/v1/historical/days
 
 const TARGET_COINS = 500;
-const COINDESK_API = 'https://data-api.coindesk.com';
-const HISTODAY_API = 'https://min-api.cryptocompare.com/data/v2/histoday';
+const API = 'https://data-api.coindesk.com';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function sma(arr) { return arr.reduce((s, v) => s + v, 0) / arr.length; }
 
-// Fetch top coins from CoinDesk's asset top list (sorted by circulating market cap)
 async function fetchTopCoins() {
-  const coins = []; // { symbol, rank, name }
-  const pageSize = 100; // min 10, max 100
+  const coins = [];
+  const pageSize = 100;
   const pages = Math.ceil(TARGET_COINS / pageSize);
   console.log(`Fetching top ${TARGET_COINS} coins from CoinDesk...`);
 
   for (let page = 1; page <= pages; page++) {
-    const url = `${COINDESK_API}/asset/v1/top/list?page=${page}&page_size=${pageSize}`;
+    const url = `${API}/asset/v1/top/list?page=${page}&page_size=${pageSize}`;
     const r = await fetch(url);
     if (!r.ok) { console.warn(`  Page ${page} failed: HTTP ${r.status}`); break; }
     const json = await r.json();
@@ -35,41 +33,27 @@ async function fetchTopCoins() {
     if (page < pages) await sleep(1500);
   }
 
-  // Sort by rank to ensure correct order
   coins.sort((a, b) => a.rank - b.rank);
   console.log(`  Total: ${coins.length} coins\n`);
   return coins;
 }
 
-// Fetch historical daily OHLCV from CryptoCompare
-async function fetchDaily(fsym, tsym, limit = 55) {
-  const url = `${HISTODAY_API}?fsym=${fsym}&tsym=${tsym}&limit=${limit}`;
+async function fetchDaily(symbol, limit = 55) {
+  const instrument = `${symbol}-USD`;
+  const url = `${API}/index/cc/v1/historical/days?market=cadli&instrument=${instrument}&limit=${limit}&apply_mapping=true`;
   const r = await fetch(url);
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const json = await r.json();
-  if (json.Response !== 'Success') throw new Error(json.Message || 'API error');
-  const bars = json.Data.Data;
-  if (bars.every(b => b.close === 0)) return null;
-  return bars;
-}
-
-async function fetchWithFallback(fsym, tsym) {
-  try {
-    const bars = await fetchDaily(fsym, tsym);
-    if (bars) return bars;
-  } catch {}
-  if (tsym === 'USD') {
-    try {
-      const bars = await fetchDaily(fsym, 'USDT');
-      if (bars) return bars;
-    } catch {}
-  }
-  return null;
+  if (json.Err?.message) throw new Error(json.Err.message);
+  if (!json.Data || json.Data.length === 0) return null;
+  // Filter out entries with zero close
+  const bars = json.Data.filter(b => b.CLOSE > 0);
+  return bars.length >= 2 ? bars : null;
 }
 
 function computeTrendAndGap(bars) {
   if (!bars || bars.length < 2) return { trend: null, gapPct: null };
-  const closes = bars.map(b => b.close);
+  const closes = bars.map(b => b.CLOSE);
   const current = closes[closes.length - 1];
   if (current === 0) return { trend: null, gapPct: null };
   const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
@@ -80,19 +64,20 @@ function computeTrendAndGap(bars) {
 }
 
 async function main() {
-  // Step 1: Get authoritative coin list + ranks from CoinDesk
   const topCoins = await fetchTopCoins();
-
   await sleep(2000);
 
-  // Step 2: Fetch BTC/USD historical data
+  // Fetch BTC/USD first
   console.log('Fetching BTC/USD...');
-  const btcUsdBars = await fetchWithFallback('BTC', 'USD');
-  if (!btcUsdBars) { console.error('FATAL: Could not fetch BTC/USD'); process.exit(1); }
+  let btcBars;
+  try { btcBars = await fetchDaily('BTC'); } catch (e) {
+    console.error('FATAL: Could not fetch BTC/USD:', e.message);
+    process.exit(1);
+  }
 
-  const btcCloses = btcUsdBars.map(b => b.close);
+  const btcCloses = btcBars.map(b => b.CLOSE);
   const btcPrice = btcCloses[btcCloses.length - 1];
-  const btcUsd = computeTrendAndGap(btcUsdBars);
+  const btcUsd = computeTrendAndGap(btcBars);
 
   const btcEntry = topCoins.find(c => c.symbol === 'BTC');
   const results = [];
@@ -101,32 +86,37 @@ async function main() {
     usdTrend: btcUsd.trend, usdGapPct: btcUsd.gapPct,
     btcTrend: null, btcGapPct: null,
   });
-  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD: ${btcUsd.trend ? 'GREEN' : 'RED'} (${btcUsd.gapPct > 0 ? '+' : ''}${btcUsd.gapPct}%)\n`);
+  console.log(`  BTC: $${btcPrice.toFixed(2)} | USD gap: ${btcUsd.gapPct > 0 ? '+' : ''}${btcUsd.gapPct}%\n`);
 
-  // Step 3: Fetch each altcoin sequentially
+  // Fetch altcoins
   const altcoins = topCoins.filter(c => c.symbol !== 'BTC');
   let skipped = 0;
+  let errors = 0;
 
   for (let i = 0; i < altcoins.length; i++) {
     const { symbol: coin, rank } = altcoins[i];
     process.stdout.write(`\r[${i + 1}/${altcoins.length}] #${rank} ${coin}...          `);
 
     await sleep(2000);
-    const usdBars = await fetchWithFallback(coin, 'USD');
-    await sleep(2000);
+
+    let usdBars = null;
+    try {
+      usdBars = await fetchDaily(coin);
+    } catch {
+      errors++;
+    }
 
     const usdResult = computeTrendAndGap(usdBars);
     let price = null;
     if (usdBars && usdBars.length >= 1) {
-      price = usdBars[usdBars.length - 1].close;
-      if (price === 0) price = null;
+      price = usdBars[usdBars.length - 1].CLOSE;
     }
 
-    // Synthetic BTC ratio
+    // Synthetic BTC ratio from USD prices
     let btcTrend = null;
     let btcGapPct = null;
     if (usdBars && usdBars.length >= 2) {
-      const coinCloses = usdBars.map(b => b.close);
+      const coinCloses = usdBars.map(b => b.CLOSE);
       const minLen = Math.min(coinCloses.length, btcCloses.length);
       if (minLen >= 2) {
         const ratios = [];
@@ -155,7 +145,7 @@ async function main() {
     results.push({ symbol: coin, rank, price, usdTrend: usdResult.trend, usdGapPct: usdResult.gapPct, btcTrend, btcGapPct });
   }
 
-  console.log(`\n\nDone. ${results.length} coins with data, ${skipped} skipped.`);
+  console.log(`\n\nDone. ${results.length} coins with data, ${skipped} skipped, ${errors} errors.`);
 
   const output = { updated: new Date().toISOString(), coins: results };
   const { writeFileSync } = await import('fs');
