@@ -25,13 +25,7 @@
   td.price { font-family: 'SF Mono', 'Courier New', monospace; }
   td.rank { color: #8b949e; font-size: 0.85rem; }
   td.gap { font-family: 'SF Mono', 'Courier New', monospace; font-size: 0.82rem; }
-  td.gap.pos { color: #2ea043; }
-  td.gap.neg { color: #da3633; }
-  td.gap.near { color: #d29922; }
   .dot { width: 24px; height: 24px; border-radius: 50%; display: inline-block; }
-  .green { background: #2ea043; box-shadow: 0 0 8px rgba(46,160,67,0.4); }
-  .red { background: #da3633; box-shadow: 0 0 8px rgba(218,54,51,0.4); }
-  .yellow { background: #d29922; box-shadow: 0 0 8px rgba(210,153,34,0.4); }
   .gray { background: #30363d; }
   #status { text-align: center; padding: 40px; color: #8b949e; font-size: 0.95rem; }
   .legend { max-width: 1100px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
@@ -73,9 +67,10 @@
 
 <div class="legend">
   <strong>How it works:</strong><br>
-  <span style="color:#2ea043;">Green</span> = price is above its 50-day SMA (bullish).
-  <span style="color:#d29922;">Yellow</span> = within 10% of the 50-day SMA.
-  <span style="color:#da3633;">Red</span> = price is below its 50-day SMA (bearish).<br>
+  Dot color is a gradient based on distance from the 50-day SMA:
+  <span style="color:hsl(120,70%,45%);">Green</span> = far above,
+  <span style="color:hsl(60,70%,45%);">Yellow</span> = near the SMA,
+  <span style="color:hsl(0,70%,45%);">Red</span> = far below.<br>
   <strong>Gap</strong> = % distance from the 50-day SMA. Positive = above, negative = below.<br>
   Data updated daily at 06:00 UTC via GitHub Actions.
 </div>
@@ -102,17 +97,30 @@ function formatPrice(p) {
   return '$' + p.toFixed(6);
 }
 
+// Map gap% to a color on a red -> yellow -> green gradient
+// -30% or worse = pure red, 0% = yellow, +30% or more = pure green
+function gapColor(pct) {
+  if (pct === null) return null;
+  // Clamp to [-30, 30] range, then map to hue [0, 120]
+  const clamped = Math.max(-30, Math.min(30, pct));
+  const hue = ((clamped + 30) / 60) * 120; // 0=red, 60=yellow, 120=green
+  const sat = 70;
+  const light = 45;
+  return `hsl(${hue}, ${sat}%, ${light}%)`;
+}
+
 function dot(val, gapPct) {
-  if (val === null) return '<span class="dot gray" title="No data"></span>';
-  if (gapPct !== null && Math.abs(gapPct) <= 10) return '<span class="dot yellow" title="Within 10% of SMA"></span>';
-  return `<span class="dot ${val ? 'green' : 'red'}"></span>`;
+  if (val === null && gapPct === null) return '<span class="dot gray" title="No data"></span>';
+  const color = gapColor(gapPct);
+  if (!color) return '<span class="dot gray"></span>';
+  return `<span class="dot" style="background:${color};box-shadow:0 0 8px ${color}44" title="${gapPct > 0 ? '+' : ''}${(gapPct || 0).toFixed(1)}% from SMA"></span>`;
 }
 
 function formatGap(pct) {
   if (pct === null) return '-';
   const sign = pct >= 0 ? '+' : '';
-  const cls = Math.abs(pct) <= 10 ? 'near' : (pct >= 0 ? 'pos' : 'neg');
-  return `<span class="${cls}">${sign}${pct.toFixed(1)}%</span>`;
+  const color = gapColor(pct);
+  return `<span style="color:${color}">${sign}${pct.toFixed(1)}%</span>`;
 }
 
 function defaultScore(c) {
