@@ -21,8 +21,6 @@
   .red { background: #da3633; box-shadow: 0 0 8px rgba(218,54,51,0.4); }
   .gray { background: #30363d; }
   #status { text-align: center; padding: 40px; color: #8b949e; font-size: 0.95rem; }
-  .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #30363d; border-top-color: #58a6ff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
-  @keyframes spin { to { transform: rotate(360deg); } }
   .legend { max-width: 750px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
   .error { color: #f85149; }
 </style>
@@ -44,83 +42,27 @@
   <tbody id="tbody"></tbody>
 </table>
 
-<div id="status"><span class="spinner"></span>Loading data...</div>
+<div id="status">Loading...</div>
 
 <div class="legend">
   <strong>How it works:</strong><br>
   <span style="color:#2ea043;">Green</span> = price is above its 50-day Simple Moving Average (bullish).<br>
   <span style="color:#da3633;">Red</span> = price is below its 50-day Simple Moving Average (bearish).<br>
   Trend vs USD: coin/USDT price vs its 50-day SMA.<br>
-  Trend vs BTC: (coin market cap / BTC market cap) ratio vs its 50-day SMA.
+  Trend vs BTC: (coin market cap / BTC market cap) ratio vs its 50-day SMA.<br>
+  Data updated daily at 06:00 UTC via GitHub Actions.
 </div>
 
 <script>
-const COINS = [
-  { id: 'ethereum', symbol: 'ETH' },
-  { id: 'solana', symbol: 'SOL' },
-  { id: 'binancecoin', symbol: 'BNB' },
-  { id: 'ripple', symbol: 'XRP' },
-  { id: 'dogecoin', symbol: 'DOGE' },
-  { id: 'cardano', symbol: 'ADA' },
-  { id: 'avalanche-2', symbol: 'AVAX' },
-  { id: 'chainlink', symbol: 'LINK' },
-  { id: 'polkadot', symbol: 'DOT' },
-  { id: 'litecoin', symbol: 'LTC' },
-  { id: 'sui', symbol: 'SUI' },
-  { id: 'near', symbol: 'NEAR' },
-  { id: 'cosmos', symbol: 'ATOM' },
-  { id: 'uniswap', symbol: 'UNI' },
-  { id: 'aave', symbol: 'AAVE' },
-  { id: 'aptos', symbol: 'APT' },
-  { id: 'arbitrum', symbol: 'ARB' },
-  { id: 'optimism', symbol: 'OP' },
-  { id: 'render-token', symbol: 'RENDER' },
-  { id: 'injective-protocol', symbol: 'INJ' },
-];
-
-const API = 'https://api.coingecko.com/api/v3';
-
-function sma(arr) {
-  return arr.reduce((s, v) => s + v, 0) / arr.length;
-}
-
 function formatPrice(p) {
   if (p >= 1) return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   if (p >= 0.01) return '$' + p.toFixed(4);
   return '$' + p.toFixed(6);
 }
 
-function dot(isGreen) {
-  return `<span class="dot ${isGreen ? 'green' : 'red'}"></span>`;
-}
-
-function grayDot() {
-  return `<span class="dot gray" title="No data"></span>`;
-}
-
-async function fetchJSON(url) {
-  const r = await fetch(url);
-  if (r.status === 429) throw new Error('RATE_LIMIT');
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  return r.json();
-}
-
-function sleep(ms) {
-  return new Promise(r => setTimeout(r, ms));
-}
-
-async function fetchWithRetry(url, retries = 3) {
-  for (let i = 0; i < retries; i++) {
-    try {
-      return await fetchJSON(url);
-    } catch (e) {
-      if (e.message === 'RATE_LIMIT' && i < retries - 1) {
-        await sleep(5000 * (i + 1));
-        continue;
-      }
-      throw e;
-    }
-  }
+function dot(val) {
+  if (val === null) return '<span class="dot gray" title="No data"></span>';
+  return `<span class="dot ${val ? 'green' : 'red'}"></span>`;
 }
 
 async function main() {
@@ -128,73 +70,25 @@ async function main() {
   const status = document.getElementById('status');
 
   try {
-    // Fetch BTC market chart first for market cap ratios
-    status.innerHTML = '<span class="spinner"></span>Fetching BTC data...';
-    const btcData = await fetchWithRetry(`${API}/coins/bitcoin/market_chart?vs_currency=usd&days=55&interval=daily`);
-    const btcMcaps = btcData.market_caps.slice(-51); // 50 days + today
+    const r = await fetch('data.json');
+    if (!r.ok) throw new Error('data.json not found');
+    const data = await r.json();
 
-    await sleep(1500);
-
-    for (let i = 0; i < COINS.length; i++) {
-      const coin = COINS[i];
-      status.innerHTML = `<span class="spinner"></span>Loading ${coin.symbol}... (${i + 1}/${COINS.length})`;
-
-      try {
-        const data = await fetchWithRetry(`${API}/coins/${coin.id}/market_chart?vs_currency=usd&days=55&interval=daily`);
-
-        const prices = data.prices.slice(-51);
-        const mcaps = data.market_caps.slice(-51);
-
-        // Current values (last entry)
-        const currentPrice = prices[prices.length - 1][1];
-
-        // 50-day SMA of USD price (exclude today, use last 50 daily closes)
-        const priceValues = prices.slice(0, -1).map(p => p[1]);
-        const priceSma = sma(priceValues.slice(-50));
-        const usdTrend = currentPrice >= priceSma;
-
-        // Market cap ratio vs BTC
-        let btcTrend = null;
-        const minLen = Math.min(mcaps.length, btcMcaps.length);
-        if (minLen >= 2) {
-          const ratios = [];
-          for (let j = 0; j < minLen; j++) {
-            const coinMcap = mcaps[mcaps.length - minLen + j][1];
-            const btcMcap = btcMcaps[btcMcaps.length - minLen + j][1];
-            if (btcMcap > 0) ratios.push(coinMcap / btcMcap);
-          }
-          if (ratios.length >= 2) {
-            const currentRatio = ratios[ratios.length - 1];
-            const ratioSma = sma(ratios.slice(0, -1).slice(-50));
-            btcTrend = currentRatio >= ratioSma;
-          }
-        }
-
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>$${coin.symbol}</td>
-          <td>${formatPrice(currentPrice)}</td>
-          <td>${dot(usdTrend)}</td>
-          <td>${btcTrend !== null ? dot(btcTrend) : grayDot()}</td>
-        `;
-        tbody.appendChild(row);
-      } catch (e) {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>$${coin.symbol}</td>
-          <td class="error">Error</td>
-          <td>${grayDot()}</td>
-          <td>${grayDot()}</td>
-        `;
-        tbody.appendChild(row);
-      }
-
-      if (i < COINS.length - 1) await sleep(1500);
+    for (const coin of data.coins) {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>$${coin.symbol}</td>
+        <td>${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
+        <td>${dot(coin.usdTrend)}</td>
+        <td>${dot(coin.btcTrend)}</td>
+      `;
+      tbody.appendChild(row);
     }
 
-    status.textContent = `Last updated: ${new Date().toLocaleString()}`;
+    const updated = new Date(data.updated);
+    status.textContent = `Last updated: ${updated.toLocaleString()}`;
   } catch (e) {
-    status.innerHTML = `<span class="error">Failed to load data. CoinGecko API may be rate-limited. Refresh to retry.</span>`;
+    status.innerHTML = '<span class="error">Failed to load data. The data file may not exist yet — trigger the workflow manually.</span>';
   }
 }
 
