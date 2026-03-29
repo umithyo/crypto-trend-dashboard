@@ -41,6 +41,8 @@ jobs:
           ref: main
       - run: git pull origin main
       - uses: actions/configure-pages@v4
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
