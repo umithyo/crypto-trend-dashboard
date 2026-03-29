@@ -11,7 +11,10 @@
   .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 24px; }
   table { width: 100%; max-width: 750px; margin: 0 auto; border-collapse: collapse; }
   th, td { border: 1px solid #30363d; padding: 14px 18px; text-align: center; }
-  th { background: #161b22; font-weight: 600; font-size: 0.9rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+  th { background: #161b22; font-weight: 600; font-size: 0.9rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; }
+  th:hover { color: #e6edf3; }
+  th .arrow { font-size: 0.7rem; margin-left: 4px; opacity: 0.4; }
+  th.active .arrow { opacity: 1; color: #58a6ff; }
   td { font-size: 1rem; }
   tr:hover td { background: #161b22; }
   td:first-child { font-weight: 700; text-align: left; }
@@ -33,10 +36,10 @@
 <table>
   <thead>
     <tr>
-      <th>Coin</th>
-      <th>Price</th>
-      <th>Trend vs USD</th>
-      <th>Trend vs BTC</th>
+      <th data-col="symbol">Coin <span class="arrow"></span></th>
+      <th data-col="price">Price <span class="arrow"></span></th>
+      <th data-col="usdTrend">Trend vs USD <span class="arrow"></span></th>
+      <th data-col="btcTrend">Trend vs BTC <span class="arrow"></span></th>
     </tr>
   </thead>
   <tbody id="tbody"></tbody>
@@ -49,11 +52,30 @@
   <span style="color:#2ea043;">Green</span> = price is above its 50-day Simple Moving Average (bullish).<br>
   <span style="color:#da3633;">Red</span> = price is below its 50-day Simple Moving Average (bearish).<br>
   Trend vs USD: coin/USDT price vs its 50-day SMA.<br>
-  Trend vs BTC: (coin market cap / BTC market cap) ratio vs its 50-day SMA.<br>
+  Trend vs BTC: (coin price / BTC price) ratio vs its 50-day SMA.<br>
   Data updated daily at 06:00 UTC via GitHub Actions.
 </div>
 
 <script>
+let coins = [];
+
+// Load sort state from cookie
+function loadSort() {
+  const m = document.cookie.match(/sort=([^;]+)/);
+  if (m) {
+    const [col, dir] = m[1].split(':');
+    return { col, dir };
+  }
+  return { col: 'default', dir: 'desc' };
+}
+function saveSort() {
+  document.cookie = `sort=${sortCol}:${sortDir};path=/;max-age=31536000`;
+}
+
+const saved = loadSort();
+let sortCol = saved.col;
+let sortDir = saved.dir;
+
 function formatPrice(p) {
   if (p >= 1) return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   if (p >= 0.01) return '$' + p.toFixed(4);
@@ -65,25 +87,98 @@ function dot(val) {
   return `<span class="dot ${val ? 'green' : 'red'}"></span>`;
 }
 
-async function main() {
-  const tbody = document.getElementById('tbody');
-  const status = document.getElementById('status');
+// Sort score: both green=2, one green=1, none=0
+function defaultScore(c) {
+  return (c.usdTrend === true ? 1 : 0) + (c.btcTrend === true ? 1 : 0);
+}
 
+function trendVal(v) {
+  if (v === true) return 2;
+  if (v === false) return 1;
+  return 0; // null
+}
+
+function getSorted() {
+  const arr = [...coins];
+  const dir = sortDir === 'asc' ? 1 : -1;
+
+  if (sortCol === 'default' || sortCol === 'usdTrend' || sortCol === 'btcTrend') {
+    const key = sortCol === 'default' ? null : sortCol;
+    arr.sort((a, b) => {
+      if (key) {
+        const diff = trendVal(a[key]) - trendVal(b[key]);
+        if (diff !== 0) return diff * dir;
+      } else {
+        const diff = defaultScore(a) - defaultScore(b);
+        if (diff !== 0) return diff * dir;
+      }
+      // Secondary: by symbol
+      return a.symbol.localeCompare(b.symbol);
+    });
+  } else if (sortCol === 'symbol') {
+    arr.sort((a, b) => a.symbol.localeCompare(b.symbol) * dir);
+  } else if (sortCol === 'price') {
+    arr.sort((a, b) => ((a.price || 0) - (b.price || 0)) * dir);
+  }
+
+  return arr;
+}
+
+function render() {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+  for (const coin of getSorted()) {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>$${coin.symbol}</td>
+      <td>${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
+      <td>${dot(coin.usdTrend)}</td>
+      <td>${dot(coin.btcTrend)}</td>
+    `;
+    tbody.appendChild(row);
+  }
+
+  // Update header arrows
+  document.querySelectorAll('th').forEach(th => {
+    const col = th.dataset.col;
+    const arrow = th.querySelector('.arrow');
+    if (col === sortCol || (sortCol === 'default' && col === 'usdTrend')) {
+      th.classList.add('active');
+      arrow.textContent = sortDir === 'desc' ? '\u25BC' : '\u25B2';
+    } else {
+      th.classList.remove('active');
+      arrow.textContent = '\u25BC';
+    }
+  });
+}
+
+document.querySelectorAll('th').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.col;
+    if (sortCol === col) {
+      sortDir = sortDir === 'desc' ? 'asc' : 'desc';
+    } else {
+      sortCol = col;
+      // Default direction: greens first for trends, high-to-low for price, A-Z for name
+      sortDir = col === 'symbol' ? 'asc' : 'desc';
+    }
+    saveSort();
+    render();
+  });
+});
+
+async function main() {
+  const status = document.getElementById('status');
   try {
     const r = await fetch('data.json');
     if (!r.ok) throw new Error('data.json not found');
     const data = await r.json();
+    coins = data.coins;
 
-    for (const coin of data.coins) {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>$${coin.symbol}</td>
-        <td>${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
-        <td>${dot(coin.usdTrend)}</td>
-        <td>${dot(coin.btcTrend)}</td>
-      `;
-      tbody.appendChild(row);
-    }
+    // Default sort: greens first
+    sortCol = 'default';
+    sortDir = 'desc';
+    render();
 
     const updated = new Date(data.updated);
     status.textContent = `Last updated: ${updated.toLocaleString()}`;
