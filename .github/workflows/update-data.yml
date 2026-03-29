@@ -5,8 +5,6 @@ on:
   workflow_dispatch:       # Allow manual trigger
 permissions:
   contents: write
-  pages: write
-  id-token: write
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -21,7 +19,7 @@ jobs:
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
-      - name: Commit data.json
+      - name: Commit and push data.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -29,22 +27,3 @@ jobs:
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update crypto data $(date -u +%Y-%m-%d)"
           git push
-  deploy:
-    needs: fetch
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - run: git pull origin main
-      - uses: actions/configure-pages@v4
-        with:
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - id: deployment
-        uses: actions/deploy-pages@v4
