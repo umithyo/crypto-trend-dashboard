@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Trend Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+  h1 { text-align: center; margin-bottom: 8px; font-size: 1.6rem; }
+  .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 24px; }
+  table { width: 100%; max-width: 750px; margin: 0 auto; border-collapse: collapse; }
+  th, td { border: 1px solid #30363d; padding: 14px 18px; text-align: center; }
+  th { background: #161b22; font-weight: 600; font-size: 0.9rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { font-size: 1rem; }
+  tr:hover td { background: #161b22; }
+  td:first-child { font-weight: 700; text-align: left; }
+  td:nth-child(2) { font-family: 'SF Mono', 'Courier New', monospace; }
+  .dot { width: 28px; height: 28px; border-radius: 50%; display: inline-block; }
+  .green { background: #2ea043; box-shadow: 0 0 8px rgba(46,160,67,0.4); }
+  .red { background: #da3633; box-shadow: 0 0 8px rgba(218,54,51,0.4); }
+  .gray { background: #30363d; }
+  #status { text-align: center; padding: 40px; color: #8b949e; font-size: 0.95rem; }
+  .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #30363d; border-top-color: #58a6ff; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .legend { max-width: 750px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
+  .error { color: #f85149; }
+</style>
+</head>
+<body>
+
+<h1>Crypto Trend Dashboard</h1>
+<p class="subtitle">50-Day SMA Trend Signals</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coin</th>
+      <th>Price</th>
+      <th>Trend vs USD</th>
+      <th>Trend vs BTC</th>
+    </tr>
+  </thead>
+  <tbody id="tbody"></tbody>
+</table>
+
+<div id="status"><span class="spinner"></span>Loading data...</div>
+
+<div class="legend">
+  <strong>How it works:</strong><br>
+  <span style="color:#2ea043;">Green</span> = price is above its 50-day Simple Moving Average (bullish).<br>
+  <span style="color:#da3633;">Red</span> = price is below its 50-day Simple Moving Average (bearish).<br>
+  Trend vs USD: coin/USDT price vs its 50-day SMA.<br>
+  Trend vs BTC: (coin market cap / BTC market cap) ratio vs its 50-day SMA.
+</div>
+
+<script>
+const COINS = [
+  { id: 'ethereum', symbol: 'ETH' },
+  { id: 'solana', symbol: 'SOL' },
+  { id: 'binancecoin', symbol: 'BNB' },
+  { id: 'ripple', symbol: 'XRP' },
+  { id: 'dogecoin', symbol: 'DOGE' },
+  { id: 'cardano', symbol: 'ADA' },
+  { id: 'avalanche-2', symbol: 'AVAX' },
+  { id: 'chainlink', symbol: 'LINK' },
+  { id: 'polkadot', symbol: 'DOT' },
+  { id: 'litecoin', symbol: 'LTC' },
+  { id: 'sui', symbol: 'SUI' },
+  { id: 'near', symbol: 'NEAR' },
+  { id: 'cosmos', symbol: 'ATOM' },
+  { id: 'uniswap', symbol: 'UNI' },
+  { id: 'aave', symbol: 'AAVE' },
+  { id: 'aptos', symbol: 'APT' },
+  { id: 'arbitrum', symbol: 'ARB' },
+  { id: 'optimism', symbol: 'OP' },
+  { id: 'render-token', symbol: 'RENDER' },
+  { id: 'injective-protocol', symbol: 'INJ' },
+];
+
+const API = 'https://api.coingecko.com/api/v3';
+
+function sma(arr) {
+  return arr.reduce((s, v) => s + v, 0) / arr.length;
+}
+
+function formatPrice(p) {
+  if (p >= 1) return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (p >= 0.01) return '$' + p.toFixed(4);
+  return '$' + p.toFixed(6);
+}
+
+function dot(isGreen) {
+  return `<span class="dot ${isGreen ? 'green' : 'red'}"></span>`;
+}
+
+function grayDot() {
+  return `<span class="dot gray" title="No data"></span>`;
+}
+
+async function fetchJSON(url) {
+  const r = await fetch(url);
+  if (r.status === 429) throw new Error('RATE_LIMIT');
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
+
+function sleep(ms) {
+  return new Promise(r => setTimeout(r, ms));
+}
+
+async function fetchWithRetry(url, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      return await fetchJSON(url);
+    } catch (e) {
+      if (e.message === 'RATE_LIMIT' && i < retries - 1) {
+        await sleep(5000 * (i + 1));
+        continue;
+      }
+      throw e;
+    }
+  }
+}
+
+async function main() {
+  const tbody = document.getElementById('tbody');
+  const status = document.getElementById('status');
+
+  try {
+    // Fetch BTC market chart first for market cap ratios
+    status.innerHTML = '<span class="spinner"></span>Fetching BTC data...';
+    const btcData = await fetchWithRetry(`${API}/coins/bitcoin/market_chart?vs_currency=usd&days=55&interval=daily`);
+    const btcMcaps = btcData.market_caps.slice(-51); // 50 days + today
+
+    await sleep(1500);
+
+    for (let i = 0; i < COINS.length; i++) {
+      const coin = COINS[i];
+      status.innerHTML = `<span class="spinner"></span>Loading ${coin.symbol}... (${i + 1}/${COINS.length})`;
+
+      try {
+        const data = await fetchWithRetry(`${API}/coins/${coin.id}/market_chart?vs_currency=usd&days=55&interval=daily`);
+
+        const prices = data.prices.slice(-51);
+        const mcaps = data.market_caps.slice(-51);
+
+        // Current values (last entry)
+        const currentPrice = prices[prices.length - 1][1];
+
+        // 50-day SMA of USD price (exclude today, use last 50 daily closes)
+        const priceValues = prices.slice(0, -1).map(p => p[1]);
+        const priceSma = sma(priceValues.slice(-50));
+        const usdTrend = currentPrice >= priceSma;
+
+        // Market cap ratio vs BTC
+        let btcTrend = null;
+        const minLen = Math.min(mcaps.length, btcMcaps.length);
+        if (minLen >= 2) {
+          const ratios = [];
+          for (let j = 0; j < minLen; j++) {
+            const coinMcap = mcaps[mcaps.length - minLen + j][1];
+            const btcMcap = btcMcaps[btcMcaps.length - minLen + j][1];
+            if (btcMcap > 0) ratios.push(coinMcap / btcMcap);
+          }
+          if (ratios.length >= 2) {
+            const currentRatio = ratios[ratios.length - 1];
+            const ratioSma = sma(ratios.slice(0, -1).slice(-50));
+            btcTrend = currentRatio >= ratioSma;
+          }
+        }
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>$${coin.symbol}</td>
+          <td>${formatPrice(currentPrice)}</td>
+          <td>${dot(usdTrend)}</td>
+          <td>${btcTrend !== null ? dot(btcTrend) : grayDot()}</td>
+        `;
+        tbody.appendChild(row);
+      } catch (e) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>$${coin.symbol}</td>
+          <td class="error">Error</td>
+          <td>${grayDot()}</td>
+          <td>${grayDot()}</td>
+        `;
+        tbody.appendChild(row);
+      }
+
+      if (i < COINS.length - 1) await sleep(1500);
+    }
+
+    status.textContent = `Last updated: ${new Date().toLocaleString()}`;
+  } catch (e) {
+    status.innerHTML = `<span class="error">Failed to load data. CoinGecko API may be rate-limited. Refresh to retry.</span>`;
+  }
+}
+
+main();
+</script>
+</body>
+</html>
