@@ -16,8 +16,8 @@ const COINS = [
 ];
 
 const API = 'https://min-api.cryptocompare.com/data/v2/histoday';
-const BATCH_SIZE = 5;     // concurrent requests per batch
-const BATCH_DELAY = 1500; // ms between batches
+const BATCH_SIZE = 5;
+const BATCH_DELAY = 1500;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function sma(arr) { return arr.reduce((s, v) => s + v, 0) / arr.length; }
@@ -31,34 +31,54 @@ async function fetchDaily(fsym, tsym, limit = 55) {
   return json.Data.Data;
 }
 
-function computeTrend(bars) {
+// Returns bars with non-zero closes, or null
+function validBars(bars) {
   if (!bars || bars.length < 2) return null;
   const closes = bars.map(b => b.close);
-  // Filter out zero-price entries (unlisted coins)
   if (closes.every(c => c === 0)) return null;
+  return bars;
+}
+
+function computeTrend(bars) {
+  const valid = validBars(bars);
+  if (!valid) return null;
+  const closes = valid.map(b => b.close);
   const current = closes[closes.length - 1];
+  if (current === 0) return null;
   const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
   return current >= sma(prior);
 }
 
-async function processBatch(coins, tsym, label) {
+function getPrice(bars) {
+  const valid = validBars(bars);
+  if (!valid) return null;
+  const price = valid[valid.length - 1].close;
+  return price === 0 ? null : price;
+}
+
+async function fetchWithFallback(coin, primaryTsym, fallbackTsym) {
+  try {
+    const bars = await fetchDaily(coin, primaryTsym);
+    if (validBars(bars)) return bars;
+  } catch {}
+  // Fallback
+  try {
+    const bars = await fetchDaily(coin, fallbackTsym);
+    if (validBars(bars)) return bars;
+  } catch {}
+  return null;
+}
+
+async function processBatchWithFallback(coins, primaryTsym, fallbackTsym, label) {
   const results = {};
   for (let i = 0; i < coins.length; i += BATCH_SIZE) {
     const batch = coins.slice(i, i + BATCH_SIZE);
-    const promises = batch.map(async (coin) => {
-      try {
-        const bars = await fetchDaily(coin, tsym);
-        results[coin] = bars;
-      } catch (e) {
-        console.error(`  ERROR ${coin}/${tsym}: ${e.message}`);
-        results[coin] = null;
-      }
-    });
-    await Promise.all(promises);
+    await Promise.all(batch.map(async (coin) => {
+      results[coin] = await fetchWithFallback(coin, primaryTsym, fallbackTsym);
+    }));
 
     const done = Math.min(i + BATCH_SIZE, coins.length);
     process.stdout.write(`\r  ${label}: ${done}/${coins.length}`);
-
     if (i + BATCH_SIZE < coins.length) await sleep(BATCH_DELAY);
   }
   console.log();
@@ -66,27 +86,32 @@ async function processBatch(coins, tsym, label) {
 }
 
 async function main() {
-  // Filter out BTC from the altcoin list (BTC vs BTC makes no sense)
   const altcoins = COINS.filter(c => c !== 'BTC');
 
+  // Fetch BTC/USD first (needed for synthetic BTC ratios)
+  console.log('Fetching BTC/USD...');
+  let btcUsdBars = null;
+  try { btcUsdBars = await fetchDaily('BTC', 'USD'); } catch (e) {
+    try { btcUsdBars = await fetchDaily('BTC', 'USDT'); } catch {}
+  }
+
+  await sleep(BATCH_DELAY);
+
+  // Fetch altcoin/USD data (fallback to USDT)
   console.log(`Fetching USD data for ${altcoins.length} coins...`);
-  const usdData = await processBatch(altcoins, 'USD', 'USD pairs');
+  const usdData = await processBatchWithFallback(altcoins, 'USD', 'USDT', 'USD pairs');
 
   await sleep(2000);
 
+  // Fetch altcoin/BTC data (fallback: compute synthetic from USD prices)
   console.log(`Fetching BTC data for ${altcoins.length} coins...`);
-  const btcData = await processBatch(altcoins, 'BTC', 'BTC pairs');
-
-  // Also fetch BTC/USD for BTC's own row
-  console.log('Fetching BTC/USD...');
-  let btcBars = null;
-  try { btcBars = await fetchDaily('BTC', 'USD'); } catch (e) { console.error(`  ERROR BTC/USD: ${e.message}`); }
+  const btcData = await processBatchWithFallback(altcoins, 'BTC', 'BTC', 'BTC pairs');
 
   const results = [];
 
-  // BTC row (only USD trend, no BTC trend for BTC itself)
-  if (btcBars) {
-    const closes = btcBars.map(b => b.close);
+  // BTC row
+  if (btcUsdBars && validBars(btcUsdBars)) {
+    const closes = btcUsdBars.map(b => b.close);
     const current = closes[closes.length - 1];
     const prior = closes.length > 50 ? closes.slice(-51, -1) : closes.slice(0, -1);
     results.push({
@@ -95,7 +120,7 @@ async function main() {
       usdTrend: current >= sma(prior),
       btcTrend: null,
     });
-    console.log(`  BTC: $${current.toFixed(2)} | USD: ${current >= sma(prior) ? 'GREEN' : 'RED'} | BTC: N/A`);
+    console.log(`  BTC: $${current.toFixed(2)} | USD: ${current >= sma(prior) ? 'GREEN' : 'RED'}`);
   }
 
   // Altcoin rows
@@ -103,14 +128,30 @@ async function main() {
     const usd = usdData[coin];
     const btc = btcData[coin];
 
-    let price = null;
+    const price = getPrice(usd);
     const usdTrend = computeTrend(usd);
-    const btcTrend = computeTrend(btc);
+    let btcTrend = computeTrend(btc);
 
-    if (usd && usd.length >= 1) {
-      const closes = usd.map(b => b.close);
-      price = closes[closes.length - 1];
-      if (price === 0) price = null;
+    // If no direct BTC pair, compute synthetic BTC ratio from USD prices
+    if (btcTrend === null && validBars(usd) && validBars(btcUsdBars)) {
+      const coinCloses = usd.map(b => b.close);
+      const btcCloses = btcUsdBars.map(b => b.close);
+      const minLen = Math.min(coinCloses.length, btcCloses.length);
+      if (minLen >= 2) {
+        const ratios = [];
+        for (let j = 0; j < minLen; j++) {
+          const ci = coinCloses.length - minLen + j;
+          const bi = btcCloses.length - minLen + j;
+          if (btcCloses[bi] > 0 && coinCloses[ci] > 0) {
+            ratios.push(coinCloses[ci] / btcCloses[bi]);
+          }
+        }
+        if (ratios.length >= 2) {
+          const current = ratios[ratios.length - 1];
+          const prior = ratios.length > 50 ? ratios.slice(-51, -1) : ratios.slice(0, -1);
+          btcTrend = current >= sma(prior);
+        }
+      }
     }
 
     // Skip coins with no data at all
