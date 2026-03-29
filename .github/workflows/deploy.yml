@@ -2,6 +2,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_run:
+    workflows: ["Update Crypto Data"]
+    types: [completed]
 permissions:
   contents: read
   pages: write
