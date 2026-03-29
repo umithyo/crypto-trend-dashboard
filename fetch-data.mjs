@@ -126,10 +126,35 @@ async function main() {
     console.log(`\r[${i + 1}/${altcoins.length}] ${coin}: ${price !== null ? '$' + price.toFixed(4) : 'N/A'} | USD: ${fmt(usdTrend)} | BTC: ${fmt(btcTrend)}`);
   }
 
+  // Fetch market cap ranks from CoinGecko (free, one call, up to 250 coins)
+  console.log('\nFetching market cap ranks from CoinGecko...');
+  const rankMap = {};
+  try {
+    // Fetch top 250 coins by market cap
+    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1';
+    const r = await fetch(url);
+    if (r.ok) {
+      const list = await r.json();
+      for (const c of list) {
+        rankMap[c.symbol.toUpperCase()] = c.market_cap_rank;
+      }
+      console.log(`  Got ranks for ${Object.keys(rankMap).length} coins`);
+    } else {
+      console.warn(`  CoinGecko returned ${r.status}, skipping ranks`);
+    }
+  } catch (e) {
+    console.warn(`  Failed to fetch ranks: ${e.message}`);
+  }
+
+  // Attach rank to results
+  for (const coin of results) {
+    coin.rank = rankMap[coin.symbol] || null;
+  }
+
   const output = { updated: new Date().toISOString(), coins: results };
   const { writeFileSync } = await import('fs');
   writeFileSync('data.json', JSON.stringify(output, null, 2));
-  console.log(`\nDone. Wrote data.json with ${results.length} coins.`);
+  console.log(`Done. Wrote data.json with ${results.length} coins.`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

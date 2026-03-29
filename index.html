@@ -8,24 +8,30 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
   h1 { text-align: center; margin-bottom: 8px; font-size: 1.6rem; }
-  .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 24px; }
-  table { width: 100%; max-width: 750px; margin: 0 auto; border-collapse: collapse; }
-  th, td { border: 1px solid #30363d; padding: 14px 18px; text-align: center; }
-  th { background: #161b22; font-weight: 600; font-size: 0.9rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; }
+  .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 16px; }
+  .filters { max-width: 850px; margin: 0 auto 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .filters button { background: #21262d; color: #8b949e; border: 1px solid #30363d; border-radius: 6px; padding: 6px 14px; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; }
+  .filters button:hover { border-color: #58a6ff; color: #e6edf3; }
+  .filters button.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+  table { width: 100%; max-width: 850px; margin: 0 auto; border-collapse: collapse; }
+  th, td { border: 1px solid #30363d; padding: 12px 14px; text-align: center; }
+  th { background: #161b22; font-weight: 600; font-size: 0.8rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; user-select: none; white-space: nowrap; }
   th:hover { color: #e6edf3; }
-  th .arrow { font-size: 0.7rem; margin-left: 4px; opacity: 0.4; }
+  th .arrow { font-size: 0.65rem; margin-left: 3px; opacity: 0.4; }
   th.active .arrow { opacity: 1; color: #58a6ff; }
-  td { font-size: 1rem; }
+  td { font-size: 0.95rem; }
   tr:hover td { background: #161b22; }
-  td:first-child { font-weight: 700; text-align: left; }
-  td:nth-child(2) { font-family: 'SF Mono', 'Courier New', monospace; }
-  .dot { width: 28px; height: 28px; border-radius: 50%; display: inline-block; }
+  td.coin { font-weight: 700; text-align: left; }
+  td.price { font-family: 'SF Mono', 'Courier New', monospace; }
+  td.rank { color: #8b949e; font-size: 0.85rem; }
+  .dot { width: 26px; height: 26px; border-radius: 50%; display: inline-block; }
   .green { background: #2ea043; box-shadow: 0 0 8px rgba(46,160,67,0.4); }
   .red { background: #da3633; box-shadow: 0 0 8px rgba(218,54,51,0.4); }
   .gray { background: #30363d; }
   #status { text-align: center; padding: 40px; color: #8b949e; font-size: 0.95rem; }
-  .legend { max-width: 750px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
+  .legend { max-width: 850px; margin: 20px auto 0; color: #8b949e; font-size: 0.8rem; line-height: 1.6; }
   .error { color: #f85149; }
+  .count { text-align: center; color: #8b949e; font-size: 0.8rem; margin-bottom: 8px; max-width: 850px; margin-left: auto; margin-right: auto; }
 </style>
 </head>
 <body>
@@ -33,9 +39,20 @@
 <h1>Crypto Trend Dashboard</h1>
 <p class="subtitle">50-Day SMA Trend Signals</p>
 
+<div class="filters">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="usdGreen">USD Green</button>
+  <button data-filter="btcGreen">BTC Green</button>
+  <button data-filter="bothGreen">Both Green</button>
+  <button data-filter="allRed">All Red</button>
+</div>
+
+<div class="count" id="count"></div>
+
 <table>
   <thead>
     <tr>
+      <th data-col="rank"># <span class="arrow"></span></th>
       <th data-col="symbol">Coin <span class="arrow"></span></th>
       <th data-col="price">Price <span class="arrow"></span></th>
       <th data-col="usdTrend">Trend vs USD <span class="arrow"></span></th>
@@ -58,23 +75,19 @@
 
 <script>
 let coins = [];
+let activeFilter = 'all';
 
-// Load sort state from cookie
-function loadSort() {
-  const m = document.cookie.match(/sort=([^;]+)/);
-  if (m) {
-    const [col, dir] = m[1].split(':');
-    return { col, dir };
-  }
-  return { col: 'default', dir: 'desc' };
+function loadCookie(name, fallback) {
+  const m = document.cookie.match(new RegExp(`${name}=([^;]+)`));
+  return m ? m[1] : fallback;
 }
-function saveSort() {
-  document.cookie = `sort=${sortCol}:${sortDir};path=/;max-age=31536000`;
+function saveCookie(name, val) {
+  document.cookie = `${name}=${val};path=/;max-age=31536000`;
 }
 
-const saved = loadSort();
-let sortCol = saved.col;
-let sortDir = saved.dir;
+const savedSort = loadCookie('sort', 'default:desc').split(':');
+let sortCol = savedSort[0];
+let sortDir = savedSort[1] || 'desc';
 
 function formatPrice(p) {
   if (p >= 1) return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -87,7 +100,6 @@ function dot(val) {
   return `<span class="dot ${val ? 'green' : 'red'}"></span>`;
 }
 
-// Sort score: both green=2, one green=1, none=0
 function defaultScore(c) {
   return (c.usdTrend === true ? 1 : 0) + (c.btcTrend === true ? 1 : 0);
 }
@@ -95,11 +107,21 @@ function defaultScore(c) {
 function trendVal(v) {
   if (v === true) return 2;
   if (v === false) return 1;
-  return 0; // null
+  return 0;
+}
+
+function getFiltered() {
+  switch (activeFilter) {
+    case 'usdGreen': return coins.filter(c => c.usdTrend === true);
+    case 'btcGreen': return coins.filter(c => c.btcTrend === true);
+    case 'bothGreen': return coins.filter(c => c.usdTrend === true && c.btcTrend === true);
+    case 'allRed': return coins.filter(c => c.usdTrend === false && c.btcTrend === false);
+    default: return coins;
+  }
 }
 
 function getSorted() {
-  const arr = [...coins];
+  const arr = getFiltered();
   const dir = sortDir === 'asc' ? 1 : -1;
 
   if (sortCol === 'default' || sortCol === 'usdTrend' || sortCol === 'btcTrend') {
@@ -112,13 +134,14 @@ function getSorted() {
         const diff = defaultScore(a) - defaultScore(b);
         if (diff !== 0) return diff * dir;
       }
-      // Secondary: by symbol
-      return a.symbol.localeCompare(b.symbol);
+      return (a.rank || 999) - (b.rank || 999);
     });
   } else if (sortCol === 'symbol') {
     arr.sort((a, b) => a.symbol.localeCompare(b.symbol) * dir);
   } else if (sortCol === 'price') {
     arr.sort((a, b) => ((a.price || 0) - (b.price || 0)) * dir);
+  } else if (sortCol === 'rank') {
+    arr.sort((a, b) => ((a.rank || 999) - (b.rank || 999)) * dir);
   }
 
   return arr;
@@ -126,19 +149,23 @@ function getSorted() {
 
 function render() {
   const tbody = document.getElementById('tbody');
+  const sorted = getSorted();
   tbody.innerHTML = '';
-  for (const coin of getSorted()) {
+
+  for (const coin of sorted) {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>$${coin.symbol}</td>
-      <td>${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
+      <td class="rank">${coin.rank || '-'}</td>
+      <td class="coin">$${coin.symbol}</td>
+      <td class="price">${coin.price !== null ? formatPrice(coin.price) : '<span class="error">N/A</span>'}</td>
       <td>${dot(coin.usdTrend)}</td>
       <td>${dot(coin.btcTrend)}</td>
     `;
     tbody.appendChild(row);
   }
 
-  // Update header arrows
+  document.getElementById('count').textContent = `Showing ${sorted.length} of ${coins.length} coins`;
+
   document.querySelectorAll('th').forEach(th => {
     const col = th.dataset.col;
     const arrow = th.querySelector('.arrow');
@@ -150,6 +177,10 @@ function render() {
       arrow.textContent = '\u25BC';
     }
   });
+
+  document.querySelectorAll('.filters button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === activeFilter);
+  });
 }
 
 document.querySelectorAll('th').forEach(th => {
@@ -159,10 +190,17 @@ document.querySelectorAll('th').forEach(th => {
       sortDir = sortDir === 'desc' ? 'asc' : 'desc';
     } else {
       sortCol = col;
-      // Default direction: greens first for trends, high-to-low for price, A-Z for name
-      sortDir = col === 'symbol' ? 'asc' : 'desc';
+      sortDir = (col === 'symbol') ? 'asc' : (col === 'rank') ? 'asc' : 'desc';
     }
-    saveSort();
+    saveCookie('sort', `${sortCol}:${sortDir}`);
+    render();
+  });
+});
+
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeFilter = btn.dataset.filter;
+    saveCookie('filter', activeFilter);
     render();
   });
 });
@@ -175,9 +213,7 @@ async function main() {
     const data = await r.json();
     coins = data.coins;
 
-    // Default sort: greens first
-    sortCol = 'default';
-    sortDir = 'desc';
+    activeFilter = loadCookie('filter', 'all');
     render();
 
     const updated = new Date(data.updated);
