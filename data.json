@@ -1,35 +1,35 @@
 {
-  "updated": "2026-03-29T08:17:48.048Z",
+  "updated": "2026-03-29T08:25:07.286Z",
   "coins": [
     {
+      "symbol": "BTC",
+      "price": 66600.23,
+      "usdTrend": false,
+      "btcTrend": null
+    },
+    {
       "symbol": "ETH",
-      "price": 2002.59,
+      "price": 2002.27,
       "usdTrend": false,
       "btcTrend": true
     },
     {
       "symbol": "SOL",
-      "price": null,
-      "usdTrend": null,
+      "price": 82.37,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "BNB",
-      "price": 613.87,
-      "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "ADA",
-      "price": 0.2447,
-      "usdTrend": false,
-      "btcTrend": null
+      "price": null,
+      "usdTrend": null,
+      "btcTrend": true
     },
     {
       "symbol": "AVAX",
-      "price": 8.733,
+      "price": 8.737,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
       "symbol": "LINK",
@@ -39,51 +39,57 @@
     },
     {
       "symbol": "DOT",
+      "price": 1.27,
+      "usdTrend": false,
+      "btcTrend": false
+    },
+    {
+      "symbol": "LTC",
+      "price": 53.94,
+      "usdTrend": false,
+      "btcTrend": true
+    },
+    {
+      "symbol": "SUI",
       "price": null,
       "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "NEAR",
-      "price": 1.161,
+      "price": 1.162,
       "usdTrend": false,
       "btcTrend": true
     },
     {
-      "symbol": "ATOM",
-      "price": 1.656,
+      "symbol": "UNI",
+      "price": 3.388,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "AAVE",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "ARB",
-      "price": 0.08945,
+      "price": 0.08951,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
       "symbol": "OP",
-      "price": 0.1023,
+      "price": 0.1024,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "RENDER",
-      "price": 1.67,
-      "usdTrend": true,
-      "btcTrend": true
+      "btcTrend": false
     },
     {
       "symbol": "INJ",
       "price": null,
       "usdTrend": null,
       "btcTrend": false
+    },
+    {
+      "symbol": "MATIC",
+      "price": 0.1995,
+      "usdTrend": false,
+      "btcTrend": true
     },
     {
       "symbol": "SHIB",
@@ -93,32 +99,20 @@
     },
     {
       "symbol": "TON",
-      "price": 1.236,
-      "usdTrend": false,
+      "price": null,
+      "usdTrend": null,
       "btcTrend": false
     },
     {
-      "symbol": "BCH",
-      "price": null,
-      "usdTrend": null,
-      "btcTrend": true
-    },
-    {
       "symbol": "HBAR",
-      "price": 0.08918,
+      "price": 0.08915,
       "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "ICP",
-      "price": 2.223,
+      "price": 2.224,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "ETC",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
@@ -129,27 +123,45 @@
     },
     {
       "symbol": "ALGO",
-      "price": 0.0813,
+      "price": 0.08139,
       "usdTrend": false,
       "btcTrend": false
     },
     {
-      "symbol": "THETA",
-      "price": 0.1517,
+      "symbol": "SAND",
+      "price": 0.07346,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
+    },
+    {
+      "symbol": "MANA",
+      "price": null,
+      "usdTrend": null,
+      "btcTrend": false
+    },
+    {
+      "symbol": "THETA",
+      "price": null,
+      "usdTrend": null,
+      "btcTrend": false
     },
     {
       "symbol": "AXS",
-      "price": null,
-      "usdTrend": null,
+      "price": 1.138,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "EOS",
       "price": 0.07534,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
+    },
+    {
+      "symbol": "FLOW",
+      "price": 0.02956,
+      "usdTrend": false,
+      "btcTrend": false
     },
     {
       "symbol": "XTZ",
@@ -159,20 +171,14 @@
     },
     {
       "symbol": "CHZ",
-      "price": 0.04017,
+      "price": 0.04036,
       "usdTrend": true,
       "btcTrend": true
     },
     {
-      "symbol": "CRV",
-      "price": 0.2106,
-      "usdTrend": false,
-      "btcTrend": false
-    },
-    {
       "symbol": "GALA",
-      "price": null,
-      "usdTrend": null,
+      "price": 0.002823,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
@@ -182,218 +188,170 @@
       "btcTrend": true
     },
     {
+      "symbol": "RNDR",
+      "price": null,
+      "usdTrend": null,
+      "btcTrend": false
+    },
+    {
       "symbol": "SNX",
-      "price": 0.2763,
+      "price": 0.2762,
       "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "ENS",
-      "price": 5.608,
+      "price": 5.607,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
-      "symbol": "IMX",
+      "symbol": "COMP",
       "price": null,
       "usdTrend": null,
-      "btcTrend": false
+      "btcTrend": true
     },
     {
       "symbol": "GRT",
-      "price": 0.0236,
+      "price": 0.02361,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "STX",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
-      "symbol": "RPL",
-      "price": 1.584,
+      "symbol": "STX",
+      "price": 0.2186,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
       "symbol": "PENDLE",
-      "price": null,
-      "usdTrend": null,
+      "price": 1.136,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "WLD",
-      "price": 0.2737,
+      "price": 0.2744,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "TIA",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
-      "symbol": "SEI",
-      "price": 0.05359,
+      "symbol": "TIA",
+      "price": 0.2931,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "JUP",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "STRK",
-      "price": null,
-      "usdTrend": null,
-      "btcTrend": false
-    },
-    {
-      "symbol": "PYTH",
-      "price": 0.03727,
-      "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "WIF",
-      "price": 0.1741,
+      "price": 0.03418,
       "usdTrend": false,
       "btcTrend": false
     },
     {
-      "symbol": "ORDI",
-      "price": null,
-      "usdTrend": null,
+      "symbol": "FLOKI",
+      "price": 0.00002758,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "RUNE",
-      "price": 0.3978,
+      "price": 0.3987,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
       "symbol": "KAS",
-      "price": 0.03499,
+      "price": 0.03501,
       "usdTrend": true,
       "btcTrend": true
     },
     {
-      "symbol": "TAO",
-      "price": null,
-      "usdTrend": null,
+      "symbol": "ONDO",
+      "price": 0.2684,
+      "usdTrend": true,
       "btcTrend": true
     },
     {
       "symbol": "JTO",
       "price": 0.2887,
       "usdTrend": true,
-      "btcTrend": null
+      "btcTrend": true
     },
     {
-      "symbol": "AR",
-      "price": null,
-      "usdTrend": null,
+      "symbol": "BEAM",
+      "price": 0.001618,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "JASMY",
-      "price": 0.005349,
+      "price": 0.00534,
       "usdTrend": false,
-      "btcTrend": false
-    },
-    {
-      "symbol": "ROSE",
-      "price": null,
-      "usdTrend": null,
-      "btcTrend": false
-    },
-    {
-      "symbol": "ZIL",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "ENJ",
-      "price": 0.01992,
+      "price": 0.01994,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": true
     },
     {
-      "symbol": "BAT",
-      "price": 0.09316,
+      "symbol": "ONE",
+      "price": 0.00209,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "CELO",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "SKL",
       "price": 0.005891,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": false
     },
     {
       "symbol": "ANKR",
-      "price": null,
-      "usdTrend": null,
+      "price": 0.005278,
+      "usdTrend": true,
       "btcTrend": true
     },
     {
-      "symbol": "CKB",
-      "price": 0.001361,
-      "usdTrend": false,
+      "symbol": "LRC",
+      "price": null,
+      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "DASH",
-      "price": 31.82,
-      "usdTrend": false,
+      "price": null,
+      "usdTrend": null,
       "btcTrend": false
     },
     {
-      "symbol": "WAVES",
+      "symbol": "NEO",
       "price": null,
       "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "KAVA",
-      "price": 0.05343,
+      "price": 0.05349,
       "usdTrend": false,
-      "btcTrend": null
-    },
-    {
-      "symbol": "1INCH",
-      "price": null,
-      "usdTrend": null,
       "btcTrend": false
     },
     {
       "symbol": "SUSHI",
-      "price": 0.1889,
+      "price": 0.189,
       "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "YFI",
-      "price": 2406.13,
+      "price": 2403.97,
       "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "DYDX",
-      "price": 0.09215,
+      "price": 0.09212,
       "usdTrend": false,
       "btcTrend": true
     },
@@ -401,17 +359,17 @@
       "symbol": "CELR",
       "price": 0.00238,
       "usdTrend": false,
-      "btcTrend": null
+      "btcTrend": true
     },
     {
       "symbol": "AUDIO",
-      "price": null,
-      "usdTrend": null,
+      "price": 0.01721,
+      "usdTrend": false,
       "btcTrend": false
     },
     {
       "symbol": "RAY",
-      "price": 0.5686,
+      "price": 0.5679,
       "usdTrend": false,
       "btcTrend": false
     }
