@@ -1,4496 +1,4505 @@
 {
-  "updated": "2026-04-17T06:52:23.834Z",
+  "updated": "2026-04-18T06:39:19.573Z",
   "coins": [
     {
       "symbol": "BTC",
       "rank": 1,
-      "price": 74810.4664071805,
+      "price": 77175.0464487354,
       "usdTrend": true,
-      "usdGapPct": 7.12,
+      "usdGapPct": 10.2,
       "btcTrend": null,
       "btcGapPct": null
     },
     {
       "symbol": "ETH",
       "rank": 2,
-      "price": 2325.87590809166,
+      "price": 2409.45577458405,
       "usdTrend": true,
-      "usdGapPct": 10.03,
+      "usdGapPct": 13.57,
       "btcTrend": true,
-      "btcGapPct": 2.77
+      "btcGapPct": 3.11
     },
     {
       "symbol": "USDT",
       "rank": 3,
-      "price": 1.00005054774427,
+      "price": 1.00016786952122,
       "usdTrend": true,
-      "usdGapPct": 0.01,
+      "usdGapPct": 0.02,
       "btcTrend": false,
-      "btcGapPct": -6.77
+      "btcGapPct": -9.38
     },
     {
       "symbol": "XRP",
       "rank": 4,
-      "price": 1.42884662756928,
+      "price": 1.46732072118431,
       "usdTrend": true,
-      "usdGapPct": 3.53,
+      "usdGapPct": 6.2,
       "btcTrend": false,
-      "btcGapPct": -3.41
+      "btcGapPct": -3.69
     },
     {
       "symbol": "BNB",
       "rank": 5,
-      "price": 627.941261091047,
+      "price": 645.462479695461,
       "usdTrend": true,
-      "usdGapPct": 0.24,
+      "usdGapPct": 2.98,
       "btcTrend": false,
-      "btcGapPct": -6.49
+      "btcGapPct": -6.63
     },
     {
       "symbol": "USDC",
       "rank": 6,
-      "price": 0.999726511248469,
+      "price": 0.999717470644756,
       "usdTrend": false,
       "usdGapPct": -0.02,
       "btcTrend": false,
-      "btcGapPct": -6.8
+      "btcGapPct": -9.42
     },
     {
       "symbol": "SOL",
       "rank": 7,
-      "price": 87.7373725291101,
+      "price": 88.479708312378,
       "usdTrend": true,
-      "usdGapPct": 2.32,
+      "usdGapPct": 3.12,
       "btcTrend": false,
-      "btcGapPct": -4.51
+      "btcGapPct": -6.47
     },
     {
       "symbol": "TRX",
       "rank": 8,
-      "price": 0.32615029099361,
+      "price": 0.327286589898358,
       "usdTrend": true,
-      "usdGapPct": 6.98,
-      "btcTrend": false,
-      "btcGapPct": -0.22
-    },
-    {
-      "symbol": "WBT",
-      "rank": 9,
-      "price": 54.4652044831331,
-      "usdTrend": true,
-      "usdGapPct": 2.19,
-      "btcTrend": false,
-      "btcGapPct": -4.63
-    },
-    {
-      "symbol": "DOGE",
-      "rank": 10,
-      "price": 0.0970986331210794,
-      "usdTrend": true,
-      "usdGapPct": 3.92,
-      "btcTrend": false,
-      "btcGapPct": -3.04
-    },
-    {
-      "symbol": "HYPE",
-      "rank": 11,
-      "price": 43.7114949812315,
-      "usdTrend": true,
-      "usdGapPct": 17.99,
-      "btcTrend": true,
-      "btcGapPct": 10.3
-    },
-    {
-      "symbol": "ADA",
-      "rank": 12,
-      "price": 0.253076508461364,
-      "usdTrend": false,
-      "usdGapPct": -2.32,
-      "btcTrend": false,
-      "btcGapPct": -8.9
-    },
-    {
-      "symbol": "LEO",
-      "rank": 13,
-      "price": 9.86956432631255,
-      "usdTrend": true,
-      "usdGapPct": 4.08,
+      "usdGapPct": 7.05,
       "btcTrend": false,
       "btcGapPct": -2.95
     },
     {
+      "symbol": "DOGE",
+      "rank": 9,
+      "price": 0.0987421941932361,
+      "usdTrend": true,
+      "usdGapPct": 5.63,
+      "btcTrend": false,
+      "btcGapPct": -4.21
+    },
+    {
+      "symbol": "WBT",
+      "rank": 10,
+      "price": 56.0148704539898,
+      "usdTrend": true,
+      "usdGapPct": 4.88,
+      "btcTrend": false,
+      "btcGapPct": -4.87
+    },
+    {
+      "symbol": "HYPE",
+      "rank": 11,
+      "price": 44.8855109680194,
+      "usdTrend": true,
+      "usdGapPct": 20.09,
+      "btcTrend": true,
+      "btcGapPct": 9.13
+    },
+    {
+      "symbol": "ADA",
+      "rank": 12,
+      "price": 0.257894457939704,
+      "usdTrend": false,
+      "usdGapPct": -0.24,
+      "btcTrend": false,
+      "btcGapPct": -9.58
+    },
+    {
+      "symbol": "LEO",
+      "rank": 13,
+      "price": 10.0000910295971,
+      "usdTrend": true,
+      "usdGapPct": 5.2,
+      "btcTrend": false,
+      "btcGapPct": -4.66
+    },
+    {
       "symbol": "BCH",
       "rank": 14,
-      "price": 450.324593482765,
+      "price": 453.891210617277,
       "usdTrend": false,
-      "usdGapPct": -0.99,
+      "usdGapPct": -0.1,
       "btcTrend": false,
-      "btcGapPct": -7.71
+      "btcGapPct": -9.49
     },
     {
       "symbol": "USDS",
       "rank": 15,
-      "price": 0.994967373490077,
+      "price": 0.998653640049625,
       "usdTrend": false,
-      "usdGapPct": -0.48,
-      "btcTrend": false,
-      "btcGapPct": -7.23
-    },
-    {
-      "symbol": "LINK",
-      "rank": 16,
-      "price": 9.37000233277269,
-      "usdTrend": true,
-      "usdGapPct": 4.32,
-      "btcTrend": false,
-      "btcGapPct": -2.64
-    },
-    {
-      "symbol": "M",
-      "rank": 17,
-      "price": 3.83435973379072,
-      "usdTrend": true,
-      "usdGapPct": 87.37,
-      "btcTrend": true,
-      "btcGapPct": 75.25
-    },
-    {
-      "symbol": "XMR",
-      "rank": 18,
-      "price": 343.563595423217,
-      "usdTrend": true,
-      "usdGapPct": 0.37,
-      "btcTrend": false,
-      "btcGapPct": -6.36
-    },
-    {
-      "symbol": "USDE",
-      "rank": 19,
-      "price": 0.999630695056586,
-      "usdTrend": true,
-      "usdGapPct": 0.01,
-      "btcTrend": false,
-      "btcGapPct": -6.77
-    },
-    {
-      "symbol": "CC",
-      "rank": 20,
-      "price": 0.148574306228542,
-      "usdTrend": false,
-      "usdGapPct": -0.66,
-      "btcTrend": false,
-      "btcGapPct": -7.42
-    },
-    {
-      "symbol": "ZEC",
-      "rank": 21,
-      "price": 331.789609601591,
-      "usdTrend": true,
-      "usdGapPct": 30.81,
-      "btcTrend": true,
-      "btcGapPct": 22.59
-    },
-    {
-      "symbol": "XLM",
-      "rank": 22,
-      "price": 0.165326235146764,
-      "usdTrend": true,
-      "usdGapPct": 2.31,
-      "btcTrend": false,
-      "btcGapPct": -4.6
-    },
-    {
-      "symbol": "RAVE",
-      "rank": 23,
-      "price": 18.2492193731293,
-      "usdTrend": true,
-      "usdGapPct": 1105.11,
-      "btcTrend": true,
-      "btcGapPct": 1080.43
-    },
-    {
-      "symbol": "DAI",
-      "rank": 24,
-      "price": 0.999856264880677,
-      "usdTrend": true,
-      "usdGapPct": 0,
-      "btcTrend": false,
-      "btcGapPct": -6.77
-    },
-    {
-      "symbol": "LTC",
-      "rank": 25,
-      "price": 55.7067408316051,
-      "usdTrend": true,
-      "usdGapPct": 1.8,
-      "btcTrend": false,
-      "btcGapPct": -5.04
-    },
-    {
-      "symbol": "USD1",
-      "rank": 26,
-      "price": 0.999911663736539,
-      "usdTrend": true,
-      "usdGapPct": 0.04,
-      "btcTrend": false,
-      "btcGapPct": -6.74
-    },
-    {
-      "symbol": "PYUSD",
-      "rank": 27,
-      "price": 0.99869230721135,
-      "usdTrend": false,
-      "usdGapPct": -0.12,
-      "btcTrend": false,
-      "btcGapPct": -6.89
-    },
-    {
-      "symbol": "AVAX",
-      "rank": 28,
-      "price": 9.48636434615688,
-      "usdTrend": true,
-      "usdGapPct": 2.04,
-      "btcTrend": false,
-      "btcGapPct": -4.75
-    },
-    {
-      "symbol": "SUI",
-      "rank": 29,
-      "price": 0.980140129506607,
-      "usdTrend": true,
-      "usdGapPct": 5.19,
-      "btcTrend": false,
-      "btcGapPct": -1.78
-    },
-    {
-      "symbol": "HBAR",
-      "rank": 30,
-      "price": 0.0890776255501992,
-      "usdTrend": false,
-      "usdGapPct": -3.89,
-      "btcTrend": false,
-      "btcGapPct": -10.41
-    },
-    {
-      "symbol": "RAIN",
-      "rank": 31,
-      "price": 0.00764767604717891,
-      "usdTrend": false,
-      "usdGapPct": -9.77,
-      "btcTrend": false,
-      "btcGapPct": -15.9
-    },
-    {
-      "symbol": "SHIB",
-      "rank": 32,
-      "price": 0.0000061185590373584,
-      "usdTrend": true,
-      "usdGapPct": 4.73,
-      "btcTrend": false,
-      "btcGapPct": -2.3
-    },
-    {
-      "symbol": "TON",
-      "rank": 33,
-      "price": 1.4335945290721,
-      "usdTrend": true,
-      "usdGapPct": 10.71,
-      "btcTrend": true,
-      "btcGapPct": 3.33
-    },
-    {
-      "symbol": "CRO",
-      "rank": 34,
-      "price": 0.0705463669924566,
-      "usdTrend": false,
-      "usdGapPct": -4.02,
-      "btcTrend": false,
-      "btcGapPct": -10.51
-    },
-    {
-      "symbol": "WLFI",
-      "rank": 35,
-      "price": 0.0805093500700589,
-      "usdTrend": false,
-      "usdGapPct": -17.85,
-      "btcTrend": false,
-      "btcGapPct": -23.53
-    },
-    {
-      "symbol": "XAUT",
-      "rank": 36,
-      "price": 4770.1087819852,
-      "usdTrend": false,
-      "usdGapPct": -1.06,
-      "btcTrend": false,
-      "btcGapPct": -7.77
-    },
-    {
-      "symbol": "TAO",
-      "rank": 37,
-      "price": 245.937765768531,
-      "usdTrend": false,
-      "usdGapPct": -5.14,
-      "btcTrend": false,
-      "btcGapPct": -11.49
-    },
-    {
-      "symbol": "UNI",
-      "rank": 38,
-      "price": 3.34854671240457,
-      "usdTrend": false,
-      "usdGapPct": -6.17,
-      "btcTrend": false,
-      "btcGapPct": -12.53
-    },
-    {
-      "symbol": "PAXG",
-      "rank": 39,
-      "price": 4770.23504527849,
-      "usdTrend": false,
-      "usdGapPct": -1.51,
-      "btcTrend": false,
-      "btcGapPct": -8.19
-    },
-    {
-      "symbol": "MANTLE",
-      "rank": 40,
-      "price": 0.662035306458034,
-      "usdTrend": false,
-      "usdGapPct": -4.96,
-      "btcTrend": false,
-      "btcGapPct": -11.29
-    },
-    {
-      "symbol": "PI",
-      "rank": 41,
-      "price": 0.179791858774818,
-      "usdTrend": false,
-      "usdGapPct": -2.97,
-      "btcTrend": false,
-      "btcGapPct": -9.56
-    },
-    {
-      "symbol": "OKB",
-      "rank": 42,
-      "price": 85.849179174039,
-      "usdTrend": false,
-      "usdGapPct": -1.09,
-      "btcTrend": false,
-      "btcGapPct": -7.72
-    },
-    {
-      "symbol": "ASTER",
-      "rank": 43,
-      "price": 0.676270349735031,
-      "usdTrend": false,
-      "usdGapPct": -1.22,
-      "btcTrend": false,
-      "btcGapPct": -7.88
-    },
-    {
-      "symbol": "SKY",
-      "rank": 44,
-      "price": 0.0764592879091822,
-      "usdTrend": true,
-      "usdGapPct": 3.43,
-      "btcTrend": false,
-      "btcGapPct": -3.49
-    },
-    {
-      "symbol": "NEAR",
-      "rank": 45,
-      "price": 1.40940010962209,
-      "usdTrend": true,
-      "usdGapPct": 9.71,
-      "btcTrend": true,
-      "btcGapPct": 2.52
-    },
-    {
-      "symbol": "USDF",
-      "rank": 46,
-      "price": 0.998085412138448,
-      "usdTrend": true,
-      "usdGapPct": 0.03,
-      "btcTrend": false,
-      "btcGapPct": -6.75
-    },
-    {
-      "symbol": "AAVE",
-      "rank": 47,
-      "price": 112.528343992433,
-      "usdTrend": true,
-      "usdGapPct": 6.26,
-      "btcTrend": false,
-      "btcGapPct": -0.88
-    },
-    {
-      "symbol": "PEPE",
-      "rank": 48,
-      "price": 0.00000385284933510669,
-      "usdTrend": true,
-      "usdGapPct": 10.74,
-      "btcTrend": true,
-      "btcGapPct": 3.36
-    },
-    {
-      "symbol": "RLUSD",
-      "rank": 49,
-      "price": 0.999864444239538,
-      "usdTrend": false,
-      "usdGapPct": -0.04,
-      "btcTrend": false,
-      "btcGapPct": -6.81
-    },
-    {
-      "symbol": "ICP",
-      "rank": 50,
-      "price": 2.5700249726224,
-      "usdTrend": true,
-      "usdGapPct": 4.98,
-      "btcTrend": false,
-      "btcGapPct": -1.99
-    },
-    {
-      "symbol": "USDY",
-      "rank": 51,
-      "price": 1.13597544187915,
-      "usdTrend": true,
-      "usdGapPct": 0.93,
-      "btcTrend": false,
-      "btcGapPct": -5.9
-    },
-    {
-      "symbol": "ETC",
-      "rank": 52,
-      "price": 8.58921719867665,
-      "usdTrend": true,
-      "usdGapPct": 2.06,
-      "btcTrend": false,
-      "btcGapPct": -4.8
-    },
-    {
-      "symbol": "BGB",
-      "rank": 53,
-      "price": 1.89387252038449,
-      "usdTrend": false,
-      "usdGapPct": -7.4,
-      "btcTrend": false,
-      "btcGapPct": -13.68
-    },
-    {
-      "symbol": "ONDO",
-      "rank": 54,
-      "price": 0.262831441647101,
-      "usdTrend": true,
-      "usdGapPct": 1.04,
-      "btcTrend": false,
-      "btcGapPct": -5.77
-    },
-    {
-      "symbol": "RYO",
-      "rank": 55,
-      "price": 4.20286166729463,
-      "usdTrend": false,
-      "usdGapPct": -4.29,
-      "btcTrend": false,
-      "btcGapPct": -10.74
-    },
-    {
-      "symbol": "HTX",
-      "rank": 56,
-      "price": 0.00000177931691479548,
-      "usdTrend": true,
-      "usdGapPct": 6.02,
-      "btcTrend": false,
-      "btcGapPct": -1.1
-    },
-    {
-      "symbol": "KCS",
-      "rank": 57,
-      "price": 8.58425278801098,
-      "usdTrend": true,
-      "usdGapPct": 5.4,
-      "btcTrend": false,
-      "btcGapPct": -1.66
-    },
-    {
-      "symbol": "USDD",
-      "rank": 58,
-      "price": 1.00004641959271,
-      "usdTrend": true,
-      "usdGapPct": 0.06,
-      "btcTrend": false,
-      "btcGapPct": -6.72
-    },
-    {
-      "symbol": "QNT",
-      "rank": 59,
-      "price": 75.4552908831956,
-      "usdTrend": true,
-      "usdGapPct": 7.19,
-      "btcTrend": true,
-      "btcGapPct": 0.04
-    },
-    {
-      "symbol": "WLD",
-      "rank": 60,
-      "price": 0.31613210756847,
-      "usdTrend": false,
-      "usdGapPct": -3.24,
-      "btcTrend": false,
-      "btcGapPct": -9.74
-    },
-    {
-      "symbol": "ALGO",
-      "rank": 61,
-      "price": 0.114118198260487,
-      "usdTrend": true,
-      "usdGapPct": 19.58,
-      "btcTrend": true,
-      "btcGapPct": 11.7
-    },
-    {
-      "symbol": "DEXE",
-      "rank": 62,
-      "price": 11.6144226164597,
-      "usdTrend": true,
-      "usdGapPct": 77.65,
-      "btcTrend": true,
-      "btcGapPct": 66.44
-    },
-    {
-      "symbol": "U",
-      "rank": 63,
-      "price": 0.999861574584563,
-      "usdTrend": false,
-      "usdGapPct": -0.01,
-      "btcTrend": false,
-      "btcGapPct": -6.78
-    },
-    {
-      "symbol": "ENA",
-      "rank": 64,
-      "price": 0.109508307236474,
-      "usdTrend": true,
-      "usdGapPct": 10.38,
-      "btcTrend": true,
-      "btcGapPct": 3.06
-    },
-    {
-      "symbol": "KAS",
-      "rank": 65,
-      "price": 0.0341132608702173,
-      "usdTrend": true,
-      "usdGapPct": 4.58,
-      "btcTrend": false,
-      "btcGapPct": -2.43
-    },
-    {
-      "symbol": "DOT",
-      "rank": 66,
-      "price": 1.3076934627024,
-      "usdTrend": false,
-      "usdGapPct": -6.41,
-      "btcTrend": false,
-      "btcGapPct": -12.77
-    },
-    {
-      "symbol": "ATOM",
-      "rank": 67,
-      "price": 1.79337228527977,
-      "usdTrend": true,
-      "usdGapPct": 0.45,
-      "btcTrend": false,
-      "btcGapPct": -6.29
-    },
-    {
-      "symbol": "POL",
-      "rank": 68,
-      "price": 0.0885801470882779,
-      "usdTrend": false,
-      "usdGapPct": -6.64,
-      "btcTrend": false,
-      "btcGapPct": -13.03
-    },
-    {
-      "symbol": "USDTB",
-      "rank": 69,
-      "price": 0.999853824473042,
-      "usdTrend": true,
-      "usdGapPct": 0,
-      "btcTrend": false,
-      "btcGapPct": -6.78
-    },
-    {
-      "symbol": "RENDER",
-      "rank": 70,
-      "price": 1.84551962137825,
-      "usdTrend": true,
-      "usdGapPct": 8.38,
-      "btcTrend": true,
-      "btcGapPct": 1.3
-    },
-    {
-      "symbol": "GT",
-      "rank": 71,
-      "price": 7.22407820411809,
-      "usdTrend": true,
-      "usdGapPct": 5.91,
-      "btcTrend": false,
-      "btcGapPct": -1.21
-    },
-    {
-      "symbol": "ARB",
-      "rank": 72,
-      "price": 0.131565432509314,
-      "usdTrend": true,
-      "usdGapPct": 30.5,
-      "btcTrend": true,
-      "btcGapPct": 21.96
-    },
-    {
-      "symbol": "APT",
-      "rank": 73,
-      "price": 0.976288753523045,
-      "usdTrend": true,
-      "usdGapPct": 4.38,
-      "btcTrend": false,
-      "btcGapPct": -2.67
-    },
-    {
-      "symbol": "FIL",
-      "rank": 74,
-      "price": 0.977387175172819,
-      "usdTrend": true,
-      "usdGapPct": 7.76,
-      "btcTrend": true,
-      "btcGapPct": 0.53
-    },
-    {
-      "symbol": "MORPHO",
-      "rank": 75,
-      "price": 1.80359805874275,
-      "usdTrend": true,
-      "usdGapPct": 3.45,
-      "btcTrend": false,
-      "btcGapPct": -3.42
-    },
-    {
-      "symbol": "ZRO",
-      "rank": 76,
-      "price": 1.9400476480367,
-      "usdTrend": false,
-      "usdGapPct": -1.72,
-      "btcTrend": false,
-      "btcGapPct": -8.25
-    },
-    {
-      "symbol": "TRUMP",
-      "rank": 77,
-      "price": 3.00390835386285,
-      "usdTrend": false,
-      "usdGapPct": -4.92,
-      "btcTrend": false,
-      "btcGapPct": -11.3
-    },
-    {
-      "symbol": "FLR",
-      "rank": 78,
-      "price": 0.0080992996294693,
-      "usdTrend": false,
-      "usdGapPct": -2.91,
+      "usdGapPct": -0.1,
       "btcTrend": false,
       "btcGapPct": -9.5
     },
     {
-      "symbol": "XDC",
-      "rank": 79,
-      "price": 0.0317255434307939,
-      "usdTrend": false,
-      "usdGapPct": -0.44,
-      "btcTrend": false,
-      "btcGapPct": -7.17
-    },
-    {
-      "symbol": "VET",
-      "rank": 80,
-      "price": 0.00724473419227209,
+      "symbol": "M",
+      "rank": 16,
+      "price": 4.62759048743226,
       "usdTrend": true,
-      "usdGapPct": 1.87,
-      "btcTrend": false,
-      "btcGapPct": -4.98
-    },
-    {
-      "symbol": "BDX",
-      "rank": 81,
-      "price": 0.0800872727956546,
-      "usdTrend": false,
-      "usdGapPct": -0.5,
-      "btcTrend": false,
-      "btcGapPct": -7.24
-    },
-    {
-      "symbol": "FET",
-      "rank": 82,
-      "price": 0.230037553230155,
-      "usdTrend": true,
-      "usdGapPct": 11.31,
+      "usdGapPct": 120.93,
       "btcTrend": true,
-      "btcGapPct": 4.01
+      "btcGapPct": 101.09
     },
     {
-      "symbol": "NIGHT",
-      "rank": 83,
-      "price": 0.0369378081999639,
-      "usdTrend": false,
-      "usdGapPct": -23.22,
-      "btcTrend": false,
-      "btcGapPct": -28.59
-    },
-    {
-      "symbol": "PUMP",
-      "rank": 84,
-      "price": 0.00195421754625104,
+      "symbol": "LINK",
+      "rank": 17,
+      "price": 9.6071650926674,
       "usdTrend": true,
-      "usdGapPct": 5.08,
+      "usdGapPct": 6.84,
       "btcTrend": false,
-      "btcGapPct": -1.9
+      "btcGapPct": -3.08
     },
     {
-      "symbol": "JUP",
-      "rank": 85,
-      "price": 0.181440893288964,
+      "symbol": "RAVE",
+      "rank": 18,
+      "price": 26.8219443265873,
       "usdTrend": true,
-      "usdGapPct": 11.5,
+      "usdGapPct": 1276.03,
       "btcTrend": true,
-      "btcGapPct": 4.06
+      "btcGapPct": 1221.87
     },
     {
-      "symbol": "JST",
-      "rank": 86,
-      "price": 0.0659100618925083,
+      "symbol": "XMR",
+      "rank": 19,
+      "price": 346.146288857179,
       "usdTrend": true,
-      "usdGapPct": 12.49,
-      "btcTrend": true,
-      "btcGapPct": 5.09
-    },
-    {
-      "symbol": "USD0",
-      "rank": 87,
-      "price": 0.998221993007072,
-      "usdTrend": false,
-      "usdGapPct": -0.03,
-      "btcTrend": false,
-      "btcGapPct": -6.81
-    },
-    {
-      "symbol": "PENGU",
-      "rank": 88,
-      "price": 0.00754793748872073,
-      "usdTrend": true,
-      "usdGapPct": 9.67,
-      "btcTrend": true,
-      "btcGapPct": 2.4
-    },
-    {
-      "symbol": "BONK",
-      "rank": 89,
-      "price": 0.0000063127249059265,
-      "usdTrend": true,
-      "usdGapPct": 6.18,
-      "btcTrend": false,
-      "btcGapPct": -0.91
-    },
-    {
-      "symbol": "CAKE",
-      "rank": 90,
-      "price": 1.60092440195977,
-      "usdTrend": true,
-      "usdGapPct": 13.24,
-      "btcTrend": true,
-      "btcGapPct": 5.76
-    },
-    {
-      "symbol": "NEXO",
-      "rank": 91,
-      "price": 0.910976098810542,
-      "usdTrend": true,
-      "usdGapPct": 3.03,
-      "btcTrend": false,
-      "btcGapPct": -3.89
-    },
-    {
-      "symbol": "TUSD",
-      "rank": 92,
-      "price": 0.999230382530073,
-      "usdTrend": true,
-      "usdGapPct": 0,
-      "btcTrend": false,
-      "btcGapPct": -6.78
-    },
-    {
-      "symbol": "VIRTUAL",
-      "rank": 93,
-      "price": 0.717193063523857,
-      "usdTrend": true,
-      "usdGapPct": 4.04,
-      "btcTrend": false,
-      "btcGapPct": -2.88
-    },
-    {
-      "symbol": "DASH",
-      "rank": 94,
-      "price": 36.6050027412333,
-      "usdTrend": true,
-      "usdGapPct": 8.17,
-      "btcTrend": true,
-      "btcGapPct": 1.09
-    },
-    {
-      "symbol": "EDGE",
-      "rank": 95,
-      "price": 1.24389507053235,
-      "usdTrend": true,
-      "usdGapPct": 444.92,
-      "btcTrend": true,
-      "btcGapPct": 421.82
-    },
-    {
-      "symbol": "STX",
-      "rank": 96,
-      "price": 0.238191349990172,
-      "usdTrend": false,
-      "usdGapPct": -0.72,
-      "btcTrend": false,
-      "btcGapPct": -7.42
-    },
-    {
-      "symbol": "EURC",
-      "rank": 97,
-      "price": 1.17746838991118,
-      "usdTrend": true,
-      "usdGapPct": 1.5,
-      "btcTrend": false,
-      "btcGapPct": -5.37
-    },
-    {
-      "symbol": "CHZ",
-      "rank": 98,
-      "price": 0.0402431001711539,
-      "usdTrend": true,
-      "usdGapPct": 7.12,
-      "btcTrend": false,
-      "btcGapPct": -0.06
-    },
-    {
-      "symbol": "FDUSD",
-      "rank": 99,
-      "price": 0.999298399663678,
-      "usdTrend": false,
-      "usdGapPct": -0.03,
-      "btcTrend": false,
-      "btcGapPct": -6.8
-    },
-    {
-      "symbol": "VVV",
-      "rank": 100,
-      "price": 8.83501634290588,
-      "usdTrend": true,
-      "usdGapPct": 36.26,
-      "btcTrend": true,
-      "btcGapPct": 27.45
-    },
-    {
-      "symbol": "XTZ",
-      "rank": 101,
-      "price": 0.369625804977081,
-      "usdTrend": true,
-      "usdGapPct": 0.32,
-      "btcTrend": false,
-      "btcGapPct": -6.43
-    },
-    {
-      "symbol": "SEI",
-      "rank": 102,
-      "price": 0.0572935055270312,
-      "usdTrend": false,
-      "usdGapPct": -5.68,
-      "btcTrend": false,
-      "btcGapPct": -12.04
-    },
-    {
-      "symbol": "MON",
-      "rank": 103,
-      "price": 0.0332984458281213,
-      "usdTrend": true,
-      "usdGapPct": 33.08,
-      "btcTrend": true,
-      "btcGapPct": 24.61
-    },
-    {
-      "symbol": "ETHFI",
-      "rank": 104,
-      "price": 0.475571110207013,
-      "usdTrend": false,
-      "usdGapPct": -5.31,
-      "btcTrend": false,
-      "btcGapPct": -11.7
-    },
-    {
-      "symbol": "币安人生",
-      "rank": 105,
-      "price": 0.350757582916875,
-      "usdTrend": true,
-      "usdGapPct": 319.01,
-      "btcTrend": true,
-      "btcGapPct": 298.04
-    },
-    {
-      "symbol": "DCR",
-      "rank": 106,
-      "price": 19.9692816605805,
-      "usdTrend": false,
-      "usdGapPct": -18.4,
-      "btcTrend": false,
-      "btcGapPct": -23.98
-    },
-    {
-      "symbol": "SUN",
-      "rank": 107,
-      "price": 0.0184785895239397,
-      "usdTrend": true,
-      "usdGapPct": 8.26,
-      "btcTrend": true,
-      "btcGapPct": 1
-    },
-    {
-      "symbol": "AERO",
-      "rank": 108,
-      "price": 0.413129000545129,
-      "usdTrend": true,
-      "usdGapPct": 22.01,
-      "btcTrend": true,
-      "btcGapPct": 13.94
-    },
-    {
-      "symbol": "CRV",
-      "rank": 109,
-      "price": 0.229038525326938,
-      "usdTrend": false,
-      "usdGapPct": -0.07,
-      "btcTrend": false,
-      "btcGapPct": -6.8
-    },
-    {
-      "symbol": "NFT",
-      "rank": 110,
-      "price": 3.3348136474096e-7,
-      "usdTrend": true,
-      "usdGapPct": 0.51,
-      "btcTrend": false,
-      "btcGapPct": -6.29
-    },
-    {
-      "symbol": "LDO",
-      "rank": 111,
-      "price": 0.420709788061174,
-      "usdTrend": true,
-      "usdGapPct": 34.78,
-      "btcTrend": true,
-      "btcGapPct": 25.88
-    },
-    {
-      "symbol": "XPL",
-      "rank": 112,
-      "price": 0.134734867839029,
-      "usdTrend": true,
-      "usdGapPct": 24.3,
-      "btcTrend": true,
-      "btcGapPct": 16.32
-    },
-    {
-      "symbol": "IMX",
-      "rank": 113,
-      "price": 0.165548586908855,
-      "usdTrend": true,
-      "usdGapPct": 7.61,
-      "btcTrend": true,
-      "btcGapPct": 0.42
-    },
-    {
-      "symbol": "SPX",
-      "rank": 114,
-      "price": 0.344543043377834,
-      "usdTrend": true,
-      "usdGapPct": 13.03,
-      "btcTrend": true,
-      "btcGapPct": 5.6
-    },
-    {
-      "symbol": "BTT",
-      "rank": 115,
-      "price": 3.26433619130269e-7,
-      "usdTrend": false,
-      "usdGapPct": -0.65,
-      "btcTrend": false,
-      "btcGapPct": -7.35
-    },
-    {
-      "symbol": "BSV",
-      "rank": 116,
-      "price": 16.1388822420256,
-      "usdTrend": true,
-      "usdGapPct": 7.85,
-      "btcTrend": true,
-      "btcGapPct": 0.66
-    },
-    {
-      "symbol": "TIA",
-      "rank": 117,
-      "price": 0.394148074915601,
-      "usdTrend": true,
-      "usdGapPct": 22.45,
-      "btcTrend": true,
-      "btcGapPct": 14.34
-    },
-    {
-      "symbol": "GNO",
-      "rank": 118,
-      "price": 119.883433859805,
-      "usdTrend": false,
-      "usdGapPct": -4.69,
-      "btcTrend": false,
-      "btcGapPct": -11.1
-    },
-    {
-      "symbol": "CFX",
-      "rank": 119,
-      "price": 0.0653617532115401,
-      "usdTrend": true,
-      "usdGapPct": 19.57,
-      "btcTrend": true,
-      "btcGapPct": 11.68
-    },
-    {
-      "symbol": "KAIA",
-      "rank": 120,
-      "price": 0.0476674630989682,
-      "usdTrend": false,
-      "usdGapPct": -6.07,
-      "btcTrend": false,
-      "btcGapPct": -12.43
-    },
-    {
-      "symbol": "COCO",
-      "rank": 121,
-      "price": 0.302193825562122,
-      "usdTrend": true,
-      "usdGapPct": 43.95,
-      "btcTrend": true,
-      "btcGapPct": 34.76
-    },
-    {
-      "symbol": "FLOKI",
-      "rank": 122,
-      "price": 0.0000312119495812746,
-      "usdTrend": true,
-      "usdGapPct": 8.72,
-      "btcTrend": true,
-      "btcGapPct": 1.48
-    },
-    {
-      "symbol": "NEO",
-      "rank": 123,
-      "price": 2.94840158711926,
-      "usdTrend": true,
-      "usdGapPct": 9.13,
-      "btcTrend": true,
-      "btcGapPct": 1.84
-    },
-    {
-      "symbol": "KAG",
-      "rank": 124,
-      "price": 78.8391036880731,
-      "usdTrend": true,
-      "usdGapPct": 2.48,
-      "btcTrend": false,
-      "btcGapPct": -4.48
-    },
-    {
-      "symbol": "H",
-      "rank": 125,
-      "price": 0.120100772726597,
-      "usdTrend": true,
-      "usdGapPct": 12.13,
-      "btcTrend": true,
-      "btcGapPct": 4.6
-    },
-    {
-      "symbol": "SYRUP",
-      "rank": 126,
-      "price": 0.240805519639024,
-      "usdTrend": true,
-      "usdGapPct": 4.71,
-      "btcTrend": false,
-      "btcGapPct": -2.22
-    },
-    {
-      "symbol": "FRAXLEGACY",
-      "rank": 127,
-      "price": 0.99369455314356,
-      "usdTrend": true,
-      "usdGapPct": 0.14,
-      "btcTrend": false,
-      "btcGapPct": -6.64
-    },
-    {
-      "symbol": "GRT",
-      "rank": 128,
-      "price": 0.0253647341806546,
-      "usdTrend": true,
-      "usdGapPct": 0.68,
-      "btcTrend": false,
-      "btcGapPct": -6.08
-    },
-    {
-      "symbol": "JASMY",
-      "rank": 129,
-      "price": 0.00555269026452001,
-      "usdTrend": true,
-      "usdGapPct": 0.6,
-      "btcTrend": false,
-      "btcGapPct": -6.17
-    },
-    {
-      "symbol": "ZBCN",
-      "rank": 130,
-      "price": 0.00278374784384488,
-      "usdTrend": true,
-      "usdGapPct": 20.51,
-      "btcTrend": true,
-      "btcGapPct": 12.5
-    },
-    {
-      "symbol": "INJ",
-      "rank": 131,
-      "price": 3.38510001977664,
-      "usdTrend": true,
-      "usdGapPct": 12.89,
-      "btcTrend": true,
-      "btcGapPct": 5.36
-    },
-    {
-      "symbol": "PYTH",
-      "rank": 132,
-      "price": 0.0471111647264977,
-      "usdTrend": true,
-      "usdGapPct": 5.71,
-      "btcTrend": false,
-      "btcGapPct": -1.33
-    },
-    {
-      "symbol": "OP",
-      "rank": 133,
-      "price": 0.129327842818003,
-      "usdTrend": true,
-      "usdGapPct": 10.21,
-      "btcTrend": true,
-      "btcGapPct": 2.87
-    },
-    {
-      "symbol": "MIOTA",
-      "rank": 134,
-      "price": 0.0580813735571495,
-      "usdTrend": false,
-      "usdGapPct": -4.83,
-      "btcTrend": false,
-      "btcGapPct": -11.3
-    },
-    {
-      "symbol": "ZGC",
-      "rank": 135,
-      "price": 0.0824615034889484,
-      "usdTrend": false,
-      "usdGapPct": -67.2,
-      "btcTrend": false,
-      "btcGapPct": -69.21
-    },
-    {
-      "symbol": "SAND",
-      "rank": 136,
-      "price": 0.0818069870203073,
-      "usdTrend": true,
-      "usdGapPct": 2.16,
-      "btcTrend": false,
-      "btcGapPct": -4.68
-    },
-    {
-      "symbol": "LUNC",
-      "rank": 137,
-      "price": 0.000046486468459156,
-      "usdTrend": true,
-      "usdGapPct": 16.14,
-      "btcTrend": true,
-      "btcGapPct": 8.37
-    },
-    {
-      "symbol": "ENS",
-      "rank": 138,
-      "price": 6.09878038082399,
-      "usdTrend": true,
-      "usdGapPct": 2.85,
-      "btcTrend": false,
-      "btcGapPct": -4.04
-    },
-    {
-      "symbol": "2Z",
-      "rank": 139,
-      "price": 0.0940373307436231,
-      "usdTrend": true,
-      "usdGapPct": 20.68,
-      "btcTrend": true,
-      "btcGapPct": 12.67
-    },
-    {
-      "symbol": "LIT",
-      "rank": 140,
-      "price": 1.01566796328263,
-      "usdTrend": false,
-      "usdGapPct": -6.5,
-      "btcTrend": false,
-      "btcGapPct": -12.76
-    },
-    {
-      "symbol": "COMP",
-      "rank": 141,
-      "price": 24.3636182246481,
-      "usdTrend": true,
-      "usdGapPct": 31.54,
-      "btcTrend": true,
-      "btcGapPct": 22.89
-    },
-    {
-      "symbol": "FARTCOIN",
-      "rank": 142,
-      "price": 0.217804866014407,
-      "usdTrend": true,
-      "usdGapPct": 23.86,
-      "btcTrend": true,
-      "btcGapPct": 15.8
-    },
-    {
-      "symbol": "TEL",
-      "rank": 143,
-      "price": 0.00222737471995565,
-      "usdTrend": false,
-      "usdGapPct": -6.03,
-      "btcTrend": false,
-      "btcGapPct": -12.37
-    },
-    {
-      "symbol": "WIF",
-      "rank": 144,
-      "price": 0.212422494597684,
-      "usdTrend": true,
-      "usdGapPct": 14.1,
-      "btcTrend": true,
-      "btcGapPct": 6.47
-    },
-    {
-      "symbol": "STRK",
-      "rank": 145,
-      "price": 0.0364244864721882,
-      "usdTrend": false,
-      "usdGapPct": -1.17,
-      "btcTrend": false,
-      "btcGapPct": -7.87
-    },
-    {
-      "symbol": "KAU",
-      "rank": 146,
-      "price": 153.45252767298,
-      "usdTrend": false,
-      "usdGapPct": -3.02,
-      "btcTrend": false,
-      "btcGapPct": -9.62
-    },
-    {
-      "symbol": "GRASS",
-      "rank": 147,
-      "price": 0.365503830777949,
-      "usdTrend": true,
-      "usdGapPct": 13.71,
-      "btcTrend": true,
-      "btcGapPct": 6.42
-    },
-    {
-      "symbol": "VSN",
-      "rank": 148,
-      "price": 0.0549267288737462,
-      "usdTrend": true,
-      "usdGapPct": 1.61,
-      "btcTrend": false,
-      "btcGapPct": -5.22
-    },
-    {
-      "symbol": "THETA",
-      "rank": 149,
-      "price": 0.196414611764903,
-      "usdTrend": true,
-      "usdGapPct": 13.82,
-      "btcTrend": true,
-      "btcGapPct": 6.25
-    },
-    {
-      "symbol": "PENDLE",
-      "rank": 150,
-      "price": 1.24502119713292,
-      "usdTrend": true,
-      "usdGapPct": 4.52,
-      "btcTrend": false,
-      "btcGapPct": -2.53
-    },
-    {
-      "symbol": "AXS",
-      "rank": 151,
-      "price": 1.15763187710636,
-      "usdTrend": false,
-      "usdGapPct": -0.28,
-      "btcTrend": false,
-      "btcGapPct": -7.04
-    },
-    {
-      "symbol": "HNT",
-      "rank": 152,
-      "price": 1.04713361215047,
-      "usdTrend": false,
-      "usdGapPct": -9.35,
-      "btcTrend": false,
-      "btcGapPct": -15.54
-    },
-    {
-      "symbol": "RAY",
-      "rank": 153,
-      "price": 0.676016568765534,
-      "usdTrend": true,
-      "usdGapPct": 9.88,
-      "btcTrend": true,
-      "btcGapPct": 2.58
-    },
-    {
-      "symbol": "IP",
-      "rank": 154,
-      "price": 0.632056388950063,
-      "usdTrend": false,
-      "usdGapPct": -6.67,
-      "btcTrend": false,
-      "btcGapPct": -13.09
-    },
-    {
-      "symbol": "XCN",
-      "rank": 155,
-      "price": 0.0047286667438868,
-      "usdTrend": false,
-      "usdGapPct": -5.09,
-      "btcTrend": false,
-      "btcGapPct": -11.45
-    },
-    {
-      "symbol": "MANA",
-      "rank": 156,
-      "price": 0.0923278801774627,
-      "usdTrend": true,
-      "usdGapPct": 2.63,
-      "btcTrend": false,
-      "btcGapPct": -4.26
-    },
-    {
-      "symbol": "MX",
-      "rank": 157,
-      "price": 1.7741004139272,
-      "usdTrend": false,
-      "usdGapPct": -0.99,
-      "btcTrend": false,
-      "btcGapPct": -7.71
-    },
-    {
-      "symbol": "WAL",
-      "rank": 158,
-      "price": 0.0756169466836504,
-      "usdTrend": true,
-      "usdGapPct": 0.15,
-      "btcTrend": false,
-      "btcGapPct": -6.56
-    },
-    {
-      "symbol": "WFI",
-      "rank": 159,
-      "price": 2.04810729000689,
-      "usdTrend": false,
-      "usdGapPct": -6.01,
-      "btcTrend": false,
-      "btcGapPct": -12.35
-    },
-    {
-      "symbol": "TWT",
-      "rank": 160,
-      "price": 0.421765880217092,
-      "usdTrend": false,
-      "usdGapPct": -8.4,
-      "btcTrend": false,
-      "btcGapPct": -14.59
-    },
-    {
-      "symbol": "CRCLON",
-      "rank": 161,
-      "price": 105.982422781567,
-      "usdTrend": true,
-      "usdGapPct": 3.24,
-      "btcTrend": false,
-      "btcGapPct": -3.54
-    },
-    {
-      "symbol": "PLAY",
-      "rank": 162,
-      "price": 0.114178647381935,
-      "usdTrend": true,
-      "usdGapPct": 136.81,
-      "btcTrend": true,
-      "btcGapPct": 123.32
-    },
-    {
-      "symbol": "ENJ",
-      "rank": 163,
-      "price": 0.0774078983483716,
-      "usdTrend": true,
-      "usdGapPct": 210.21,
-      "btcTrend": true,
-      "btcGapPct": 192.57
-    },
-    {
-      "symbol": "XT",
-      "rank": 164,
-      "price": 4.26867230213474,
-      "usdTrend": true,
-      "usdGapPct": 8.43,
-      "btcTrend": true,
-      "btcGapPct": 1.24
-    },
-    {
-      "symbol": "AB",
-      "rank": 165,
-      "price": 0.00154682722942076,
-      "usdTrend": false,
-      "usdGapPct": -21.1,
-      "btcTrend": false,
-      "btcGapPct": -26.58
-    },
-    {
-      "symbol": "GAS",
-      "rank": 166,
-      "price": 1.73534836073814,
-      "usdTrend": true,
-      "usdGapPct": 7.05,
-      "btcTrend": false,
-      "btcGapPct": -0.13
-    },
-    {
-      "symbol": "JTO",
-      "rank": 167,
-      "price": 0.332595686294953,
-      "usdTrend": true,
-      "usdGapPct": 15.89,
-      "btcTrend": true,
-      "btcGapPct": 8.21
-    },
-    {
-      "symbol": "BAT",
-      "rank": 168,
-      "price": 0.102943466202692,
-      "usdTrend": true,
-      "usdGapPct": 3.37,
-      "btcTrend": false,
-      "btcGapPct": -3.59
-    },
-    {
-      "symbol": "SFP",
-      "rank": 169,
-      "price": 0.302047624617048,
-      "usdTrend": true,
-      "usdGapPct": 6.12,
-      "btcTrend": false,
-      "btcGapPct": -0.96
-    },
-    {
-      "symbol": "AUSD",
-      "rank": 170,
-      "price": 0.99866081540998,
-      "usdTrend": false,
-      "usdGapPct": -0.08,
-      "btcTrend": false,
-      "btcGapPct": -6.85
-    },
-    {
-      "symbol": "ZANO",
-      "rank": 171,
-      "price": 9.70133102090338,
-      "usdTrend": true,
-      "usdGapPct": 17,
-      "btcTrend": true,
-      "btcGapPct": 9.01
-    },
-    {
-      "symbol": "MKR",
-      "rank": 172,
-      "price": 1791.38431810545,
-      "usdTrend": true,
-      "usdGapPct": 1.92,
-      "btcTrend": false,
-      "btcGapPct": -4.85
-    },
-    {
-      "symbol": "RUNE",
-      "rank": 173,
-      "price": 0.414982284950038,
-      "usdTrend": true,
-      "usdGapPct": 0.65,
-      "btcTrend": false,
-      "btcGapPct": -6.09
-    },
-    {
-      "symbol": "AKT",
-      "rank": 174,
-      "price": 0.490618874579257,
-      "usdTrend": true,
-      "usdGapPct": 9.48,
-      "btcTrend": true,
-      "btcGapPct": 2.22
-    },
-    {
-      "symbol": "GOT",
-      "rank": 175,
-      "price": 2.36307153530732,
-      "usdTrend": false,
-      "usdGapPct": -17.96,
-      "btcTrend": false,
-      "btcGapPct": -23.53
-    },
-    {
-      "symbol": "XEC",
-      "rank": 176,
-      "price": 0.00000715322812202868,
-      "usdTrend": true,
-      "usdGapPct": 2.44,
-      "btcTrend": false,
-      "btcGapPct": -4.45
-    },
-    {
-      "symbol": "CVX",
-      "rank": 177,
-      "price": 1.85420492949458,
-      "usdTrend": false,
-      "usdGapPct": -0.15,
-      "btcTrend": false,
-      "btcGapPct": -6.83
-    },
-    {
-      "symbol": "COCA",
-      "rank": 178,
-      "price": 1.24884072800337,
-      "usdTrend": true,
-      "usdGapPct": 7.68,
-      "btcTrend": true,
-      "btcGapPct": 0.76
-    },
-    {
-      "symbol": "TIBBIR",
-      "rank": 179,
-      "price": 0.139354699088688,
-      "usdTrend": true,
-      "usdGapPct": 1.02,
-      "btcTrend": false,
-      "btcGapPct": -5.71
-    },
-    {
-      "symbol": "CFGV1",
-      "rank": 180,
-      "price": 0.221496638332785,
-      "usdTrend": true,
-      "usdGapPct": 42.5,
-      "btcTrend": true,
-      "btcGapPct": 33.33
-    },
-    {
-      "symbol": "GALA",
-      "rank": 181,
-      "price": 0.00330608098187834,
-      "usdTrend": true,
-      "usdGapPct": 2.5,
-      "btcTrend": false,
-      "btcGapPct": -4.38
-    },
-    {
-      "symbol": "RNDR",
-      "rank": 182,
-      "price": 1.85010863177551,
-      "usdTrend": true,
-      "usdGapPct": 8.73,
-      "btcTrend": true,
-      "btcGapPct": 1.63
-    },
-    {
-      "symbol": "1INCH",
-      "rank": 183,
-      "price": 0.0959143980621115,
-      "usdTrend": true,
-      "usdGapPct": 2.48,
-      "btcTrend": false,
-      "btcGapPct": -4.35
-    },
-    {
-      "symbol": "A",
-      "rank": 184,
-      "price": 0.0828276273730773,
-      "usdTrend": true,
-      "usdGapPct": 5.11,
-      "btcTrend": false,
-      "btcGapPct": -1.94
-    },
-    {
-      "symbol": "FLUID",
-      "rank": 185,
-      "price": 1.66856418740674,
-      "usdTrend": false,
-      "usdGapPct": -13.97,
-      "btcTrend": false,
-      "btcGapPct": -19.75
-    },
-    {
-      "symbol": "S",
-      "rank": 186,
-      "price": 0.0452220648268121,
-      "usdTrend": true,
-      "usdGapPct": 7.07,
-      "btcTrend": false,
-      "btcGapPct": -0.05
-    },
-    {
-      "symbol": "SENT",
-      "rank": 187,
-      "price": 0.0167637263607719,
-      "usdTrend": false,
-      "usdGapPct": -13.84,
-      "btcTrend": false,
-      "btcGapPct": -19.75
-    },
-    {
-      "symbol": "EIGEN",
-      "rank": 188,
-      "price": 0.192102593150028,
-      "usdTrend": true,
-      "usdGapPct": 6.51,
-      "btcTrend": false,
-      "btcGapPct": -0.59
-    },
-    {
-      "symbol": "OZO",
-      "rank": 189,
-      "price": 0.129523382441802,
-      "usdTrend": false,
-      "usdGapPct": -0.95,
-      "btcTrend": false,
-      "btcGapPct": -7.66
-    },
-    {
-      "symbol": "EGLD",
-      "rank": 190,
-      "price": 4.17133255060426,
-      "usdTrend": true,
-      "usdGapPct": 3.39,
-      "btcTrend": false,
-      "btcGapPct": -3.58
-    },
-    {
-      "symbol": "ATH",
-      "rank": 191,
-      "price": 0.00629544619274336,
-      "usdTrend": false,
-      "usdGapPct": -3.03,
+      "usdGapPct": 1.09,
       "btcTrend": false,
-      "btcGapPct": -9.63
+      "btcGapPct": -8.34
     },
     {
-      "symbol": "ASTHERUSUSDF",
-      "rank": 192,
-      "price": 0.999410270093537,
+      "symbol": "USDE",
+      "rank": 20,
+      "price": 1.00000739177478,
       "usdTrend": true,
       "usdGapPct": 0.04,
       "btcTrend": false,
-      "btcGapPct": -6.74
+      "btcGapPct": -9.36
     },
     {
-      "symbol": "TRAC",
-      "rank": 193,
-      "price": 0.308969336798966,
+      "symbol": "XLM",
+      "rank": 21,
+      "price": 0.173869149880552,
       "usdTrend": true,
-      "usdGapPct": 1.14,
+      "usdGapPct": 7.44,
       "btcTrend": false,
-      "btcGapPct": -5.66
+      "btcGapPct": -2.62
     },
     {
-      "symbol": "WEMIX",
-      "rank": 194,
-      "price": 0.23611600832618,
+      "symbol": "CC",
+      "rank": 22,
+      "price": 0.149065565786859,
       "usdTrend": false,
-      "usdGapPct": -12.07,
+      "usdGapPct": -0.03,
       "btcTrend": false,
-      "btcGapPct": -18.08
+      "btcGapPct": -9.44
     },
     {
-      "symbol": "CHEEMS",
-      "rank": 195,
-      "price": 5.37678217414849e-7,
+      "symbol": "ZEC",
+      "rank": 23,
+      "price": 336.443638428669,
       "usdTrend": true,
-      "usdGapPct": 15.13,
+      "usdGapPct": 31.71,
       "btcTrend": true,
-      "btcGapPct": 7.56
+      "btcGapPct": 20.02
     },
     {
-      "symbol": "LPT",
-      "rank": 196,
-      "price": 2.1701522944805,
-      "usdTrend": false,
-      "usdGapPct": -1.03,
+      "symbol": "DAI",
+      "rank": 24,
+      "price": 0.999804597971334,
+      "usdTrend": true,
+      "usdGapPct": 0,
       "btcTrend": false,
-      "btcGapPct": -7.7
+      "btcGapPct": -9.4
     },
     {
-      "symbol": "TRADOOR",
-      "rank": 197,
-      "price": 7.23781746067987,
+      "symbol": "LTC",
+      "rank": 25,
+      "price": 56.3592122903339,
       "usdTrend": true,
-      "usdGapPct": 166.53,
-      "btcTrend": true,
-      "btcGapPct": 150.73
-    },
-    {
-      "symbol": "QUBIC",
-      "rank": 198,
-      "price": 7.7124434504064e-7,
-      "usdTrend": false,
-      "usdGapPct": -3.56,
+      "usdGapPct": 2.97,
       "btcTrend": false,
-      "btcGapPct": -9.94
+      "btcGapPct": -6.65
     },
     {
-      "symbol": "B",
-      "rank": 199,
-      "price": 0.105543475473516,
-      "usdTrend": false,
-      "usdGapPct": -44.77,
+      "symbol": "USD1",
+      "rank": 26,
+      "price": 1.00010237416986,
+      "usdTrend": true,
+      "usdGapPct": 0.06,
       "btcTrend": false,
-      "btcGapPct": -48.59
+      "btcGapPct": -9.35
     },
     {
-      "symbol": "SHXV1",
-      "rank": 200,
-      "price": 0.00605164273257671,
+      "symbol": "AVAX",
+      "rank": 27,
+      "price": 9.68793934348637,
       "usdTrend": true,
-      "usdGapPct": 26.81,
-      "btcTrend": true,
-      "btcGapPct": 18.26
-    },
-    {
-      "symbol": "AWE",
-      "rank": 201,
-      "price": 0.0554075837334417,
-      "usdTrend": true,
-      "usdGapPct": 8.11,
-      "btcTrend": true,
-      "btcGapPct": 0.87
-    },
-    {
-      "symbol": "BEAT",
-      "rank": 202,
-      "price": 0.483585526803282,
-      "usdTrend": true,
-      "usdGapPct": 17.14,
-      "btcTrend": true,
-      "btcGapPct": 9.32
-    },
-    {
-      "symbol": "AR",
-      "rank": 203,
-      "price": 2.10813303961216,
-      "usdTrend": true,
-      "usdGapPct": 21.93,
-      "btcTrend": true,
-      "btcGapPct": 13.88
-    },
-    {
-      "symbol": "ZEN",
-      "rank": 204,
-      "price": 5.81572302536684,
-      "usdTrend": true,
-      "usdGapPct": 4.04,
-      "btcTrend": false,
-      "btcGapPct": -2.82
-    },
-    {
-      "symbol": "9BIT",
-      "rank": 205,
-      "price": 0.0264232356070214,
-      "usdTrend": true,
-      "usdGapPct": 8.85,
-      "btcTrend": true,
-      "btcGapPct": 1.57
-    },
-    {
-      "symbol": "SNX",
-      "rank": 206,
-      "price": 0.298905061077898,
-      "usdTrend": false,
-      "usdGapPct": -1.28,
-      "btcTrend": false,
-      "btcGapPct": -7.92
-    },
-    {
-      "symbol": "BEAM",
-      "rank": 207,
-      "price": 0.00201263505665409,
-      "usdTrend": true,
-      "usdGapPct": 7.55,
-      "btcTrend": true,
-      "btcGapPct": 0.38
-    },
-    {
-      "symbol": "BERA",
-      "rank": 208,
-      "price": 0.445951991578335,
-      "usdTrend": false,
-      "usdGapPct": -12.02,
-      "btcTrend": false,
-      "btcGapPct": -17.98
-    },
-    {
-      "symbol": "SAFE",
-      "rank": 209,
-      "price": 0.158707058376351,
-      "usdTrend": true,
-      "usdGapPct": 43.39,
-      "btcTrend": true,
-      "btcGapPct": 34.16
-    },
-    {
-      "symbol": "RSR",
-      "rank": 210,
-      "price": 0.00164413623509871,
-      "usdTrend": true,
-      "usdGapPct": 4.13,
-      "btcTrend": false,
-      "btcGapPct": -2.83
-    },
-    {
-      "symbol": "BANANAF",
-      "rank": 211,
-      "price": 0.0108440403098231,
-      "usdTrend": true,
-      "usdGapPct": 11.61,
-      "btcTrend": true,
-      "btcGapPct": 4.12
-    },
-    {
-      "symbol": "DUSD",
-      "rank": 212,
-      "price": 0.998580920363374,
-      "usdTrend": false,
-      "usdGapPct": -0.11,
-      "btcTrend": false,
-      "btcGapPct": -6.88
-    },
-    {
-      "symbol": "FTT",
-      "rank": 213,
-      "price": 0.30614752284881,
-      "usdTrend": true,
-      "usdGapPct": 4.62,
-      "btcTrend": false,
-      "btcGapPct": -2.46
-    },
-    {
-      "symbol": "QTUM",
-      "rank": 214,
-      "price": 0.930469836910096,
-      "usdTrend": true,
-      "usdGapPct": 3.42,
-      "btcTrend": false,
-      "btcGapPct": -3.51
-    },
-    {
-      "symbol": "RVN",
-      "rank": 215,
-      "price": 0.00598215098558718,
-      "usdTrend": true,
-      "usdGapPct": 5.74,
-      "btcTrend": false,
-      "btcGapPct": -1.41
-    },
-    {
-      "symbol": "BARD",
-      "rank": 216,
-      "price": 0.329189943835599,
-      "usdTrend": false,
-      "usdGapPct": -51.22,
-      "btcTrend": false,
-      "btcGapPct": -54.56
-    },
-    {
-      "symbol": "APE",
-      "rank": 217,
-      "price": 0.100236494739257,
-      "usdTrend": true,
-      "usdGapPct": 7.63,
-      "btcTrend": true,
-      "btcGapPct": 0.4
-    },
-    {
-      "symbol": "YFI",
-      "rank": 218,
-      "price": 2738.58681852961,
-      "usdTrend": true,
-      "usdGapPct": 6.47,
-      "btcTrend": false,
-      "btcGapPct": -0.67
-    },
-    {
-      "symbol": "KMNO",
-      "rank": 219,
-      "price": 0.0236939789786864,
-      "usdTrend": true,
-      "usdGapPct": 17.28,
-      "btcTrend": true,
-      "btcGapPct": 9.53
-    },
-    {
-      "symbol": "ACH",
-      "rank": 220,
-      "price": 0.00619700890835494,
-      "usdTrend": false,
-      "usdGapPct": -5.34,
-      "btcTrend": false,
-      "btcGapPct": -11.75
-    },
-    {
-      "symbol": "EURCV",
-      "rank": 221,
-      "price": 1.1766059638381,
-      "usdTrend": true,
-      "usdGapPct": 1.47,
-      "btcTrend": false,
-      "btcGapPct": -5.4
-    },
-    {
-      "symbol": "DEEP",
-      "rank": 222,
-      "price": 0.0313368184120644,
-      "usdTrend": true,
-      "usdGapPct": 7.91,
-      "btcTrend": true,
-      "btcGapPct": 0.86
-    },
-    {
-      "symbol": "MYX",
-      "rank": 223,
-      "price": 0.293051915974689,
-      "usdTrend": false,
-      "usdGapPct": -1.95,
-      "btcTrend": false,
-      "btcGapPct": -8.59
-    },
-    {
-      "symbol": "YZY",
-      "rank": 224,
-      "price": 0.307214205029136,
-      "usdTrend": false,
-      "usdGapPct": -5.4,
-      "btcTrend": false,
-      "btcGapPct": -11.86
-    },
-    {
-      "symbol": "ZRX",
-      "rank": 225,
-      "price": 0.110801590053468,
-      "usdTrend": true,
-      "usdGapPct": 5.86,
-      "btcTrend": false,
-      "btcGapPct": -1.23
-    },
-    {
-      "symbol": "ORDI",
-      "rank": 226,
-      "price": 7.77374683189999,
-      "usdTrend": true,
-      "usdGapPct": 203.41,
-      "btcTrend": true,
-      "btcGapPct": 184.29
-    },
-    {
-      "symbol": "COW",
-      "rank": 227,
-      "price": 0.195208795920792,
-      "usdTrend": false,
-      "usdGapPct": -10.83,
-      "btcTrend": false,
-      "btcGapPct": -16.77
-    },
-    {
-      "symbol": "SKR",
-      "rank": 228,
-      "price": 0.0169615431726984,
-      "usdTrend": false,
-      "usdGapPct": -16.13,
-      "btcTrend": false,
-      "btcGapPct": -21.85
-    },
-    {
-      "symbol": "AMP",
-      "rank": 229,
-      "price": 0.00088176145588609,
-      "usdTrend": false,
-      "usdGapPct": -25.68,
-      "btcTrend": false,
-      "btcGapPct": -30.82
-    },
-    {
-      "symbol": "USDA",
-      "rank": 230,
-      "price": 1.00091457331381,
-      "usdTrend": true,
-      "usdGapPct": 0.24,
-      "btcTrend": false,
-      "btcGapPct": -6.55
-    },
-    {
-      "symbol": "COAI",
-      "rank": 231,
-      "price": 0.365672661212004,
-      "usdTrend": true,
-      "usdGapPct": 20.59,
-      "btcTrend": true,
-      "btcGapPct": 12.64
-    },
-    {
-      "symbol": "DGB",
-      "rank": 232,
-      "price": 0.00467332227017139,
-      "usdTrend": true,
-      "usdGapPct": 10.63,
-      "btcTrend": true,
-      "btcGapPct": 3.29
-    },
-    {
-      "symbol": "ROSE",
-      "rank": 233,
-      "price": 0.0116389631002097,
-      "usdTrend": true,
-      "usdGapPct": 3.02,
-      "btcTrend": false,
-      "btcGapPct": -3.88
-    },
-    {
-      "symbol": "DYDX",
-      "rank": 234,
-      "price": 0.12771936634239,
-      "usdTrend": true,
-      "usdGapPct": 37.21,
-      "btcTrend": true,
-      "btcGapPct": 28.03
-    },
-    {
-      "symbol": "TFUEL",
-      "rank": 235,
-      "price": 0.0117785056444741,
-      "usdTrend": false,
-      "usdGapPct": -4.56,
-      "btcTrend": false,
-      "btcGapPct": -11.04
-    },
-    {
-      "symbol": "GLM",
-      "rank": 236,
-      "price": 0.134106765454573,
-      "usdTrend": true,
-      "usdGapPct": 3.16,
-      "btcTrend": false,
-      "btcGapPct": -3.8
-    },
-    {
-      "symbol": "DOG",
-      "rank": 237,
-      "price": 0.000827001359100171,
-      "usdTrend": true,
-      "usdGapPct": 8.45,
-      "btcTrend": true,
-      "btcGapPct": 1.09
-    },
-    {
-      "symbol": "TURBO",
-      "rank": 238,
-      "price": 0.00121053332105585,
-      "usdTrend": true,
-      "usdGapPct": 18.05,
-      "btcTrend": true,
-      "btcGapPct": 10.23
-    },
-    {
-      "symbol": "ALCH",
-      "rank": 239,
-      "price": 0.0775311459244303,
-      "usdTrend": true,
-      "usdGapPct": 6.81,
-      "btcTrend": false,
-      "btcGapPct": -0.43
-    },
-    {
-      "symbol": "LIGHT",
-      "rank": 240,
-      "price": 0.21254178167781,
-      "usdTrend": true,
-      "usdGapPct": 15.19,
-      "btcTrend": true,
-      "btcGapPct": 7.52
-    },
-    {
-      "symbol": "LINEA",
-      "rank": 241,
-      "price": 0.00344800777245003,
-      "usdTrend": true,
-      "usdGapPct": 7.6,
-      "btcTrend": true,
-      "btcGapPct": 0.46
-    },
-    {
-      "symbol": "CTC",
-      "rank": 242,
-      "price": 0.153832761799127,
-      "usdTrend": true,
-      "usdGapPct": 1.04,
-      "btcTrend": false,
-      "btcGapPct": -5.76
-    },
-    {
-      "symbol": "BIO",
-      "rank": 243,
-      "price": 0.0335555979277996,
-      "usdTrend": true,
-      "usdGapPct": 68.65,
-      "btcTrend": true,
-      "btcGapPct": 57.67
-    },
-    {
-      "symbol": "FF",
-      "rank": 244,
-      "price": 0.0738748340774497,
-      "usdTrend": false,
-      "usdGapPct": -1.07,
-      "btcTrend": false,
-      "btcGapPct": -7.69
-    },
-    {
-      "symbol": "BRETT",
-      "rank": 245,
-      "price": 0.00773219281056513,
-      "usdTrend": true,
-      "usdGapPct": 12.15,
-      "btcTrend": true,
-      "btcGapPct": 4.77
-    },
-    {
-      "symbol": "TOSHI",
-      "rank": 246,
-      "price": 0.000186901203195718,
-      "usdTrend": false,
-      "usdGapPct": -5.11,
-      "btcTrend": false,
-      "btcGapPct": -11.51
-    },
-    {
-      "symbol": "BABYDOGE",
-      "rank": 247,
-      "price": 4.34052279395255e-10,
-      "usdTrend": true,
-      "usdGapPct": 8.5,
-      "btcTrend": true,
-      "btcGapPct": 1.27
-    },
-    {
-      "symbol": "MWC",
-      "rank": 248,
-      "price": 7.06060848093357,
-      "usdTrend": false,
-      "usdGapPct": -18.1,
-      "btcTrend": false,
-      "btcGapPct": -23.73
-    },
-    {
-      "symbol": "XVG",
-      "rank": 249,
-      "price": 0.00373850384267016,
-      "usdTrend": false,
-      "usdGapPct": -24.8,
-      "btcTrend": false,
-      "btcGapPct": -29.87
-    },
-    {
-      "symbol": "DUSK",
-      "rank": 250,
-      "price": 0.160952392797341,
-      "usdTrend": true,
-      "usdGapPct": 52.86,
-      "btcTrend": true,
-      "btcGapPct": 43.04
-    },
-    {
-      "symbol": "TAG",
-      "rank": 251,
-      "price": 0.00071893253560475,
-      "usdTrend": true,
-      "usdGapPct": 25.23,
-      "btcTrend": true,
-      "btcGapPct": 17.09
-    },
-    {
-      "symbol": "CET",
-      "rank": 252,
-      "price": 0.0299748301269514,
-      "usdTrend": true,
-      "usdGapPct": 1.27,
+      "usdGapPct": 4.12,
       "btcTrend": false,
       "btcGapPct": -5.54
     },
     {
-      "symbol": "MINA",
-      "rank": 253,
-      "price": 0.0601788150043107,
-      "usdTrend": true,
-      "usdGapPct": 5.78,
-      "btcTrend": false,
-      "btcGapPct": -1.31
-    },
-    {
-      "symbol": "AIOZ",
-      "rank": 254,
-      "price": 0.0598781428610427,
-      "usdTrend": false,
-      "usdGapPct": -2.86,
-      "btcTrend": false,
-      "btcGapPct": -9.41
-    },
-    {
-      "symbol": "MET",
-      "rank": 255,
-      "price": 0.147285465871942,
-      "usdTrend": false,
-      "usdGapPct": -2.61,
-      "btcTrend": false,
-      "btcGapPct": -9.23
-    },
-    {
-      "symbol": "BAN",
-      "rank": 256,
-      "price": 0.0720577295459918,
-      "usdTrend": false,
-      "usdGapPct": -14.28,
-      "btcTrend": false,
-      "btcGapPct": -19.95
-    },
-    {
-      "symbol": "CKB",
-      "rank": 257,
-      "price": 0.00156656826792414,
-      "usdTrend": true,
-      "usdGapPct": 5.85,
-      "btcTrend": false,
-      "btcGapPct": -1.24
-    },
-    {
-      "symbol": "AXL",
-      "rank": 258,
-      "price": 0.0597874680069126,
-      "usdTrend": true,
-      "usdGapPct": 17.5,
-      "btcTrend": true,
-      "btcGapPct": 9.62
-    },
-    {
-      "symbol": "ZORA",
-      "rank": 259,
-      "price": 0.0148182215855915,
-      "usdTrend": false,
-      "usdGapPct": -7.57,
-      "btcTrend": false,
-      "btcGapPct": -13.87
-    },
-    {
-      "symbol": "FOGO",
-      "rank": 260,
-      "price": 0.0195915139478722,
-      "usdTrend": false,
-      "usdGapPct": -4.84,
-      "btcTrend": false,
-      "btcGapPct": -11.33
-    },
-    {
-      "symbol": "SAHARA",
-      "rank": 261,
-      "price": 0.0229811310118676,
-      "usdTrend": false,
-      "usdGapPct": -4.32,
-      "btcTrend": false,
-      "btcGapPct": -10.78
-    },
-    {
-      "symbol": "ZETA",
-      "rank": 262,
-      "price": 0.0665939569208483,
-      "usdTrend": true,
-      "usdGapPct": 30.02,
-      "btcTrend": true,
-      "btcGapPct": 21.27
-    },
-    {
-      "symbol": "HOT",
-      "rank": 263,
-      "price": 0.000427902131913141,
-      "usdTrend": true,
-      "usdGapPct": 3.56,
-      "btcTrend": false,
-      "btcGapPct": -3.41
-    },
-    {
-      "symbol": "T",
-      "rank": 264,
-      "price": 0.00637849994967001,
-      "usdTrend": false,
-      "usdGapPct": -0.21,
-      "btcTrend": false,
-      "btcGapPct": -6.94
-    },
-    {
-      "symbol": "RONIN",
-      "rank": 265,
-      "price": 0.0931499289801413,
-      "usdTrend": true,
-      "usdGapPct": 1.19,
-      "btcTrend": false,
-      "btcGapPct": -5.63
-    },
-    {
-      "symbol": "HOME",
-      "rank": 266,
-      "price": 0.0187126359101738,
-      "usdTrend": false,
-      "usdGapPct": -15.35,
-      "btcTrend": false,
-      "btcGapPct": -21.19
-    },
-    {
-      "symbol": "BLUR",
-      "rank": 267,
-      "price": 0.0252551968284858,
-      "usdTrend": true,
-      "usdGapPct": 27.59,
-      "btcTrend": true,
-      "btcGapPct": 19.18
-    },
-    {
-      "symbol": "ASTR",
-      "rank": 268,
-      "price": 0.00803996006754737,
-      "usdTrend": true,
-      "usdGapPct": 6.15,
-      "btcTrend": false,
-      "btcGapPct": -0.98
-    },
-    {
-      "symbol": "DOLA",
-      "rank": 269,
-      "price": 0.98406464358932,
-      "usdTrend": false,
-      "usdGapPct": -0.7,
-      "btcTrend": false,
-      "btcGapPct": -7.43
-    },
-    {
-      "symbol": "ARKM",
-      "rank": 270,
-      "price": 0.125203787994082,
-      "usdTrend": true,
-      "usdGapPct": 19.76,
-      "btcTrend": true,
-      "btcGapPct": 11.82
-    },
-    {
-      "symbol": "MOVE",
-      "rank": 271,
-      "price": 0.0184526950756969,
-      "usdTrend": false,
-      "usdGapPct": -6.27,
-      "btcTrend": false,
-      "btcGapPct": -12.62
-    },
-    {
-      "symbol": "PUFF",
-      "rank": 272,
-      "price": 0.0743033380558145,
-      "usdTrend": false,
-      "usdGapPct": -1.21,
-      "btcTrend": false,
-      "btcGapPct": -7.91
-    },
-    {
-      "symbol": "ONT",
-      "rank": 273,
-      "price": 0.0737138883374833,
-      "usdTrend": true,
-      "usdGapPct": 21.99,
-      "btcTrend": true,
-      "btcGapPct": 13.79
-    },
-    {
-      "symbol": "XPR",
-      "rank": 274,
-      "price": 0.00231775643918667,
-      "usdTrend": true,
-      "usdGapPct": 1.55,
-      "btcTrend": false,
-      "btcGapPct": -5.28
-    },
-    {
-      "symbol": "NPC",
-      "rank": 275,
-      "price": 0.00790967604622851,
-      "usdTrend": true,
-      "usdGapPct": 0.53,
-      "btcTrend": false,
-      "btcGapPct": -6.13
-    },
-    {
-      "symbol": "GMX",
-      "rank": 276,
-      "price": 6.43485395964866,
-      "usdTrend": true,
-      "usdGapPct": 0.12,
-      "btcTrend": false,
-      "btcGapPct": -6.66
-    },
-    {
-      "symbol": "NANO",
-      "rank": 277,
-      "price": 0.478344039465423,
-      "usdTrend": false,
-      "usdGapPct": -0.97,
-      "btcTrend": false,
-      "btcGapPct": -7.68
-    },
-    {
-      "symbol": "NMR",
-      "rank": 278,
-      "price": 8.41232674381335,
-      "usdTrend": true,
-      "usdGapPct": 10.16,
-      "btcTrend": true,
-      "btcGapPct": 2.89
-    },
-    {
-      "symbol": "KUB",
-      "rank": 279,
-      "price": 0.848466005806761,
-      "usdTrend": false,
-      "usdGapPct": -4.92,
-      "btcTrend": false,
-      "btcGapPct": -11.38
-    },
-    {
-      "symbol": "DUAL",
-      "rank": 280,
-      "price": 0.007619,
-      "usdTrend": false,
-      "usdGapPct": -5.88,
-      "btcTrend": false,
-      "btcGapPct": -5.99
-    },
-    {
-      "symbol": "DESO",
-      "rank": 281,
-      "price": 4.80704813045682,
-      "usdTrend": false,
-      "usdGapPct": -11.76,
-      "btcTrend": false,
-      "btcGapPct": -17.74
-    },
-    {
-      "symbol": "PLUME",
-      "rank": 282,
-      "price": 0.0125068138804402,
-      "usdTrend": true,
-      "usdGapPct": 17.29,
-      "btcTrend": true,
-      "btcGapPct": 9.52
-    },
-    {
-      "symbol": "IRYS",
-      "rank": 283,
-      "price": 0.0299082392435092,
-      "usdTrend": true,
-      "usdGapPct": 45.93,
-      "btcTrend": true,
-      "btcGapPct": 36.47
-    },
-    {
-      "symbol": "WMTX",
-      "rank": 284,
-      "price": 0.0711503333289807,
-      "usdTrend": false,
-      "usdGapPct": -5.5,
-      "btcTrend": false,
-      "btcGapPct": -11.75
-    },
-    {
-      "symbol": "HBTC",
-      "rank": 285,
-      "price": 60281.0691178721,
-      "usdTrend": true,
-      "usdGapPct": 7.34,
-      "btcTrend": true,
-      "btcGapPct": 0.25
-    },
-    {
-      "symbol": "ZK",
-      "rank": 286,
-      "price": 0.0161784369944905,
-      "usdTrend": false,
-      "usdGapPct": -8.94,
-      "btcTrend": false,
-      "btcGapPct": -15.12
-    },
-    {
-      "symbol": "FLOW",
-      "rank": 287,
-      "price": 0.0360793150867724,
-      "usdTrend": true,
-      "usdGapPct": 0.22,
-      "btcTrend": false,
-      "btcGapPct": -6.5
-    },
-    {
-      "symbol": "VELO",
-      "rank": 288,
-      "price": 0.00343148774035968,
-      "usdTrend": false,
-      "usdGapPct": -5.07,
-      "btcTrend": false,
-      "btcGapPct": -11.49
-    },
-    {
-      "symbol": "CCD",
-      "rank": 289,
-      "price": 0.00474888008692888,
-      "usdTrend": false,
-      "usdGapPct": -8.16,
-      "btcTrend": false,
-      "btcGapPct": -14.45
-    },
-    {
-      "symbol": "MOODENG",
-      "rank": 290,
-      "price": 0.0564160483857144,
-      "usdTrend": true,
-      "usdGapPct": 14.58,
-      "btcTrend": true,
-      "btcGapPct": 7.01
-    },
-    {
-      "symbol": "PCI",
-      "rank": 291,
-      "price": 0.0540124904002788,
-      "usdTrend": true,
-      "usdGapPct": 4.21,
-      "btcTrend": false,
-      "btcGapPct": -2.73
-    },
-    {
-      "symbol": "KAVA",
-      "rank": 292,
-      "price": 0.0558256663326744,
-      "usdTrend": true,
-      "usdGapPct": 0.35,
-      "btcTrend": false,
-      "btcGapPct": -6.4
-    },
-    {
-      "symbol": "SUSHI",
-      "rank": 293,
-      "price": 0.212012087259695,
-      "usdTrend": true,
-      "usdGapPct": 6.13,
-      "btcTrend": false,
-      "btcGapPct": -0.98
-    },
-    {
-      "symbol": "EOS",
-      "rank": 294,
-      "price": 0.0823343572833791,
-      "usdTrend": true,
-      "usdGapPct": 4.77,
-      "btcTrend": false,
-      "btcGapPct": -2.25
-    },
-    {
-      "symbol": "VTHO",
-      "rank": 295,
-      "price": 0.00058294539717427,
-      "usdTrend": true,
-      "usdGapPct": 1.5,
-      "btcTrend": false,
-      "btcGapPct": -5.32
-    },
-    {
-      "symbol": "ELF",
-      "rank": 296,
-      "price": 0.0809546575204256,
-      "usdTrend": true,
-      "usdGapPct": 2.2,
-      "btcTrend": false,
-      "btcGapPct": -4.7
-    },
-    {
-      "symbol": "VVS",
-      "rank": 297,
-      "price": 0.00000130580889520772,
-      "usdTrend": false,
-      "usdGapPct": -7.45,
-      "btcTrend": false,
-      "btcGapPct": -13.73
-    },
-    {
-      "symbol": "MOG",
-      "rank": 298,
-      "price": 1.4121047863104e-7,
-      "usdTrend": false,
-      "usdGapPct": -5.71,
-      "btcTrend": false,
-      "btcGapPct": -12.07
-    },
-    {
-      "symbol": "MOCA",
-      "rank": 299,
-      "price": 0.0135641157209747,
-      "usdTrend": false,
-      "usdGapPct": -3.09,
-      "btcTrend": false,
-      "btcGapPct": -9.65
-    },
-    {
-      "symbol": "POPCAT",
-      "rank": 300,
-      "price": 0.0580248568990941,
-      "usdTrend": true,
-      "usdGapPct": 14.58,
-      "btcTrend": true,
-      "btcGapPct": 7.02
-    },
-    {
-      "symbol": "PNUT",
-      "rank": 301,
-      "price": 0.067104993900614,
-      "usdTrend": true,
-      "usdGapPct": 51.95,
-      "btcTrend": true,
-      "btcGapPct": 41.99
-    },
-    {
-      "symbol": "TSLAX",
-      "rank": 302,
-      "price": 386.933892923468,
-      "usdTrend": true,
-      "usdGapPct": 2.15,
-      "btcTrend": false,
-      "btcGapPct": -4.78
-    },
-    {
-      "symbol": "BIGTIME",
-      "rank": 303,
-      "price": 0.0136934146388518,
-      "usdTrend": true,
-      "usdGapPct": 4.49,
-      "btcTrend": false,
-      "btcGapPct": -2.53
-    },
-    {
-      "symbol": "REQ",
-      "rank": 304,
-      "price": 0.0696204343544256,
-      "usdTrend": true,
-      "usdGapPct": 5.28,
-      "btcTrend": false,
-      "btcGapPct": -1.76
-    },
-    {
-      "symbol": "MEW",
-      "rank": 305,
-      "price": 0.000612679788321678,
-      "usdTrend": true,
-      "usdGapPct": 2.77,
-      "btcTrend": false,
-      "btcGapPct": -4.08
-    },
-    {
-      "symbol": "HOLO",
-      "rank": 306,
-      "price": 0.0600489018675234,
-      "usdTrend": true,
-      "usdGapPct": 3.3,
-      "btcTrend": false,
-      "btcGapPct": -3.6
-    },
-    {
-      "symbol": "SC",
-      "rank": 307,
-      "price": 0.000984139608956191,
-      "usdTrend": false,
-      "usdGapPct": -2.16,
-      "btcTrend": false,
-      "btcGapPct": -8.76
-    },
-    {
-      "symbol": "CRCLX",
-      "rank": 308,
-      "price": 105.757658107326,
-      "usdTrend": true,
-      "usdGapPct": 2.94,
-      "btcTrend": false,
-      "btcGapPct": -3.81
-    },
-    {
-      "symbol": "HSK",
-      "rank": 309,
-      "price": 0.160712960360107,
-      "usdTrend": false,
-      "usdGapPct": -0.52,
-      "btcTrend": false,
-      "btcGapPct": -7.28
-    },
-    {
-      "symbol": "MANTRA",
-      "rank": 310,
-      "price": 0.0111471527670555,
-      "usdTrend": false,
-      "usdGapPct": -15.79,
-      "btcTrend": false,
-      "btcGapPct": -21.2
-    },
-    {
-      "symbol": "BSB",
-      "rank": 311,
-      "price": 0.250118980894302,
-      "usdTrend": true,
-      "usdGapPct": 106.46,
-      "btcTrend": true,
-      "btcGapPct": 93.39
-    },
-    {
-      "symbol": "ME",
-      "rank": 312,
-      "price": 0.107993870335285,
-      "usdTrend": false,
-      "usdGapPct": -0.86,
-      "btcTrend": false,
-      "btcGapPct": -7.53
-    },
-    {
-      "symbol": "WAVES",
-      "rank": 313,
-      "price": 0.417524756908071,
-      "usdTrend": false,
-      "usdGapPct": -5.26,
-      "btcTrend": false,
-      "btcGapPct": -11.69
-    },
-    {
-      "symbol": "TRB",
-      "rank": 314,
-      "price": 19.8696972967593,
-      "usdTrend": true,
-      "usdGapPct": 28.29,
-      "btcTrend": true,
-      "btcGapPct": 19.84
-    },
-    {
-      "symbol": "ESP",
-      "rank": 315,
-      "price": 0.0761732915934501,
-      "usdTrend": false,
-      "usdGapPct": -19.61,
-      "btcTrend": false,
-      "btcGapPct": -25.17
-    },
-    {
-      "symbol": "FIDD",
-      "rank": 316,
-      "price": 0.999359540706594,
+      "symbol": "PYUSD",
+      "rank": 28,
+      "price": 0.999437738738802,
       "usdTrend": false,
       "usdGapPct": -0.04,
       "btcTrend": false,
-      "btcGapPct": -6.81
+      "btcGapPct": -9.44
     },
     {
-      "symbol": "ORCA",
-      "rank": 317,
-      "price": 0.925271956619209,
+      "symbol": "SUI",
+      "rank": 29,
+      "price": 1.00220898608705,
       "usdTrend": true,
-      "usdGapPct": 2.47,
+      "usdGapPct": 7.42,
       "btcTrend": false,
-      "btcGapPct": -4.38
+      "btcGapPct": -2.51
     },
     {
-      "symbol": "XYO",
-      "rank": 318,
-      "price": 0.00371688174356075,
+      "symbol": "HBAR",
+      "rank": 30,
+      "price": 0.0899491875429419,
       "usdTrend": false,
-      "usdGapPct": -3.61,
+      "usdGapPct": -2.7,
       "btcTrend": false,
-      "btcGapPct": -10.16
+      "btcGapPct": -11.85
     },
     {
-      "symbol": "XUSD",
-      "rank": 319,
-      "price": 0.999781816025604,
+      "symbol": "RAIN",
+      "rank": 31,
+      "price": 0.00776184614044317,
       "usdTrend": false,
-      "usdGapPct": -0.02,
+      "usdGapPct": -8.03,
       "btcTrend": false,
-      "btcGapPct": -6.79
+      "btcGapPct": -16.7
     },
     {
-      "symbol": "ANKR",
-      "rank": 320,
-      "price": 0.00517765240204031,
+      "symbol": "SHIB",
+      "rank": 32,
+      "price": 0.00000629775145593238,
       "usdTrend": true,
-      "usdGapPct": 7.4,
-      "btcTrend": true,
-      "btcGapPct": 0.2
-    },
-    {
-      "symbol": "ROG",
-      "rank": 321,
-      "price": 0.251066203761677,
-      "usdTrend": true,
-      "usdGapPct": 0.4,
+      "usdGapPct": 7.67,
       "btcTrend": false,
-      "btcGapPct": -6.41
+      "btcGapPct": -2.37
     },
     {
-      "symbol": "CELO",
-      "rank": 322,
-      "price": 0.0851346007486964,
+      "symbol": "TON",
+      "rank": 33,
+      "price": 1.39700726068097,
       "usdTrend": true,
-      "usdGapPct": 7.05,
+      "usdGapPct": 7.68,
       "btcTrend": false,
-      "btcGapPct": -0.14
+      "btcGapPct": -2.31
     },
     {
-      "symbol": "USDKG",
-      "rank": 323,
-      "price": 0.999964333761358,
-      "usdTrend": true,
-      "usdGapPct": 0,
-      "btcTrend": false,
-      "btcGapPct": -6.78
-    },
-    {
-      "symbol": "OPEN",
-      "rank": 324,
-      "price": 0.214182881407997,
-      "usdTrend": true,
-      "usdGapPct": 31.19,
-      "btcTrend": true,
-      "btcGapPct": 22.57
-    },
-    {
-      "symbol": "LUX",
-      "rank": 325,
-      "price": 0.00136675472471419,
-      "usdTrend": true,
-      "usdGapPct": 50.7,
-      "btcTrend": true,
-      "btcGapPct": 41.25
-    },
-    {
-      "symbol": "SRX",
-      "rank": 326,
-      "price": 0.0634920278258534,
-      "usdTrend": true,
-      "usdGapPct": 10.08,
-      "btcTrend": true,
-      "btcGapPct": 2.72
-    },
-    {
-      "symbol": "ALT",
-      "rank": 327,
-      "price": 0.00723829391979934,
-      "usdTrend": true,
-      "usdGapPct": 3.09,
-      "btcTrend": false,
-      "btcGapPct": -3.79
-    },
-    {
-      "symbol": "PURR",
-      "rank": 328,
-      "price": 0.0828467122868145,
-      "usdTrend": true,
-      "usdGapPct": 3.43,
-      "btcTrend": false,
-      "btcGapPct": -3.35
-    },
-    {
-      "symbol": "SUPER",
-      "rank": 329,
-      "price": 0.119850654097656,
-      "usdTrend": true,
-      "usdGapPct": 5.65,
-      "btcTrend": false,
-      "btcGapPct": -1.38
-    },
-    {
-      "symbol": "SNT",
-      "rank": 330,
-      "price": 0.0102073549780402,
-      "usdTrend": true,
-      "usdGapPct": 3.28,
-      "btcTrend": false,
-      "btcGapPct": -3.7
-    },
-    {
-      "symbol": "STG",
-      "rank": 331,
-      "price": 0.231445996441321,
-      "usdTrend": true,
-      "usdGapPct": 14.68,
-      "btcTrend": true,
-      "btcGapPct": 6.94
-    },
-    {
-      "symbol": "AVNT",
-      "rank": 332,
-      "price": 0.14103019750723,
+      "symbol": "CRO",
+      "rank": 34,
+      "price": 0.0717640531987232,
       "usdTrend": false,
-      "usdGapPct": -4.97,
+      "usdGapPct": -2.21,
       "btcTrend": false,
-      "btcGapPct": -11.41
+      "btcGapPct": -11.39
     },
     {
-      "symbol": "BURN",
-      "rank": 333,
-      "price": 3.79997300372238,
+      "symbol": "WLFI",
+      "rank": 35,
+      "price": 0.0810214956872915,
       "usdTrend": false,
-      "usdGapPct": -16.81,
+      "usdGapPct": -16.73,
       "btcTrend": false,
-      "btcGapPct": -22.52
+      "btcGapPct": -24.69
     },
     {
-      "symbol": "CSPR",
-      "rank": 334,
-      "price": 0.00303929366836707,
+      "symbol": "TAO",
+      "rank": 36,
+      "price": 253.48311375883,
       "usdTrend": false,
-      "usdGapPct": -2.05,
+      "usdGapPct": -2.78,
       "btcTrend": false,
-      "btcGapPct": -8.67
+      "btcGapPct": -11.86
     },
     {
-      "symbol": "RATS",
-      "rank": 335,
-      "price": 0.0000412386781752885,
+      "symbol": "XAUT",
+      "rank": 37,
+      "price": 4810.6621064984,
       "usdTrend": false,
-      "usdGapPct": -6.05,
+      "usdGapPct": -0.07,
       "btcTrend": false,
-      "btcGapPct": -12.38
+      "btcGapPct": -9.46
     },
     {
-      "symbol": "MASK",
-      "rank": 336,
-      "price": 0.476542269495528,
-      "usdTrend": true,
-      "usdGapPct": 8.06,
-      "btcTrend": true,
-      "btcGapPct": 0.84
-    },
-    {
-      "symbol": "ALEO",
-      "rank": 337,
-      "price": 0.0452372206799858,
+      "symbol": "UNI",
+      "rank": 38,
+      "price": 3.46645186869856,
       "usdTrend": false,
-      "usdGapPct": -19.41,
+      "usdGapPct": -2.63,
       "btcTrend": false,
-      "btcGapPct": -24.96
+      "btcGapPct": -11.78
     },
     {
-      "symbol": "PROVE",
-      "rank": 338,
-      "price": 0.236633700925937,
+      "symbol": "PAXG",
+      "rank": 39,
+      "price": 4815.14294307818,
       "usdTrend": false,
-      "usdGapPct": -7.16,
+      "usdGapPct": -0.43,
       "btcTrend": false,
-      "btcGapPct": -13.49
+      "btcGapPct": -9.79
     },
     {
-      "symbol": "USELESS",
-      "rank": 339,
-      "price": 0.0459855510200646,
-      "usdTrend": true,
-      "usdGapPct": 21.63,
-      "btcTrend": true,
-      "btcGapPct": 13.7
-    },
-    {
-      "symbol": "XVS",
-      "rank": 340,
-      "price": 2.66441948272431,
+      "symbol": "MANTLE",
+      "rank": 40,
+      "price": 0.683947413862176,
       "usdTrend": false,
-      "usdGapPct": -6.08,
+      "usdGapPct": -1.93,
       "btcTrend": false,
-      "btcGapPct": -12.41
+      "btcGapPct": -11.05
     },
     {
-      "symbol": "DRV",
-      "rank": 341,
-      "price": 0.0777984059360291,
+      "symbol": "PI",
+      "rank": 41,
+      "price": 0.186701211026021,
+      "usdTrend": true,
+      "usdGapPct": 0.64,
+      "btcTrend": false,
+      "btcGapPct": -8.84
+    },
+    {
+      "symbol": "ASTER",
+      "rank": 42,
+      "price": 0.687728025267245,
+      "usdTrend": true,
+      "usdGapPct": 0.51,
+      "btcTrend": false,
+      "btcGapPct": -8.91
+    },
+    {
+      "symbol": "OKB",
+      "rank": 43,
+      "price": 86.8928466179045,
       "usdTrend": false,
-      "usdGapPct": -0.81,
+      "usdGapPct": -0.09,
       "btcTrend": false,
-      "btcGapPct": -7.09
+      "btcGapPct": -9.42
     },
     {
-      "symbol": "APR",
-      "rank": 342,
-      "price": 0.176797401407494,
-      "usdTrend": true,
-      "usdGapPct": 15.9,
-      "btcTrend": true,
-      "btcGapPct": 8.61
-    },
-    {
-      "symbol": "ORBS",
-      "rank": 343,
-      "price": 0.00897763296426602,
-      "usdTrend": false,
-      "usdGapPct": -5.49,
-      "btcTrend": false,
-      "btcGapPct": -11.95
-    },
-    {
-      "symbol": "BORA",
-      "rank": 344,
-      "price": 0.0366813452401749,
-      "usdTrend": true,
-      "usdGapPct": 0.1,
-      "btcTrend": false,
-      "btcGapPct": -6.67
-    },
-    {
-      "symbol": "IOTX",
-      "rank": 345,
-      "price": 0.00473289489039371,
-      "usdTrend": false,
-      "usdGapPct": -3.78,
-      "btcTrend": false,
-      "btcGapPct": -10.28
-    },
-    {
-      "symbol": "API3",
-      "rank": 346,
-      "price": 0.3006120799101,
-      "usdTrend": true,
-      "usdGapPct": 6.63,
-      "btcTrend": false,
-      "btcGapPct": -0.52
-    },
-    {
-      "symbol": "ARDR",
-      "rank": 347,
-      "price": 0.0434491757362761,
-      "usdTrend": false,
-      "usdGapPct": -1.09,
-      "btcTrend": false,
-      "btcGapPct": -7.75
-    },
-    {
-      "symbol": "ICX",
-      "rank": 348,
-      "price": 0.0389498185834252,
-      "usdTrend": true,
-      "usdGapPct": 7.46,
-      "btcTrend": true,
-      "btcGapPct": 0.28
-    },
-    {
-      "symbol": "RPL",
-      "rank": 349,
-      "price": 1.91582135113113,
-      "usdTrend": true,
-      "usdGapPct": 5.06,
-      "btcTrend": false,
-      "btcGapPct": -1.95
-    },
-    {
-      "symbol": "G",
-      "rank": 350,
-      "price": 0.00393910977373903,
-      "usdTrend": true,
-      "usdGapPct": 6.71,
-      "btcTrend": false,
-      "btcGapPct": -0.3
-    },
-    {
-      "symbol": "VENOM",
-      "rank": 351,
-      "price": 0.0192853268021766,
-      "usdTrend": false,
-      "usdGapPct": -22.06,
-      "btcTrend": false,
-      "btcGapPct": -27.59
-    },
-    {
-      "symbol": "GUSD",
-      "rank": 352,
-      "price": 0.994309439154033,
-      "usdTrend": false,
-      "usdGapPct": -0.58,
-      "btcTrend": false,
-      "btcGapPct": -7.32
-    },
-    {
-      "symbol": "MERL",
-      "rank": 353,
-      "price": 0.0406381272127956,
-      "usdTrend": true,
-      "usdGapPct": 29.43,
-      "btcTrend": true,
-      "btcGapPct": 20.73
-    },
-    {
-      "symbol": "NOT",
-      "rank": 354,
-      "price": 0.000420806324171714,
-      "usdTrend": true,
-      "usdGapPct": 12.34,
-      "btcTrend": true,
-      "btcGapPct": 4.88
-    },
-    {
-      "symbol": "FRAX",
-      "rank": 355,
-      "price": 0.443535315577744,
-      "usdTrend": false,
-      "usdGapPct": -12.95,
-      "btcTrend": false,
-      "btcGapPct": -18.85
-    },
-    {
-      "symbol": "RIF",
-      "rank": 356,
-      "price": 0.0455387038921921,
-      "usdTrend": true,
-      "usdGapPct": 26.85,
-      "btcTrend": true,
-      "btcGapPct": 18.51
-    },
-    {
-      "symbol": "NEIRO",
-      "rank": 357,
-      "price": 0.000104549220109675,
-      "usdTrend": true,
-      "usdGapPct": 62.15,
-      "btcTrend": true,
-      "btcGapPct": 51.59
-    },
-    {
-      "symbol": "SSV",
-      "rank": 358,
-      "price": 2.53481399006672,
-      "usdTrend": true,
-      "usdGapPct": 1.48,
-      "btcTrend": false,
-      "btcGapPct": -5.36
-    },
-    {
-      "symbol": "ZIG",
-      "rank": 359,
-      "price": 0.028498893705611,
-      "usdTrend": false,
-      "usdGapPct": -14.3,
-      "btcTrend": false,
-      "btcGapPct": -20.12
-    },
-    {
-      "symbol": "KAITO",
-      "rank": 360,
-      "price": 0.488004345722863,
-      "usdTrend": true,
-      "usdGapPct": 26.91,
-      "btcTrend": true,
-      "btcGapPct": 18.45
-    },
-    {
-      "symbol": "GIGGLE",
-      "rank": 361,
-      "price": 40.7984831276368,
-      "usdTrend": true,
-      "usdGapPct": 48.13,
-      "btcTrend": true,
-      "btcGapPct": 38.72
-    },
-    {
-      "symbol": "LUNA",
-      "rank": 362,
-      "price": 0.0624491514725212,
-      "usdTrend": true,
-      "usdGapPct": 4.61,
-      "btcTrend": false,
-      "btcGapPct": -2.48
-    },
-    {
-      "symbol": "OSAK",
-      "rank": 363,
-      "price": 5.15966844759316e-8,
-      "usdTrend": true,
-      "usdGapPct": 50.35,
-      "btcTrend": true,
-      "btcGapPct": 40.67
-    },
-    {
-      "symbol": "BIRB",
-      "rank": 364,
-      "price": 0.146133227092634,
-      "usdTrend": true,
-      "usdGapPct": 1.33,
-      "btcTrend": false,
-      "btcGapPct": -5.49
-    },
-    {
-      "symbol": "GPS",
-      "rank": 365,
-      "price": 0.0086459945432323,
-      "usdTrend": true,
-      "usdGapPct": 4.62,
-      "btcTrend": false,
-      "btcGapPct": -2.45
-    },
-    {
-      "symbol": "APEX",
-      "rank": 366,
-      "price": 0.301670200945147,
-      "usdTrend": true,
-      "usdGapPct": 7.63,
-      "btcTrend": true,
-      "btcGapPct": 0.38
-    },
-    {
-      "symbol": "PEOPLE",
-      "rank": 367,
-      "price": 0.00818991181587047,
-      "usdTrend": true,
-      "usdGapPct": 19.55,
-      "btcTrend": true,
-      "btcGapPct": 11.65
-    },
-    {
-      "symbol": "UMA",
-      "rank": 368,
-      "price": 0.455958614383696,
-      "usdTrend": true,
-      "usdGapPct": 8.52,
-      "btcTrend": true,
-      "btcGapPct": 1.24
-    },
-    {
-      "symbol": "STORJ",
-      "rank": 369,
-      "price": 0.104371648916118,
-      "usdTrend": true,
-      "usdGapPct": 9.11,
-      "btcTrend": true,
-      "btcGapPct": 1.83
-    },
-    {
-      "symbol": "PUNDIX",
-      "rank": 370,
-      "price": 0.153728086874985,
-      "usdTrend": true,
-      "usdGapPct": 2.91,
-      "btcTrend": false,
-      "btcGapPct": -4.03
-    },
-    {
-      "symbol": "BAND",
-      "rank": 371,
-      "price": 0.233834236305889,
-      "usdTrend": true,
-      "usdGapPct": 8.71,
-      "btcTrend": true,
-      "btcGapPct": 1.46
-    },
-    {
-      "symbol": "CTSI",
-      "rank": 372,
-      "price": 0.0377208313572346,
-      "usdTrend": true,
-      "usdGapPct": 38.45,
-      "btcTrend": true,
-      "btcGapPct": 29.36
-    },
-    {
-      "symbol": "ARRR",
-      "rank": 373,
-      "price": 0.186777001829271,
-      "usdTrend": false,
-      "usdGapPct": -15.13,
-      "btcTrend": false,
-      "btcGapPct": -20.88
-    },
-    {
-      "symbol": "SOMI",
-      "rank": 374,
-      "price": 0.186128808382209,
-      "usdTrend": true,
-      "usdGapPct": 6.05,
-      "btcTrend": false,
-      "btcGapPct": -1.11
-    },
-    {
-      "symbol": "SUSD",
-      "rank": 375,
-      "price": 0.754133913268376,
-      "usdTrend": false,
-      "usdGapPct": -4.1,
-      "btcTrend": false,
-      "btcGapPct": -10.61
-    },
-    {
-      "symbol": "ELON",
-      "rank": 376,
-      "price": 3.99603196969197e-8,
-      "usdTrend": true,
-      "usdGapPct": 3.84,
-      "btcTrend": false,
-      "btcGapPct": -3.05
-    },
-    {
-      "symbol": "USDP",
-      "rank": 377,
-      "price": 0.999583874289859,
-      "usdTrend": false,
-      "usdGapPct": -0.01,
-      "btcTrend": false,
-      "btcGapPct": -6.79
-    },
-    {
-      "symbol": "POLYX",
-      "rank": 378,
-      "price": 0.05340176962122,
-      "usdTrend": true,
-      "usdGapPct": 17.98,
-      "btcTrend": true,
-      "btcGapPct": 10.14
-    },
-    {
-      "symbol": "OMI",
-      "rank": 379,
-      "price": 0.00014130350698618,
-      "usdTrend": true,
-      "usdGapPct": 17.04,
-      "btcTrend": true,
-      "btcGapPct": 9.21
-    },
-    {
-      "symbol": "IO",
-      "rank": 380,
-      "price": 0.113422952695465,
+      "symbol": "SKY",
+      "rank": 44,
+      "price": 0.07817097820893,
       "usdTrend": true,
       "usdGapPct": 5.49,
       "btcTrend": false,
-      "btcGapPct": -1.59
+      "btcGapPct": -4.34
     },
     {
-      "symbol": "ONGAS",
-      "rank": 381,
-      "price": 0.0791695865742145,
+      "symbol": "AAVE",
+      "rank": 45,
+      "price": 115.011192343052,
       "usdTrend": true,
-      "usdGapPct": 14.95,
-      "btcTrend": true,
-      "btcGapPct": 7.39
-    },
-    {
-      "symbol": "IOST",
-      "rank": 382,
-      "price": 0.00113932851815367,
-      "usdTrend": true,
-      "usdGapPct": 1.77,
+      "usdGapPct": 8.59,
       "btcTrend": false,
-      "btcGapPct": -5.08
+      "btcGapPct": -1.53
     },
     {
-      "symbol": "RLC",
-      "rank": 383,
-      "price": 0.438644656686302,
+      "symbol": "NEAR",
+      "rank": 46,
+      "price": 1.40427686282496,
       "usdTrend": true,
-      "usdGapPct": 7.66,
-      "btcTrend": true,
-      "btcGapPct": 0.48
-    },
-    {
-      "symbol": "POWR",
-      "rank": 384,
-      "price": 0.0685188342061712,
-      "usdTrend": true,
-      "usdGapPct": 7.22,
-      "btcTrend": true,
-      "btcGapPct": 0.06
-    },
-    {
-      "symbol": "ANIME",
-      "rank": 385,
-      "price": 0.00484303422616601,
-      "usdTrend": true,
-      "usdGapPct": 2.25,
-      "btcTrend": false,
-      "btcGapPct": -4.63
-    },
-    {
-      "symbol": "UCN",
-      "rank": 386,
-      "price": 346.806296534503,
-      "usdTrend": false,
-      "usdGapPct": -17.23,
-      "btcTrend": false,
-      "btcGapPct": -23.08
-    },
-    {
-      "symbol": "UAI",
-      "rank": 387,
-      "price": 0.234294300683155,
-      "usdTrend": false,
-      "usdGapPct": -10.7,
-      "btcTrend": false,
-      "btcGapPct": -16.47
-    },
-    {
-      "symbol": "EWT",
-      "rank": 388,
-      "price": 0.424496254719094,
-      "usdTrend": false,
-      "usdGapPct": -9.7,
-      "btcTrend": false,
-      "btcGapPct": -15.85
-    },
-    {
-      "symbol": "SOLV",
-      "rank": 389,
-      "price": 0.00423902637131007,
-      "usdTrend": true,
-      "usdGapPct": 7.68,
-      "btcTrend": true,
-      "btcGapPct": 0.52
-    },
-    {
-      "symbol": "ILV",
-      "rank": 390,
-      "price": 4.58016888740202,
-      "usdTrend": true,
-      "usdGapPct": 19.79,
-      "btcTrend": true,
-      "btcGapPct": 11.92
-    },
-    {
-      "symbol": "SKL",
-      "rank": 391,
-      "price": 0.00681175227565065,
-      "usdTrend": true,
-      "usdGapPct": 5.02,
-      "btcTrend": false,
-      "btcGapPct": -2.05
-    },
-    {
-      "symbol": "PIPPIN",
-      "rank": 392,
-      "price": 0.0352514800461108,
-      "usdTrend": false,
-      "usdGapPct": -81.88,
-      "btcTrend": false,
-      "btcGapPct": -83.3
-    },
-    {
-      "symbol": "AUCTION",
-      "rank": 393,
-      "price": 4.85409316037603,
-      "usdTrend": true,
-      "usdGapPct": 2.63,
-      "btcTrend": false,
-      "btcGapPct": -4.27
-    },
-    {
-      "symbol": "EDU",
-      "rank": 394,
-      "price": 0.0467904105864342,
-      "usdTrend": false,
-      "usdGapPct": -37.14,
-      "btcTrend": false,
-      "btcGapPct": -41.58
-    },
-    {
-      "symbol": "SQD",
-      "rank": 395,
-      "price": 0.0333551592890748,
-      "usdTrend": false,
-      "usdGapPct": -2.62,
-      "btcTrend": false,
-      "btcGapPct": -9.19
-    },
-    {
-      "symbol": "MEME",
-      "rank": 396,
-      "price": 0.000583612462351763,
-      "usdTrend": true,
-      "usdGapPct": 4.1,
-      "btcTrend": false,
-      "btcGapPct": -2.9
-    },
-    {
-      "symbol": "CYBER",
-      "rank": 397,
-      "price": 0.53531988073114,
-      "usdTrend": true,
-      "usdGapPct": 1.67,
-      "btcTrend": false,
-      "btcGapPct": -5.15
-    },
-    {
-      "symbol": "LON",
-      "rank": 398,
-      "price": 0.282332301148336,
-      "usdTrend": false,
-      "usdGapPct": -0.46,
-      "btcTrend": false,
-      "btcGapPct": -7.13
-    },
-    {
-      "symbol": "WOO",
-      "rank": 400,
-      "price": 0.0185132708871877,
-      "usdTrend": true,
-      "usdGapPct": 5.71,
-      "btcTrend": false,
-      "btcGapPct": -1.29
-    },
-    {
-      "symbol": "LAYER",
-      "rank": 401,
-      "price": 0.0890261457379548,
-      "usdTrend": true,
-      "usdGapPct": 6.95,
-      "btcTrend": false,
-      "btcGapPct": -0.26
-    },
-    {
-      "symbol": "PRO",
-      "rank": 402,
-      "price": 0.349999910026564,
-      "usdTrend": false,
-      "usdGapPct": -3.45,
-      "btcTrend": false,
-      "btcGapPct": -9.98
-    },
-    {
-      "symbol": "OCEAN",
-      "rank": 403,
-      "price": 0.145098756404833,
-      "usdTrend": true,
-      "usdGapPct": 17.16,
-      "btcTrend": true,
-      "btcGapPct": 9.47
-    },
-    {
-      "symbol": "SWFTC",
-      "rank": 404,
-      "price": 0.00347063620565086,
-      "usdTrend": true,
-      "usdGapPct": 0.36,
-      "btcTrend": false,
-      "btcGapPct": -6.44
-    },
-    {
-      "symbol": "BNT",
-      "rank": 405,
-      "price": 0.314734801725074,
-      "usdTrend": true,
-      "usdGapPct": 7.3,
-      "btcTrend": true,
-      "btcGapPct": 0.17
-    },
-    {
-      "symbol": "1000SATS",
-      "rank": 406,
-      "price": 0.0000198755142337639,
-      "usdTrend": true,
-      "usdGapPct": 74.52,
-      "btcTrend": true,
-      "btcGapPct": 63.07
-    },
-    {
-      "symbol": "SATS",
-      "rank": 407,
-      "price": 1.98184638463503e-8,
-      "usdTrend": true,
-      "usdGapPct": 74.11,
-      "btcTrend": true,
-      "btcGapPct": 62.69
-    },
-    {
-      "symbol": "BOME",
-      "rank": 408,
-      "price": 0.000527336782441757,
-      "usdTrend": true,
-      "usdGapPct": 29.23,
-      "btcTrend": true,
-      "btcGapPct": 20.77
-    },
-    {
-      "symbol": "DEP",
-      "rank": 409,
-      "price": 0.00111025876444387,
-      "usdTrend": false,
-      "usdGapPct": -5.93,
-      "btcTrend": false,
-      "btcGapPct": -12.35
-    },
-    {
-      "symbol": "SNEK",
-      "rank": 410,
-      "price": 0.000472732023335051,
-      "usdTrend": false,
-      "usdGapPct": -0.49,
-      "btcTrend": false,
-      "btcGapPct": -7.22
-    },
-    {
-      "symbol": "DKA",
-      "rank": 411,
-      "price": 0.00650462150591672,
-      "usdTrend": true,
-      "usdGapPct": 22.47,
-      "btcTrend": true,
-      "btcGapPct": 14.43
-    },
-    {
-      "symbol": "KNC",
-      "rank": 412,
-      "price": 0.140134028368085,
-      "usdTrend": true,
-      "usdGapPct": 2.72,
-      "btcTrend": false,
-      "btcGapPct": -4.25
-    },
-    {
-      "symbol": "VANA",
-      "rank": 413,
-      "price": 1.43455877728764,
-      "usdTrend": true,
-      "usdGapPct": 5.96,
+      "usdGapPct": 8.83,
       "btcTrend": false,
       "btcGapPct": -1.15
     },
     {
-      "symbol": "ONE",
-      "rank": 414,
-      "price": 0.002251477239378,
-      "usdTrend": false,
-      "usdGapPct": -1.22,
-      "btcTrend": false,
-      "btcGapPct": -7.87
-    },
-    {
-      "symbol": "XCH",
-      "rank": 415,
-      "price": 2.28886603633815,
-      "usdTrend": false,
-      "usdGapPct": -11.19,
-      "btcTrend": false,
-      "btcGapPct": -17.23
-    },
-    {
-      "symbol": "QQQON",
-      "rank": 416,
-      "price": 640.815510237281,
+      "symbol": "USDF",
+      "rank": 47,
+      "price": 0.9981413379643,
       "usdTrend": true,
-      "usdGapPct": 7.24,
+      "usdGapPct": 0.04,
+      "btcTrend": false,
+      "btcGapPct": -9.37
+    },
+    {
+      "symbol": "PEPE",
+      "rank": 48,
+      "price": 0.00000394755737079389,
+      "usdTrend": true,
+      "usdGapPct": 13.38,
       "btcTrend": true,
-      "btcGapPct": 0.04
+      "btcGapPct": 2.88
     },
     {
-      "symbol": "LA",
-      "rank": 417,
-      "price": 0.171512807685362,
+      "symbol": "ICP",
+      "rank": 49,
+      "price": 2.61339586430251,
+      "usdTrend": true,
+      "usdGapPct": 6.59,
+      "btcTrend": false,
+      "btcGapPct": -3.27
+    },
+    {
+      "symbol": "RLUSD",
+      "rank": 50,
+      "price": 0.999756942871197,
       "usdTrend": false,
-      "usdGapPct": -15.35,
+      "usdGapPct": -0.05,
       "btcTrend": false,
-      "btcGapPct": -21.14
+      "btcGapPct": -9.44
     },
     {
-      "symbol": "PHA",
-      "rank": 418,
-      "price": 0.0376954071228195,
+      "symbol": "ETC",
+      "rank": 51,
+      "price": 8.7174162468753,
       "usdTrend": true,
-      "usdGapPct": 6.5,
+      "usdGapPct": 3.6,
       "btcTrend": false,
-      "btcGapPct": -0.52
+      "btcGapPct": -6.07
     },
     {
-      "symbol": "MATIC",
-      "rank": 419,
-      "price": 0.089115501667678,
+      "symbol": "BGB",
+      "rank": 52,
+      "price": 1.90495752770918,
       "usdTrend": false,
-      "usdGapPct": -6.14,
+      "usdGapPct": -6.57,
       "btcTrend": false,
-      "btcGapPct": -12.57
+      "btcGapPct": -15.37
     },
     {
-      "symbol": "DAG",
-      "rank": 420,
-      "price": 0.00847038579617053,
+      "symbol": "ONDO",
+      "rank": 53,
+      "price": 0.270726072538895,
+      "usdTrend": true,
+      "usdGapPct": 4.04,
+      "btcTrend": false,
+      "btcGapPct": -5.69
+    },
+    {
+      "symbol": "RYO",
+      "rank": 54,
+      "price": 4.27357495633364,
       "usdTrend": false,
-      "usdGapPct": -13.49,
+      "usdGapPct": -2.55,
       "btcTrend": false,
-      "btcGapPct": -19.43
+      "btcGapPct": -11.68
     },
     {
-      "symbol": "MANTA",
-      "rank": 421,
-      "price": 0.0690048671356173,
+      "symbol": "HTX",
+      "rank": 55,
+      "price": 0.00000178680024455573,
       "usdTrend": true,
-      "usdGapPct": 6.16,
+      "usdGapPct": 6.26,
       "btcTrend": false,
-      "btcGapPct": -0.9
+      "btcGapPct": -3.66
     },
     {
-      "symbol": "PEAQ",
-      "rank": 422,
-      "price": 0.0173306452245484,
+      "symbol": "KCS",
+      "rank": 56,
+      "price": 8.69253691927481,
       "usdTrend": true,
-      "usdGapPct": 18.78,
-      "btcTrend": true,
-      "btcGapPct": 10.71
+      "usdGapPct": 6.7,
+      "btcTrend": false,
+      "btcGapPct": -3.23
     },
     {
-      "symbol": "REZ",
-      "rank": 423,
-      "price": 0.00412335667618086,
+      "symbol": "QNT",
+      "rank": 57,
+      "price": 76.9474754426251,
       "usdTrend": true,
-      "usdGapPct": 21.33,
-      "btcTrend": true,
-      "btcGapPct": 13.35
+      "usdGapPct": 8.9,
+      "btcTrend": false,
+      "btcGapPct": -1.22
     },
     {
-      "symbol": "STEEM",
-      "rank": 424,
-      "price": 0.0591190887155539,
+      "symbol": "USDD",
+      "rank": 58,
+      "price": 1.00016270396945,
+      "usdTrend": true,
+      "usdGapPct": 0.07,
+      "btcTrend": false,
+      "btcGapPct": -9.34
+    },
+    {
+      "symbol": "DEXE",
+      "rank": 59,
+      "price": 13.4124052666014,
+      "usdTrend": true,
+      "usdGapPct": 99.61,
+      "btcTrend": true,
+      "btcGapPct": 81.97
+    },
+    {
+      "symbol": "ENA",
+      "rank": 60,
+      "price": 0.125247831619774,
+      "usdTrend": true,
+      "usdGapPct": 25.74,
+      "btcTrend": true,
+      "btcGapPct": 14.16
+    },
+    {
+      "symbol": "ALGO",
+      "rank": 61,
+      "price": 0.111299830100506,
+      "usdTrend": true,
+      "usdGapPct": 16.07,
+      "btcTrend": true,
+      "btcGapPct": 5.4
+    },
+    {
+      "symbol": "KAS",
+      "rank": 62,
+      "price": 0.0356918080681253,
+      "usdTrend": true,
+      "usdGapPct": 9.09,
+      "btcTrend": false,
+      "btcGapPct": -1.06
+    },
+    {
+      "symbol": "U",
+      "rank": 63,
+      "price": 0.999853697286507,
       "usdTrend": false,
-      "usdGapPct": -1.57,
+      "usdGapPct": -0.01,
       "btcTrend": false,
-      "btcGapPct": -8.22
+      "btcGapPct": -9.41
     },
     {
-      "symbol": "ZENT",
-      "rank": 425,
-      "price": 0.0034565431236864,
-      "usdTrend": true,
-      "usdGapPct": 0.85,
-      "btcTrend": false,
-      "btcGapPct": -5.97
-    },
-    {
-      "symbol": "BREV",
-      "rank": 426,
-      "price": 0.128926814517945,
-      "usdTrend": true,
-      "usdGapPct": 1.54,
-      "btcTrend": false,
-      "btcGapPct": -5.28
-    },
-    {
-      "symbol": "CVC",
-      "rank": 427,
-      "price": 0.0311943269679373,
-      "usdTrend": true,
-      "usdGapPct": 2.38,
-      "btcTrend": false,
-      "btcGapPct": -4.52
-    },
-    {
-      "symbol": "BLAST",
-      "rank": 428,
-      "price": 0.000532178778571629,
-      "usdTrend": true,
-      "usdGapPct": 8.09,
-      "btcTrend": true,
-      "btcGapPct": 0.85
-    },
-    {
-      "symbol": "XPIN",
-      "rank": 429,
-      "price": 0.00142625671093242,
-      "usdTrend": true,
-      "usdGapPct": 9.02,
-      "btcTrend": true,
-      "btcGapPct": 1.82
-    },
-    {
-      "symbol": "ETHW",
-      "rank": 430,
-      "price": 0.279497958444625,
+      "symbol": "DOT",
+      "rank": 64,
+      "price": 1.32482737709984,
       "usdTrend": false,
-      "usdGapPct": -0.39,
+      "usdGapPct": -4.81,
       "btcTrend": false,
-      "btcGapPct": -7.12
+      "btcGapPct": -13.77
     },
     {
-      "symbol": "SCRT",
-      "rank": 431,
-      "price": 0.0947529122752957,
-      "usdTrend": true,
-      "usdGapPct": 16.51,
-      "btcTrend": true,
-      "btcGapPct": 8.83
-    },
-    {
-      "symbol": "AIXBT",
-      "rank": 432,
-      "price": 0.0296053287597653,
-      "usdTrend": true,
-      "usdGapPct": 20.31,
-      "btcTrend": true,
-      "btcGapPct": 12.41
-    },
-    {
-      "symbol": "CORE",
-      "rank": 433,
-      "price": 0.0323427182977341,
+      "symbol": "WLD",
+      "rank": 65,
+      "price": 0.284250095808009,
       "usdTrend": false,
-      "usdGapPct": -45.25,
+      "usdGapPct": -12.36,
       "btcTrend": false,
-      "btcGapPct": -49.06
+      "btcGapPct": -20.56
     },
     {
-      "symbol": "CARV",
-      "rank": 434,
-      "price": 0.059724717556315,
-      "usdTrend": true,
-      "usdGapPct": 4.51,
-      "btcTrend": false,
-      "btcGapPct": -2.59
-    },
-    {
-      "symbol": "ARK",
-      "rank": 435,
-      "price": 0.173812232287571,
-      "usdTrend": true,
-      "usdGapPct": 1.28,
-      "btcTrend": false,
-      "btcGapPct": -5.53
-    },
-    {
-      "symbol": "LSK",
-      "rank": 436,
-      "price": 0.130236780727301,
-      "usdTrend": true,
-      "usdGapPct": 1.88,
-      "btcTrend": false,
-      "btcGapPct": -4.95
-    },
-    {
-      "symbol": "ABT",
-      "rank": 437,
-      "price": 0.319308948297449,
-      "usdTrend": true,
-      "usdGapPct": 40.25,
-      "btcTrend": true,
-      "btcGapPct": 31.2
-    },
-    {
-      "symbol": "FTRB",
-      "rank": 438,
-      "price": 0.00591160150055554,
+      "symbol": "POL",
+      "rank": 66,
+      "price": 0.0906672847376389,
       "usdTrend": false,
-      "usdGapPct": -7.81,
+      "usdGapPct": -4.03,
       "btcTrend": false,
-      "btcGapPct": -14.15
+      "btcGapPct": -13.12
     },
     {
-      "symbol": "LISTA",
-      "rank": 439,
-      "price": 0.0928638925335801,
+      "symbol": "ATOM",
+      "rank": 67,
+      "price": 1.8412513922197,
+      "usdTrend": true,
+      "usdGapPct": 3.18,
+      "btcTrend": false,
+      "btcGapPct": -6.43
+    },
+    {
+      "symbol": "RENDER",
+      "rank": 68,
+      "price": 1.86853921397079,
       "usdTrend": true,
       "usdGapPct": 9.18,
+      "btcTrend": false,
+      "btcGapPct": -0.82
+    },
+    {
+      "symbol": "GT",
+      "rank": 69,
+      "price": 7.44463562329898,
+      "usdTrend": true,
+      "usdGapPct": 9.11,
+      "btcTrend": false,
+      "btcGapPct": -1.08
+    },
+    {
+      "symbol": "ARB",
+      "rank": 70,
+      "price": 0.131931972234626,
+      "usdTrend": true,
+      "usdGapPct": 30.06,
       "btcTrend": true,
-      "btcGapPct": 1.79
+      "btcGapPct": 18.19
     },
     {
-      "symbol": "FAI",
-      "rank": 440,
-      "price": 0.00348362780617537,
-      "usdTrend": false,
-      "usdGapPct": -28.62,
-      "btcTrend": false,
-      "btcGapPct": -33.3
-    },
-    {
-      "symbol": "USTC",
-      "rank": 441,
-      "price": 0.0054468850676336,
+      "symbol": "MORPHO",
+      "rank": 71,
+      "price": 1.94985433889604,
       "usdTrend": true,
-      "usdGapPct": 12.84,
+      "usdGapPct": 11.74,
       "btcTrend": true,
-      "btcGapPct": 5.29
+      "btcGapPct": 1.41
     },
     {
-      "symbol": "YGG",
-      "rank": 442,
-      "price": 0.0419289449886465,
+      "symbol": "APT",
+      "rank": 72,
+      "price": 0.981616969915496,
       "usdTrend": true,
-      "usdGapPct": 10.16,
+      "usdGapPct": 4.88,
+      "btcTrend": false,
+      "btcGapPct": -4.94
+    },
+    {
+      "symbol": "FIL",
+      "rank": 73,
+      "price": 0.984555387071894,
+      "usdTrend": true,
+      "usdGapPct": 8.66,
+      "btcTrend": false,
+      "btcGapPct": -1.47
+    },
+    {
+      "symbol": "ZRO",
+      "rank": 74,
+      "price": 1.95967230327481,
+      "usdTrend": false,
+      "usdGapPct": -1.11,
+      "btcTrend": false,
+      "btcGapPct": -10.29
+    },
+    {
+      "symbol": "FLR",
+      "rank": 75,
+      "price": 0.00843593377329214,
+      "usdTrend": true,
+      "usdGapPct": 1.4,
+      "btcTrend": false,
+      "btcGapPct": -8.13
+    },
+    {
+      "symbol": "TRUMP",
+      "rank": 76,
+      "price": 3.01509331960863,
+      "usdTrend": false,
+      "usdGapPct": -4.31,
+      "btcTrend": false,
+      "btcGapPct": -13.24
+    },
+    {
+      "symbol": "JUP",
+      "rank": 77,
+      "price": 0.186356774647769,
+      "usdTrend": true,
+      "usdGapPct": 14.09,
       "btcTrend": true,
-      "btcGapPct": 2.83
+      "btcGapPct": 3.5
     },
     {
-      "symbol": "STRAX",
-      "rank": 443,
-      "price": 0.0136626350427098,
+      "symbol": "XDC",
+      "rank": 78,
+      "price": 0.0321593635922345,
       "usdTrend": true,
-      "usdGapPct": 0.08,
+      "usdGapPct": 1.18,
       "btcTrend": false,
-      "btcGapPct": -6.68
+      "btcGapPct": -8.32
     },
     {
-      "symbol": "IQ",
-      "rank": 444,
-      "price": 0.00110315709943055,
-      "usdTrend": false,
-      "usdGapPct": -0.83,
-      "btcTrend": false,
-      "btcGapPct": -7.5
-    },
-    {
-      "symbol": "LQTY",
-      "rank": 445,
-      "price": 0.291669653854235,
+      "symbol": "PUMP",
+      "rank": 79,
+      "price": 0.00200781998631601,
       "usdTrend": true,
-      "usdGapPct": 3.21,
+      "usdGapPct": 7.74,
       "btcTrend": false,
-      "btcGapPct": -3.68
+      "btcGapPct": -2.23
     },
     {
-      "symbol": "PIXEL",
-      "rank": 446,
-      "price": 0.00827987039593757,
+      "symbol": "VET",
+      "rank": 80,
+      "price": 0.00730923861468932,
       "usdTrend": true,
-      "usdGapPct": 6.72,
+      "usdGapPct": 2.85,
       "btcTrend": false,
-      "btcGapPct": -0.1
+      "btcGapPct": -6.75
     },
     {
-      "symbol": "LCX",
-      "rank": 447,
-      "price": 0.0326971162475427,
+      "symbol": "NIGHT",
+      "rank": 81,
+      "price": 0.0374865523796584,
       "usdTrend": false,
-      "usdGapPct": -22.54,
+      "usdGapPct": -21.31,
       "btcTrend": false,
-      "btcGapPct": -27.82
+      "btcGapPct": -28.89
     },
     {
-      "symbol": "UQC",
-      "rank": 448,
-      "price": 2.82560043030382,
+      "symbol": "BDX",
+      "rank": 82,
+      "price": 0.0799267089390779,
+      "usdTrend": false,
+      "usdGapPct": -0.68,
+      "btcTrend": false,
+      "btcGapPct": -10.02
+    },
+    {
+      "symbol": "FET",
+      "rank": 83,
+      "price": 0.229390130301477,
       "usdTrend": true,
-      "usdGapPct": 0.09,
-      "btcTrend": false,
-      "btcGapPct": -6.68
-    },
-    {
-      "symbol": "AGI",
-      "rank": 449,
-      "price": 0.0114121665156301,
-      "usdTrend": false,
-      "usdGapPct": -0.65,
-      "btcTrend": false,
-      "btcGapPct": -7.29
-    },
-    {
-      "symbol": "MLK",
-      "rank": 450,
-      "price": 0.0521117779259599,
-      "usdTrend": false,
-      "usdGapPct": -0.41,
-      "btcTrend": false,
-      "btcGapPct": -7.15
-    },
-    {
-      "symbol": "DRIFT",
-      "rank": 451,
-      "price": 0.0442756600413732,
-      "usdTrend": false,
-      "usdGapPct": -34.13,
-      "btcTrend": false,
-      "btcGapPct": -38.73
-    },
-    {
-      "symbol": "NYM",
-      "rank": 452,
-      "price": 0.0328110568170045,
-      "usdTrend": true,
-      "usdGapPct": 8.73,
+      "usdGapPct": 10.26,
       "btcTrend": true,
-      "btcGapPct": 1.49
+      "btcGapPct": 0.14
     },
     {
-      "symbol": "WET",
-      "rank": 453,
-      "price": 0.113647809228958,
+      "symbol": "JST",
+      "rank": 84,
+      "price": 0.0694790137617184,
       "usdTrend": true,
-      "usdGapPct": 4.82,
-      "btcTrend": false,
-      "btcGapPct": -2.14
-    },
-    {
-      "symbol": "GUN",
-      "rank": 454,
-      "price": 0.016613217225775,
-      "usdTrend": false,
-      "usdGapPct": -10.66,
-      "btcTrend": false,
-      "btcGapPct": -16.93
-    },
-    {
-      "symbol": "CLANKER",
-      "rank": 455,
-      "price": 27.0005989747302,
-      "usdTrend": true,
-      "usdGapPct": 0.57,
-      "btcTrend": false,
-      "btcGapPct": -6.16
-    },
-    {
-      "symbol": "BLUAI",
-      "rank": 456,
-      "price": 0.00881301504943951,
-      "usdTrend": true,
-      "usdGapPct": 31.58,
+      "usdGapPct": 17.73,
       "btcTrend": true,
-      "btcGapPct": 23.24
+      "btcGapPct": 6.91
     },
     {
-      "symbol": "MTL",
-      "rank": 457,
-      "price": 0.302151643054238,
-      "usdTrend": true,
-      "usdGapPct": 7.48,
-      "btcTrend": true,
-      "btcGapPct": 0.28
-    },
-    {
-      "symbol": "SPYX",
-      "rank": 458,
-      "price": 704.022778127394,
-      "usdTrend": true,
-      "usdGapPct": 5.2,
-      "btcTrend": false,
-      "btcGapPct": -1.88
-    },
-    {
-      "symbol": "VOW",
-      "rank": 459,
-      "price": 0.0248065775885069,
-      "usdTrend": false,
-      "usdGapPct": -3.33,
-      "btcTrend": false,
-      "btcGapPct": -9.87
-    },
-    {
-      "symbol": "AERGO",
-      "rank": 460,
-      "price": 0.0553373207584663,
-      "usdTrend": true,
-      "usdGapPct": 1.57,
-      "btcTrend": false,
-      "btcGapPct": -5.29
-    },
-    {
-      "symbol": "MMT",
-      "rank": 461,
-      "price": 0.141350184948084,
-      "usdTrend": true,
-      "usdGapPct": 18.38,
-      "btcTrend": true,
-      "btcGapPct": 10.54
-    },
-    {
-      "symbol": "ERG",
-      "rank": 462,
-      "price": 0.323788161564143,
-      "usdTrend": true,
-      "usdGapPct": 4.72,
-      "btcTrend": false,
-      "btcGapPct": -2.34
-    },
-    {
-      "symbol": "C",
-      "rank": 463,
-      "price": 0.0766676727971137,
-      "usdTrend": true,
-      "usdGapPct": 22.29,
-      "btcTrend": true,
-      "btcGapPct": 14.07
-    },
-    {
-      "symbol": "USDCV",
-      "rank": 464,
-      "price": 0.999072988062129,
+      "symbol": "USD0",
+      "rank": 85,
+      "price": 0.99812914632659,
       "usdTrend": false,
       "usdGapPct": -0.04,
       "btcTrend": false,
-      "btcGapPct": -6.81
+      "btcGapPct": -9.44
     },
     {
-      "symbol": "QANX",
-      "rank": 465,
-      "price": 0.0121534604419449,
+      "symbol": "PENGU",
+      "rank": 86,
+      "price": 0.00776115228291653,
+      "usdTrend": true,
+      "usdGapPct": 12.53,
+      "btcTrend": true,
+      "btcGapPct": 2.13
+    },
+    {
+      "symbol": "BONK",
+      "rank": 87,
+      "price": 0.00000642304114125237,
+      "usdTrend": true,
+      "usdGapPct": 7.93,
+      "btcTrend": false,
+      "btcGapPct": -2.1
+    },
+    {
+      "symbol": "CAKE",
+      "rank": 88,
+      "price": 1.58570439639873,
+      "usdTrend": true,
+      "usdGapPct": 11.71,
+      "btcTrend": true,
+      "btcGapPct": 1.42
+    },
+    {
+      "symbol": "NEXO",
+      "rank": 89,
+      "price": 0.926609119877261,
+      "usdTrend": true,
+      "usdGapPct": 4.66,
+      "btcTrend": false,
+      "btcGapPct": -5.11
+    },
+    {
+      "symbol": "VIRTUAL",
+      "rank": 90,
+      "price": 0.757648929624303,
+      "usdTrend": true,
+      "usdGapPct": 9.68,
+      "btcTrend": false,
+      "btcGapPct": -0.49
+    },
+    {
+      "symbol": "TUSD",
+      "rank": 91,
+      "price": 0.999250659407425,
+      "usdTrend": true,
+      "usdGapPct": 0,
+      "btcTrend": false,
+      "btcGapPct": -9.4
+    },
+    {
+      "symbol": "EDGE",
+      "rank": 92,
+      "price": 1.34449304172311,
+      "usdTrend": true,
+      "usdGapPct": 430.64,
+      "btcTrend": true,
+      "btcGapPct": 396.54
+    },
+    {
+      "symbol": "DASH",
+      "rank": 93,
+      "price": 36.8547122837854,
+      "usdTrend": true,
+      "usdGapPct": 8.73,
+      "btcTrend": false,
+      "btcGapPct": -1.22
+    },
+    {
+      "symbol": "CHZ",
+      "rank": 94,
+      "price": 0.0422124282228524,
+      "usdTrend": true,
+      "usdGapPct": 11.81,
+      "btcTrend": true,
+      "btcGapPct": 1.38
+    },
+    {
+      "symbol": "STX",
+      "rank": 95,
+      "price": 0.238985448516517,
       "usdTrend": false,
-      "usdGapPct": -18.51,
+      "usdGapPct": -0.23,
       "btcTrend": false,
-      "btcGapPct": -24.13
+      "btcGapPct": -9.57
     },
     {
-      "symbol": "PROM",
-      "rank": 466,
-      "price": 1.53544481723258,
+      "symbol": "ETHFI",
+      "rank": 96,
+      "price": 0.519860804961269,
       "usdTrend": true,
-      "usdGapPct": 40.42,
-      "btcTrend": true,
-      "btcGapPct": 31.18
-    },
-    {
-      "symbol": "CPOOL",
-      "rank": 467,
-      "price": 0.0247609057242056,
-      "usdTrend": true,
-      "usdGapPct": 12.18,
-      "btcTrend": true,
-      "btcGapPct": 4.69
-    },
-    {
-      "symbol": "SLP",
-      "rank": 468,
-      "price": 0.000636044416927659,
-      "usdTrend": true,
-      "usdGapPct": 7.9,
-      "btcTrend": true,
-      "btcGapPct": 0.71
-    },
-    {
-      "symbol": "COTI",
-      "rank": 469,
-      "price": 0.0147639024085557,
-      "usdTrend": true,
-      "usdGapPct": 15.25,
-      "btcTrend": true,
-      "btcGapPct": 7.61
-    },
-    {
-      "symbol": "CTK",
-      "rank": 470,
-      "price": 0.182949450826208,
-      "usdTrend": true,
-      "usdGapPct": 7.64,
-      "btcTrend": true,
-      "btcGapPct": 0.39
-    },
-    {
-      "symbol": "XAN",
-      "rank": 471,
-      "price": 0.00975729474584215,
-      "usdTrend": true,
-      "usdGapPct": 18.51,
-      "btcTrend": true,
-      "btcGapPct": 10.85
-    },
-    {
-      "symbol": "ALLO",
-      "rank": 472,
-      "price": 0.114089437821007,
-      "usdTrend": true,
-      "usdGapPct": 0.52,
+      "usdGapPct": 3.48,
       "btcTrend": false,
-      "btcGapPct": -6.23
+      "btcGapPct": -6.2
     },
     {
-      "symbol": "TREE",
-      "rank": 473,
-      "price": 0.0690395178028425,
+      "symbol": "EURC",
+      "rank": 97,
+      "price": 1.17596867388762,
       "usdTrend": true,
-      "usdGapPct": 6.74,
+      "usdGapPct": 1.38,
       "btcTrend": false,
-      "btcGapPct": -0.43
+      "btcGapPct": -8.14
     },
     {
-      "symbol": "CBK",
-      "rank": 474,
-      "price": 0.252846232298917,
-      "usdTrend": true,
-      "usdGapPct": 1.37,
-      "btcTrend": false,
-      "btcGapPct": -5.47
-    },
-    {
-      "symbol": "ID",
-      "rank": 475,
-      "price": 0.0329757191876035,
+      "symbol": "FDUSD",
+      "rank": 98,
+      "price": 0.999373428131709,
       "usdTrend": false,
-      "usdGapPct": -12.7,
+      "usdGapPct": -0.02,
       "btcTrend": false,
-      "btcGapPct": -18.67
+      "btcGapPct": -9.42
     },
     {
-      "symbol": "AGLD",
-      "rank": 476,
-      "price": 0.271708999860932,
+      "symbol": "VVV",
+      "rank": 99,
+      "price": 9.07423615740082,
       "usdTrend": true,
-      "usdGapPct": 10.6,
+      "usdGapPct": 37.94,
       "btcTrend": true,
-      "btcGapPct": 3.18
+      "btcGapPct": 25.43
     },
     {
-      "symbol": "OSMO",
-      "rank": 477,
-      "price": 0.0322473119890833,
+      "symbol": "SEI",
+      "rank": 100,
+      "price": 0.0582024650811396,
       "usdTrend": false,
-      "usdGapPct": -0.34,
+      "usdGapPct": -3.8,
       "btcTrend": false,
-      "btcGapPct": -7.06
+      "btcGapPct": -12.81
     },
     {
-      "symbol": "APTM",
-      "rank": 478,
-      "price": 0.278152135077691,
+      "symbol": "XTZ",
+      "rank": 101,
+      "price": 0.374257555334278,
       "usdTrend": true,
-      "usdGapPct": 5.84,
+      "usdGapPct": 1.65,
+      "btcTrend": false,
+      "btcGapPct": -7.85
+    },
+    {
+      "symbol": "AERO",
+      "rank": 102,
+      "price": 0.439338412345909,
+      "usdTrend": true,
+      "usdGapPct": 29.17,
+      "btcTrend": true,
+      "btcGapPct": 17.3
+    },
+    {
+      "symbol": "MON",
+      "rank": 103,
+      "price": 0.0343148511464635,
+      "usdTrend": true,
+      "usdGapPct": 35.65,
+      "btcTrend": true,
+      "btcGapPct": 23.51
+    },
+    {
+      "symbol": "LDO",
+      "rank": 104,
+      "price": 0.428731026699169,
+      "usdTrend": true,
+      "usdGapPct": 36.38,
+      "btcTrend": true,
+      "btcGapPct": 23.86
+    },
+    {
+      "symbol": "TIA",
+      "rank": 105,
+      "price": 0.424976807015116,
+      "usdTrend": true,
+      "usdGapPct": 31.28,
+      "btcTrend": true,
+      "btcGapPct": 19.21
+    },
+    {
+      "symbol": "SUN",
+      "rank": 106,
+      "price": 0.0186695957383158,
+      "usdTrend": true,
+      "usdGapPct": 9.03,
+      "btcTrend": false,
+      "btcGapPct": -1.12
+    },
+    {
+      "symbol": "DCR",
+      "rank": 107,
+      "price": 20.8048993789584,
+      "usdTrend": false,
+      "usdGapPct": -14.22,
+      "btcTrend": false,
+      "btcGapPct": -22.35
+    },
+    {
+      "symbol": "CRV",
+      "rank": 108,
+      "price": 0.239182282615556,
+      "usdTrend": true,
+      "usdGapPct": 4.46,
+      "btcTrend": false,
+      "btcGapPct": -5.31
+    },
+    {
+      "symbol": "CFX",
+      "rank": 109,
+      "price": 0.0628793353557831,
+      "usdTrend": true,
+      "usdGapPct": 14.41,
+      "btcTrend": true,
+      "btcGapPct": 3.88
+    },
+    {
+      "symbol": "币安人生",
+      "rank": 110,
+      "price": 0.532362422071897,
+      "usdTrend": true,
+      "usdGapPct": 489.41,
+      "btcTrend": true,
+      "btcGapPct": 446.94
+    },
+    {
+      "symbol": "IMX",
+      "rank": 111,
+      "price": 0.168397150725155,
+      "usdTrend": true,
+      "usdGapPct": 9.42,
+      "btcTrend": false,
+      "btcGapPct": -0.73
+    },
+    {
+      "symbol": "NFT",
+      "rank": 112,
+      "price": 3.38629235074268e-7,
+      "usdTrend": true,
+      "usdGapPct": 2.05,
+      "btcTrend": false,
+      "btcGapPct": -7.53
+    },
+    {
+      "symbol": "BSV",
+      "rank": 113,
+      "price": 16.3620277840786,
+      "usdTrend": true,
+      "usdGapPct": 9.28,
+      "btcTrend": false,
+      "btcGapPct": -0.86
+    },
+    {
+      "symbol": "SPX",
+      "rank": 114,
+      "price": 0.369949035324297,
+      "usdTrend": true,
+      "usdGapPct": 20.91,
+      "btcTrend": true,
+      "btcGapPct": 9.83
+    },
+    {
+      "symbol": "BTT",
+      "rank": 115,
+      "price": 3.28697976728339e-7,
+      "usdTrend": true,
+      "usdGapPct": 0.17,
+      "btcTrend": false,
+      "btcGapPct": -9.2
+    },
+    {
+      "symbol": "XPL",
+      "rank": 116,
+      "price": 0.127117114884435,
+      "usdTrend": true,
+      "usdGapPct": 16.57,
+      "btcTrend": true,
+      "btcGapPct": 6.04
+    },
+    {
+      "symbol": "GNO",
+      "rank": 117,
+      "price": 125.624066158573,
+      "usdTrend": false,
+      "usdGapPct": -0.06,
+      "btcTrend": false,
+      "btcGapPct": -9.4
+    },
+    {
+      "symbol": "H",
+      "rank": 118,
+      "price": 0.133584712474814,
+      "usdTrend": true,
+      "usdGapPct": 24.54,
+      "btcTrend": true,
+      "btcGapPct": 12.97
+    },
+    {
+      "symbol": "FLOKI",
+      "rank": 119,
+      "price": 0.0000323027933994822,
+      "usdTrend": true,
+      "usdGapPct": 12.27,
+      "btcTrend": true,
+      "btcGapPct": 1.87
+    },
+    {
+      "symbol": "KAIA",
+      "rank": 120,
+      "price": 0.0509351915666877,
+      "usdTrend": true,
+      "usdGapPct": 0.58,
+      "btcTrend": false,
+      "btcGapPct": -8.86
+    },
+    {
+      "symbol": "KAG",
+      "rank": 121,
+      "price": 81.5592298046425,
+      "usdTrend": true,
+      "usdGapPct": 6.2,
+      "btcTrend": false,
+      "btcGapPct": -3.79
+    },
+    {
+      "symbol": "COCO",
+      "rank": 122,
+      "price": 0.299102688732242,
+      "usdTrend": true,
+      "usdGapPct": 40.26,
+      "btcTrend": true,
+      "btcGapPct": 27.67
+    },
+    {
+      "symbol": "NEO",
+      "rank": 123,
+      "price": 3.01718539479541,
+      "usdTrend": true,
+      "usdGapPct": 11.47,
+      "btcTrend": true,
+      "btcGapPct": 1.12
+    },
+    {
+      "symbol": "SYRUP",
+      "rank": 124,
+      "price": 0.248173726135808,
+      "usdTrend": true,
+      "usdGapPct": 7.88,
+      "btcTrend": false,
+      "btcGapPct": -2.08
+    },
+    {
+      "symbol": "ZBCN",
+      "rank": 125,
+      "price": 0.00279866901215418,
+      "usdTrend": true,
+      "usdGapPct": 20.4,
+      "btcTrend": true,
+      "btcGapPct": 9.27
+    },
+    {
+      "symbol": "OP",
+      "rank": 126,
+      "price": 0.132925097725599,
+      "usdTrend": true,
+      "usdGapPct": 12.98,
+      "btcTrend": true,
+      "btcGapPct": 2.53
+    },
+    {
+      "symbol": "JASMY",
+      "rank": 127,
+      "price": 0.00586756800806329,
+      "usdTrend": true,
+      "usdGapPct": 6.32,
+      "btcTrend": false,
+      "btcGapPct": -3.61
+    },
+    {
+      "symbol": "GRT",
+      "rank": 128,
+      "price": 0.0261437012779873,
+      "usdTrend": true,
+      "usdGapPct": 3.84,
+      "btcTrend": false,
+      "btcGapPct": -5.86
+    },
+    {
+      "symbol": "FRAXLEGACY",
+      "rank": 129,
+      "price": 0.994090631097358,
+      "usdTrend": true,
+      "usdGapPct": 0.18,
+      "btcTrend": false,
+      "btcGapPct": -9.24
+    },
+    {
+      "symbol": "PYTH",
+      "rank": 130,
+      "price": 0.0474913097957571,
+      "usdTrend": true,
+      "usdGapPct": 6.77,
+      "btcTrend": false,
+      "btcGapPct": -3.11
+    },
+    {
+      "symbol": "INJ",
+      "rank": 131,
+      "price": 3.35341400105535,
+      "usdTrend": true,
+      "usdGapPct": 11.71,
+      "btcTrend": true,
+      "btcGapPct": 1.36
+    },
+    {
+      "symbol": "MIOTA",
+      "rank": 132,
+      "price": 0.0597024667585329,
+      "usdTrend": false,
+      "usdGapPct": -1.87,
+      "btcTrend": false,
+      "btcGapPct": -11.11
+    },
+    {
+      "symbol": "LUNC",
+      "rank": 133,
+      "price": 0.0000465317728914171,
+      "usdTrend": true,
+      "usdGapPct": 15.78,
+      "btcTrend": true,
+      "btcGapPct": 5.03
+    },
+    {
+      "symbol": "2Z",
+      "rank": 134,
+      "price": 0.0949210518362945,
+      "usdTrend": true,
+      "usdGapPct": 21.34,
+      "btcTrend": true,
+      "btcGapPct": 10.14
+    },
+    {
+      "symbol": "COMP",
+      "rank": 135,
+      "price": 27.035223305067,
+      "usdTrend": true,
+      "usdGapPct": 44.8,
+      "btcTrend": true,
+      "btcGapPct": 31.58
+    },
+    {
+      "symbol": "SAND",
+      "rank": 136,
+      "price": 0.083753392955162,
+      "usdTrend": true,
+      "usdGapPct": 4.63,
+      "btcTrend": false,
+      "btcGapPct": -5.12
+    },
+    {
+      "symbol": "ENS",
+      "rank": 137,
+      "price": 6.26596726638009,
+      "usdTrend": true,
+      "usdGapPct": 5.66,
+      "btcTrend": false,
+      "btcGapPct": -4.18
+    },
+    {
+      "symbol": "IP",
+      "rank": 138,
+      "price": 0.598839202960598,
+      "usdTrend": false,
+      "usdGapPct": -10.55,
+      "btcTrend": false,
+      "btcGapPct": -19.04
+    },
+    {
+      "symbol": "FARTCOIN",
+      "rank": 139,
+      "price": 0.218546397023423,
+      "usdTrend": true,
+      "usdGapPct": 23.59,
+      "btcTrend": true,
+      "btcGapPct": 12.34
+    },
+    {
+      "symbol": "TEL",
+      "rank": 140,
+      "price": 0.00224932050590765,
+      "usdTrend": false,
+      "usdGapPct": -4.84,
+      "btcTrend": false,
+      "btcGapPct": -13.76
+    },
+    {
+      "symbol": "KAU",
+      "rank": 141,
+      "price": 153.743407360537,
+      "usdTrend": false,
+      "usdGapPct": -2.68,
+      "btcTrend": false,
+      "btcGapPct": -11.85
+    },
+    {
+      "symbol": "STRK",
+      "rank": 142,
+      "price": 0.0370785444715298,
+      "usdTrend": true,
+      "usdGapPct": 0.92,
+      "btcTrend": false,
+      "btcGapPct": -8.55
+    },
+    {
+      "symbol": "PENDLE",
+      "rank": 143,
+      "price": 1.43365788321872,
+      "usdTrend": true,
+      "usdGapPct": 20.09,
+      "btcTrend": true,
+      "btcGapPct": 8.89
+    },
+    {
+      "symbol": "WIF",
+      "rank": 144,
+      "price": 0.215014960004612,
+      "usdTrend": true,
+      "usdGapPct": 15.42,
+      "btcTrend": true,
+      "btcGapPct": 4.71
+    },
+    {
+      "symbol": "LIT",
+      "rank": 145,
+      "price": 1.04119592715155,
+      "usdTrend": false,
+      "usdGapPct": -3.47,
+      "btcTrend": false,
+      "btcGapPct": -12.45
+    },
+    {
+      "symbol": "GRASS",
+      "rank": 146,
+      "price": 0.371034855271615,
+      "usdTrend": true,
+      "usdGapPct": 14.4,
+      "btcTrend": true,
+      "btcGapPct": 4.06
+    },
+    {
+      "symbol": "VSN",
+      "rank": 147,
+      "price": 0.0542289090037385,
+      "usdTrend": true,
+      "usdGapPct": 0.31,
+      "btcTrend": false,
+      "btcGapPct": -9.07
+    },
+    {
+      "symbol": "AXS",
+      "rank": 148,
+      "price": 1.18774472307347,
+      "usdTrend": true,
+      "usdGapPct": 2.62,
+      "btcTrend": false,
+      "btcGapPct": -7.01
+    },
+    {
+      "symbol": "THETA",
+      "rank": 149,
+      "price": 0.253628747969627,
+      "usdTrend": true,
+      "usdGapPct": 46.6,
+      "btcTrend": true,
+      "btcGapPct": 33.07
+    },
+    {
+      "symbol": "HNT",
+      "rank": 150,
+      "price": 1.07667470213577,
+      "usdTrend": false,
+      "usdGapPct": -6.4,
+      "btcTrend": false,
+      "btcGapPct": -15.23
+    },
+    {
+      "symbol": "RAY",
+      "rank": 151,
+      "price": 0.696932665513445,
+      "usdTrend": true,
+      "usdGapPct": 12.97,
+      "btcTrend": true,
+      "btcGapPct": 2.51
+    },
+    {
+      "symbol": "MANA",
+      "rank": 152,
+      "price": 0.0957019353042473,
+      "usdTrend": true,
+      "usdGapPct": 6.41,
+      "btcTrend": false,
+      "btcGapPct": -3.52
+    },
+    {
+      "symbol": "XCN",
+      "rank": 153,
+      "price": 0.00478836345651569,
+      "usdTrend": false,
+      "usdGapPct": -3.85,
+      "btcTrend": false,
+      "btcGapPct": -12.83
+    },
+    {
+      "symbol": "TWT",
+      "rank": 154,
+      "price": 0.426906995827907,
+      "usdTrend": false,
+      "usdGapPct": -7,
+      "btcTrend": false,
+      "btcGapPct": -15.74
+    },
+    {
+      "symbol": "WAL",
+      "rank": 155,
+      "price": 0.0730062323867329,
+      "usdTrend": false,
+      "usdGapPct": -3.19,
+      "btcTrend": false,
+      "btcGapPct": -12.22
+    },
+    {
+      "symbol": "MX",
+      "rank": 156,
+      "price": 1.78728471936806,
+      "usdTrend": false,
+      "usdGapPct": -0.25,
+      "btcTrend": false,
+      "btcGapPct": -9.64
+    },
+    {
+      "symbol": "WFI",
+      "rank": 157,
+      "price": 2.08769580236522,
+      "usdTrend": false,
+      "usdGapPct": -4.25,
+      "btcTrend": false,
+      "btcGapPct": -13.22
+    },
+    {
+      "symbol": "CRCLON",
+      "rank": 158,
+      "price": 104.926367565922,
+      "usdTrend": true,
+      "usdGapPct": 1.84,
+      "btcTrend": false,
+      "btcGapPct": -7.53
+    },
+    {
+      "symbol": "GAS",
+      "rank": 159,
+      "price": 1.77920959407769,
+      "usdTrend": true,
+      "usdGapPct": 9.52,
+      "btcTrend": false,
+      "btcGapPct": -0.68
+    },
+    {
+      "symbol": "BAT",
+      "rank": 160,
+      "price": 0.104412745537567,
+      "usdTrend": true,
+      "usdGapPct": 5.04,
+      "btcTrend": false,
+      "btcGapPct": -4.77
+    },
+    {
+      "symbol": "XT",
+      "rank": 161,
+      "price": 4.36258973136797,
+      "usdTrend": true,
+      "usdGapPct": 10.41,
+      "btcTrend": true,
+      "btcGapPct": 0.2
+    },
+    {
+      "symbol": "JTO",
+      "rank": 162,
+      "price": 0.33455483668892,
+      "usdTrend": true,
+      "usdGapPct": 16.13,
+      "btcTrend": true,
+      "btcGapPct": 5.41
+    },
+    {
+      "symbol": "AB",
+      "rank": 163,
+      "price": 0.00153373726642614,
+      "usdTrend": false,
+      "usdGapPct": -21.06,
+      "btcTrend": false,
+      "btcGapPct": -28.63
+    },
+    {
+      "symbol": "SFP",
+      "rank": 164,
+      "price": 0.313998111681234,
+      "usdTrend": true,
+      "usdGapPct": 9.92,
+      "btcTrend": false,
+      "btcGapPct": -0.29
+    },
+    {
+      "symbol": "ORDI",
+      "rank": 165,
+      "price": 5.81495123106484,
+      "usdTrend": true,
+      "usdGapPct": 118.82,
+      "btcTrend": true,
+      "btcGapPct": 99.87
+    },
+    {
+      "symbol": "ENJ",
+      "rank": 166,
+      "price": 0.0566029830695938,
+      "usdTrend": true,
+      "usdGapPct": 119.55,
+      "btcTrend": true,
+      "btcGapPct": 101.67
+    },
+    {
+      "symbol": "GOT",
+      "rank": 167,
+      "price": 2.3031675998892,
+      "usdTrend": false,
+      "usdGapPct": -19.71,
+      "btcTrend": false,
+      "btcGapPct": -27.34
+    },
+    {
+      "symbol": "ZANO",
+      "rank": 168,
+      "price": 9.77707468468368,
+      "usdTrend": true,
+      "usdGapPct": 17.36,
+      "btcTrend": true,
+      "btcGapPct": 6.3
+    },
+    {
+      "symbol": "MKR",
+      "rank": 169,
+      "price": 1816.24887369462,
+      "usdTrend": true,
+      "usdGapPct": 3.1,
+      "btcTrend": false,
+      "btcGapPct": -6.46
+    },
+    {
+      "symbol": "RUNE",
+      "rank": 170,
+      "price": 0.429728862688936,
+      "usdTrend": true,
+      "usdGapPct": 4.1,
+      "btcTrend": false,
+      "btcGapPct": -5.6
+    },
+    {
+      "symbol": "CVX",
+      "rank": 171,
+      "price": 1.90250963032906,
+      "usdTrend": true,
+      "usdGapPct": 2.28,
+      "btcTrend": false,
+      "btcGapPct": -7.25
+    },
+    {
+      "symbol": "AUSD",
+      "rank": 172,
+      "price": 0.999371205070095,
+      "usdTrend": false,
+      "usdGapPct": -0.01,
+      "btcTrend": false,
+      "btcGapPct": -9.41
+    },
+    {
+      "symbol": "GALA",
+      "rank": 173,
+      "price": 0.0034615461980095,
+      "usdTrend": true,
+      "usdGapPct": 7.53,
+      "btcTrend": false,
+      "btcGapPct": -2.5
+    },
+    {
+      "symbol": "XEC",
+      "rank": 174,
+      "price": 0.00000738087177186359,
+      "usdTrend": true,
+      "usdGapPct": 5.78,
+      "btcTrend": false,
+      "btcGapPct": -4.09
+    },
+    {
+      "symbol": "AKT",
+      "rank": 175,
+      "price": 0.491510045383716,
+      "usdTrend": true,
+      "usdGapPct": 8.77,
+      "btcTrend": false,
+      "btcGapPct": -1.3
+    },
+    {
+      "symbol": "COCA",
+      "rank": 176,
+      "price": 1.24131295701534,
+      "usdTrend": true,
+      "usdGapPct": 6.85,
+      "btcTrend": false,
+      "btcGapPct": -2.85
+    },
+    {
+      "symbol": "TIBBIR",
+      "rank": 177,
+      "price": 0.146792409592919,
+      "usdTrend": true,
+      "usdGapPct": 6.93,
+      "btcTrend": false,
+      "btcGapPct": -2.96
+    },
+    {
+      "symbol": "A",
+      "rank": 178,
+      "price": 0.084441694933761,
+      "usdTrend": true,
+      "usdGapPct": 7.05,
+      "btcTrend": false,
+      "btcGapPct": -2.92
+    },
+    {
+      "symbol": "1INCH",
+      "rank": 179,
+      "price": 0.0981941307645318,
+      "usdTrend": true,
+      "usdGapPct": 4.86,
+      "btcTrend": false,
+      "btcGapPct": -4.87
+    },
+    {
+      "symbol": "EIGEN",
+      "rank": 180,
+      "price": 0.196454354610643,
+      "usdTrend": true,
+      "usdGapPct": 8.89,
       "btcTrend": false,
       "btcGapPct": -1.21
     },
     {
-      "symbol": "DOVU",
-      "rank": 479,
-      "price": 0.00250499450367632,
-      "usdTrend": false,
-      "usdGapPct": -28.68,
-      "btcTrend": false,
-      "btcGapPct": -33.63
-    },
-    {
-      "symbol": "USUAL",
-      "rank": 480,
-      "price": 0.0139541921622203,
+      "symbol": "RNDR",
+      "rank": 181,
+      "price": 1.8695735139472,
       "usdTrend": true,
-      "usdGapPct": 3.18,
+      "usdGapPct": 9.32,
       "btcTrend": false,
-      "btcGapPct": -3.72
+      "btcGapPct": -0.69
     },
     {
-      "symbol": "AUDIO",
-      "rank": 481,
-      "price": 0.0174391725179842,
-      "usdTrend": false,
-      "usdGapPct": -7.04,
-      "btcTrend": false,
-      "btcGapPct": -13.34
-    },
-    {
-      "symbol": "METAL",
-      "rank": 482,
-      "price": 0.136230701623587,
+      "symbol": "S",
+      "rank": 182,
+      "price": 0.047040933560798,
       "usdTrend": true,
-      "usdGapPct": 3.12,
+      "usdGapPct": 11.04,
+      "btcTrend": true,
+      "btcGapPct": 0.76
+    },
+    {
+      "symbol": "FLUID",
+      "rank": 183,
+      "price": 1.74106616610342,
+      "usdTrend": false,
+      "usdGapPct": -9.92,
       "btcTrend": false,
-      "btcGapPct": -3.8
+      "btcGapPct": -18.34
+    },
+    {
+      "symbol": "CFGV1",
+      "rank": 184,
+      "price": 0.218827429624302,
+      "usdTrend": true,
+      "usdGapPct": 39.38,
+      "btcTrend": true,
+      "btcGapPct": 26.84
+    },
+    {
+      "symbol": "SENT",
+      "rank": 185,
+      "price": 0.0170816333772566,
+      "usdTrend": false,
+      "usdGapPct": -11.49,
+      "btcTrend": false,
+      "btcGapPct": -19.89
+    },
+    {
+      "symbol": "TRADOOR",
+      "rank": 186,
+      "price": 7.69175777476901,
+      "usdTrend": true,
+      "usdGapPct": 170.41,
+      "btcTrend": true,
+      "btcGapPct": 147.89
+    },
+    {
+      "symbol": "EGLD",
+      "rank": 187,
+      "price": 4.38923603305668,
+      "usdTrend": true,
+      "usdGapPct": 8.77,
+      "btcTrend": false,
+      "btcGapPct": -1.39
+    },
+    {
+      "symbol": "OZO",
+      "rank": 188,
+      "price": 0.129828926393877,
+      "usdTrend": false,
+      "usdGapPct": -0.69,
+      "btcTrend": false,
+      "btcGapPct": -10.02
+    },
+    {
+      "symbol": "ATH",
+      "rank": 189,
+      "price": 0.00640029631297751,
+      "usdTrend": false,
+      "usdGapPct": -1.8,
+      "btcTrend": false,
+      "btcGapPct": -11.08
+    },
+    {
+      "symbol": "ASTHERUSUSDF",
+      "rank": 190,
+      "price": 0.999273021555333,
+      "usdTrend": true,
+      "usdGapPct": 0.03,
+      "btcTrend": false,
+      "btcGapPct": -9.38
+    },
+    {
+      "symbol": "TRAC",
+      "rank": 191,
+      "price": 0.309061794242265,
+      "usdTrend": true,
+      "usdGapPct": 1.26,
+      "btcTrend": false,
+      "btcGapPct": -8.2
+    },
+    {
+      "symbol": "BEAT",
+      "rank": 192,
+      "price": 0.507549134342335,
+      "usdTrend": true,
+      "usdGapPct": 21.4,
+      "btcTrend": true,
+      "btcGapPct": 10.1
+    },
+    {
+      "symbol": "SAFE",
+      "rank": 193,
+      "price": 0.156068778189204,
+      "usdTrend": true,
+      "usdGapPct": 39.71,
+      "btcTrend": true,
+      "btcGapPct": 27.12
+    },
+    {
+      "symbol": "SHXV1",
+      "rank": 194,
+      "price": 0.00614326523949111,
+      "usdTrend": true,
+      "usdGapPct": 28.26,
+      "btcTrend": true,
+      "btcGapPct": 16.34
+    },
+    {
+      "symbol": "BERA",
+      "rank": 195,
+      "price": 0.430824339853829,
+      "usdTrend": false,
+      "usdGapPct": -14.42,
+      "btcTrend": false,
+      "btcGapPct": -22.47
+    },
+    {
+      "symbol": "CHEEMS",
+      "rank": 196,
+      "price": 6.01125873713946e-7,
+      "usdTrend": true,
+      "usdGapPct": 28.14,
+      "btcTrend": true,
+      "btcGapPct": 16.37
+    },
+    {
+      "symbol": "BANANAF",
+      "rank": 197,
+      "price": 0.0101386386705994,
+      "usdTrend": true,
+      "usdGapPct": 3.24,
+      "btcTrend": false,
+      "btcGapPct": -6.43
+    },
+    {
+      "symbol": "LPT",
+      "rank": 198,
+      "price": 2.27736600709224,
+      "usdTrend": true,
+      "usdGapPct": 3.98,
+      "btcTrend": false,
+      "btcGapPct": -5.75
+    },
+    {
+      "symbol": "WEMIX",
+      "rank": 199,
+      "price": 0.234641907311818,
+      "usdTrend": false,
+      "usdGapPct": -12.16,
+      "btcTrend": false,
+      "btcGapPct": -20.47
+    },
+    {
+      "symbol": "AWE",
+      "rank": 200,
+      "price": 0.0553693693442889,
+      "usdTrend": true,
+      "usdGapPct": 7.97,
+      "btcTrend": false,
+      "btcGapPct": -2.07
+    },
+    {
+      "symbol": "AR",
+      "rank": 201,
+      "price": 2.07521912632607,
+      "usdTrend": true,
+      "usdGapPct": 19.4,
+      "btcTrend": true,
+      "btcGapPct": 8.42
+    },
+    {
+      "symbol": "QUBIC",
+      "rank": 202,
+      "price": 7.96036926531786e-7,
+      "usdTrend": false,
+      "usdGapPct": -1.29,
+      "btcTrend": false,
+      "btcGapPct": -10.44
+    },
+    {
+      "symbol": "ZEN",
+      "rank": 203,
+      "price": 6.01767079566936,
+      "usdTrend": true,
+      "usdGapPct": 7.52,
+      "btcTrend": false,
+      "btcGapPct": -2.37
+    },
+    {
+      "symbol": "B",
+      "rank": 204,
+      "price": 0.103624408648333,
+      "usdTrend": false,
+      "usdGapPct": -45.56,
+      "btcTrend": false,
+      "btcGapPct": -50.81
+    },
+    {
+      "symbol": "SNX",
+      "rank": 205,
+      "price": 0.309980850854461,
+      "usdTrend": true,
+      "usdGapPct": 2.62,
+      "btcTrend": false,
+      "btcGapPct": -6.97
+    },
+    {
+      "symbol": "BEAM",
+      "rank": 206,
+      "price": 0.00204656234712747,
+      "usdTrend": true,
+      "usdGapPct": 9.28,
+      "btcTrend": false,
+      "btcGapPct": -0.85
+    },
+    {
+      "symbol": "RSR",
+      "rank": 207,
+      "price": 0.00176375806477458,
+      "usdTrend": true,
+      "usdGapPct": 11.35,
+      "btcTrend": true,
+      "btcGapPct": 1
+    },
+    {
+      "symbol": "DYDX",
+      "rank": 208,
+      "price": 0.145145692151959,
+      "usdTrend": true,
+      "usdGapPct": 54.55,
+      "btcTrend": true,
+      "btcGapPct": 40.29
+    },
+    {
+      "symbol": "KMNO",
+      "rank": 209,
+      "price": 0.0228744026772928,
+      "usdTrend": true,
+      "usdGapPct": 13.08,
+      "btcTrend": true,
+      "btcGapPct": 2.67
+    },
+    {
+      "symbol": "FTT",
+      "rank": 210,
+      "price": 0.312025603275771,
+      "usdTrend": true,
+      "usdGapPct": 6.73,
+      "btcTrend": false,
+      "btcGapPct": -3.28
+    },
+    {
+      "symbol": "9BIT",
+      "rank": 211,
+      "price": 0.0259461719065295,
+      "usdTrend": true,
+      "usdGapPct": 6.38,
+      "btcTrend": false,
+      "btcGapPct": -3.52
+    },
+    {
+      "symbol": "APE",
+      "rank": 212,
+      "price": 0.105636701753556,
+      "usdTrend": true,
+      "usdGapPct": 13.42,
+      "btcTrend": true,
+      "btcGapPct": 2.85
+    },
+    {
+      "symbol": "DUSD",
+      "rank": 213,
+      "price": 0.998147227355799,
+      "usdTrend": false,
+      "usdGapPct": -0.15,
+      "btcTrend": false,
+      "btcGapPct": -9.54
+    },
+    {
+      "symbol": "BARD",
+      "rank": 214,
+      "price": 0.330514313457955,
+      "usdTrend": false,
+      "usdGapPct": -50.18,
+      "btcTrend": false,
+      "btcGapPct": -54.93
+    },
+    {
+      "symbol": "PLAY",
+      "rank": 215,
+      "price": 0.0914152283405972,
+      "usdTrend": true,
+      "usdGapPct": 84.21,
+      "btcTrend": true,
+      "btcGapPct": 68.97
+    },
+    {
+      "symbol": "QTUM",
+      "rank": 216,
+      "price": 0.953682508923376,
+      "usdTrend": true,
+      "usdGapPct": 5.94,
+      "btcTrend": false,
+      "btcGapPct": -3.94
+    },
+    {
+      "symbol": "YFI",
+      "rank": 217,
+      "price": 2761.0105824236,
+      "usdTrend": true,
+      "usdGapPct": 7.31,
+      "btcTrend": false,
+      "btcGapPct": -2.68
+    },
+    {
+      "symbol": "RVN",
+      "rank": 218,
+      "price": 0.00616136435773973,
+      "usdTrend": true,
+      "usdGapPct": 8.85,
+      "btcTrend": false,
+      "btcGapPct": -1.35
+    },
+    {
+      "symbol": "ACH",
+      "rank": 219,
+      "price": 0.00646820256806806,
+      "usdTrend": false,
+      "usdGapPct": -1.02,
+      "btcTrend": false,
+      "btcGapPct": -10.31
+    },
+    {
+      "symbol": "EURCV",
+      "rank": 220,
+      "price": 1.17550083656096,
+      "usdTrend": true,
+      "usdGapPct": 1.38,
+      "btcTrend": false,
+      "btcGapPct": -8.14
+    },
+    {
+      "symbol": "ZRX",
+      "rank": 221,
+      "price": 0.112153034824758,
+      "usdTrend": true,
+      "usdGapPct": 7.06,
+      "btcTrend": false,
+      "btcGapPct": -2.9
+    },
+    {
+      "symbol": "DEEP",
+      "rank": 222,
+      "price": 0.0323889041958915,
+      "usdTrend": true,
+      "usdGapPct": 11.06,
+      "btcTrend": true,
+      "btcGapPct": 0.89
+    },
+    {
+      "symbol": "YZY",
+      "rank": 223,
+      "price": 0.301931691579696,
+      "usdTrend": false,
+      "usdGapPct": -6.86,
+      "btcTrend": false,
+      "btcGapPct": -15.68
+    },
+    {
+      "symbol": "SKR",
+      "rank": 224,
+      "price": 0.0174244689002066,
+      "usdTrend": false,
+      "usdGapPct": -13.5,
+      "btcTrend": false,
+      "btcGapPct": -21.7
+    },
+    {
+      "symbol": "GLM",
+      "rank": 225,
+      "price": 0.135845744484229,
+      "usdTrend": true,
+      "usdGapPct": 4.51,
+      "btcTrend": false,
+      "btcGapPct": -5.28
+    },
+    {
+      "symbol": "ZETA",
+      "rank": 226,
+      "price": 0.0583700664554889,
+      "usdTrend": true,
+      "usdGapPct": 13.63,
+      "btcTrend": true,
+      "btcGapPct": 3.04
+    },
+    {
+      "symbol": "ROSE",
+      "rank": 227,
+      "price": 0.0117839154494292,
+      "usdTrend": true,
+      "usdGapPct": 4.46,
+      "btcTrend": false,
+      "btcGapPct": -5.26
+    },
+    {
+      "symbol": "LIGHT",
+      "rank": 228,
+      "price": 0.240912379075071,
+      "usdTrend": true,
+      "usdGapPct": 29.68,
+      "btcTrend": true,
+      "btcGapPct": 17.73
+    },
+    {
+      "symbol": "AMP",
+      "rank": 229,
+      "price": 0.000916658646315937,
+      "usdTrend": false,
+      "usdGapPct": -22,
+      "btcTrend": false,
+      "btcGapPct": -29.46
+    },
+    {
+      "symbol": "USDA",
+      "rank": 230,
+      "price": 0.996752535731623,
+      "usdTrend": false,
+      "usdGapPct": -0.19,
+      "btcTrend": false,
+      "btcGapPct": -9.57
+    },
+    {
+      "symbol": "TFUEL",
+      "rank": 231,
+      "price": 0.0127421819851626,
+      "usdTrend": true,
+      "usdGapPct": 3.53,
+      "btcTrend": false,
+      "btcGapPct": -6.21
+    },
+    {
+      "symbol": "DGB",
+      "rank": 232,
+      "price": 0.00467714938402188,
+      "usdTrend": true,
+      "usdGapPct": 10.6,
+      "btcTrend": true,
+      "btcGapPct": 0.38
+    },
+    {
+      "symbol": "LINEA",
+      "rank": 233,
+      "price": 0.00364559850368818,
+      "usdTrend": true,
+      "usdGapPct": 13.47,
+      "btcTrend": true,
+      "btcGapPct": 2.98
+    },
+    {
+      "symbol": "TURBO",
+      "rank": 234,
+      "price": 0.00122274787880201,
+      "usdTrend": true,
+      "usdGapPct": 18.81,
+      "btcTrend": true,
+      "btcGapPct": 7.85
+    },
+    {
+      "symbol": "MYX",
+      "rank": 235,
+      "price": 0.272409904850849,
+      "usdTrend": false,
+      "usdGapPct": -7.43,
+      "btcTrend": false,
+      "btcGapPct": -16.1
+    },
+    {
+      "symbol": "DOG",
+      "rank": 236,
+      "price": 0.000819831003346359,
+      "usdTrend": true,
+      "usdGapPct": 7.74,
+      "btcTrend": false,
+      "btcGapPct": -2.37
+    },
+    {
+      "symbol": "CTC",
+      "rank": 237,
+      "price": 0.154244027555998,
+      "usdTrend": true,
+      "usdGapPct": 1.51,
+      "btcTrend": false,
+      "btcGapPct": -7.97
+    },
+    {
+      "symbol": "ZGC",
+      "rank": 238,
+      "price": 0.140509209003268,
+      "usdTrend": false,
+      "usdGapPct": -43.47,
+      "btcTrend": false,
+      "btcGapPct": -48.5
+    },
+    {
+      "symbol": "COW",
+      "rank": 239,
+      "price": 0.190328662284739,
+      "usdTrend": false,
+      "usdGapPct": -12.86,
+      "btcTrend": false,
+      "btcGapPct": -20.98
+    },
+    {
+      "symbol": "DUSK",
+      "rank": 240,
+      "price": 0.163278613803193,
+      "usdTrend": true,
+      "usdGapPct": 53.03,
+      "btcTrend": true,
+      "btcGapPct": 39.3
+    },
+    {
+      "symbol": "TOSHI",
+      "rank": 241,
+      "price": 0.000190103213939844,
+      "usdTrend": false,
+      "usdGapPct": -3.27,
+      "btcTrend": false,
+      "btcGapPct": -12.34
+    },
+    {
+      "symbol": "BABYDOGE",
+      "rank": 242,
+      "price": 4.47678903278966e-10,
+      "usdTrend": true,
+      "usdGapPct": 11.63,
+      "btcTrend": true,
+      "btcGapPct": 1.29
+    },
+    {
+      "symbol": "MWC",
+      "rank": 243,
+      "price": 6.43090869704855,
+      "usdTrend": false,
+      "usdGapPct": -24.79,
+      "btcTrend": false,
+      "btcGapPct": -31.95
+    },
+    {
+      "symbol": "TAG",
+      "rank": 244,
+      "price": 0.000716603356125536,
+      "usdTrend": true,
+      "usdGapPct": 23.12,
+      "btcTrend": true,
+      "btcGapPct": 11.9
+    },
+    {
+      "symbol": "FF",
+      "rank": 245,
+      "price": 0.0749516697908821,
+      "usdTrend": true,
+      "usdGapPct": 0.58,
+      "btcTrend": false,
+      "btcGapPct": -8.79
+    },
+    {
+      "symbol": "ALCH",
+      "rank": 246,
+      "price": 0.0772698503083792,
+      "usdTrend": true,
+      "usdGapPct": 6.52,
+      "btcTrend": false,
+      "btcGapPct": -3.47
+    },
+    {
+      "symbol": "BRETT",
+      "rank": 247,
+      "price": 0.00766793861104792,
+      "usdTrend": true,
+      "usdGapPct": 11.05,
+      "btcTrend": true,
+      "btcGapPct": 0.85
+    },
+    {
+      "symbol": "CKB",
+      "rank": 248,
+      "price": 0.00161274852862589,
+      "usdTrend": true,
+      "usdGapPct": 8.83,
+      "btcTrend": false,
+      "btcGapPct": -1.29
+    },
+    {
+      "symbol": "ZORA",
+      "rank": 249,
+      "price": 0.0150471452434896,
+      "usdTrend": false,
+      "usdGapPct": -5.68,
+      "btcTrend": false,
+      "btcGapPct": -14.58
+    },
+    {
+      "symbol": "MINA",
+      "rank": 250,
+      "price": 0.060782737880495,
+      "usdTrend": true,
+      "usdGapPct": 6.75,
+      "btcTrend": false,
+      "btcGapPct": -3.19
+    },
+    {
+      "symbol": "MET",
+      "rank": 251,
+      "price": 0.153821550073721,
+      "usdTrend": true,
+      "usdGapPct": 2.17,
+      "btcTrend": false,
+      "btcGapPct": -7.43
+    },
+    {
+      "symbol": "CET",
+      "rank": 252,
+      "price": 0.029984428347934,
+      "usdTrend": true,
+      "usdGapPct": 1.19,
+      "btcTrend": false,
+      "btcGapPct": -8.28
+    },
+    {
+      "symbol": "AIOZ",
+      "rank": 253,
+      "price": 0.0662651661917091,
+      "usdTrend": true,
+      "usdGapPct": 7.52,
+      "btcTrend": false,
+      "btcGapPct": -2.53
+    },
+    {
+      "symbol": "FOGO",
+      "rank": 254,
+      "price": 0.0203559604807428,
+      "usdTrend": false,
+      "usdGapPct": -0.13,
+      "btcTrend": false,
+      "btcGapPct": -9.54
+    },
+    {
+      "symbol": "HOT",
+      "rank": 255,
+      "price": 0.000451347044865845,
+      "usdTrend": true,
+      "usdGapPct": 9.44,
+      "btcTrend": false,
+      "btcGapPct": -0.77
+    },
+    {
+      "symbol": "COAI",
+      "rank": 256,
+      "price": 0.342454681649504,
+      "usdTrend": true,
+      "usdGapPct": 12.69,
+      "btcTrend": true,
+      "btcGapPct": 2.33
+    },
+    {
+      "symbol": "RONIN",
+      "rank": 257,
+      "price": 0.0994649039153785,
+      "usdTrend": true,
+      "usdGapPct": 8.19,
+      "btcTrend": false,
+      "btcGapPct": -1.92
+    },
+    {
+      "symbol": "SAHARA",
+      "rank": 258,
+      "price": 0.0235925588368134,
+      "usdTrend": false,
+      "usdGapPct": -2.45,
+      "btcTrend": false,
+      "btcGapPct": -11.62
+    },
+    {
+      "symbol": "ARKM",
+      "rank": 259,
+      "price": 0.131072499721781,
+      "usdTrend": true,
+      "usdGapPct": 25.09,
+      "btcTrend": true,
+      "btcGapPct": 13.54
+    },
+    {
+      "symbol": "T",
+      "rank": 260,
+      "price": 0.00658402148551134,
+      "usdTrend": true,
+      "usdGapPct": 3.01,
+      "btcTrend": false,
+      "btcGapPct": -6.63
+    },
+    {
+      "symbol": "BLUR",
+      "rank": 261,
+      "price": 0.0266902059309071,
+      "usdTrend": true,
+      "usdGapPct": 34.22,
+      "btcTrend": true,
+      "btcGapPct": 21.9
+    },
+    {
+      "symbol": "ASTR",
+      "rank": 262,
+      "price": 0.00818204756662912,
+      "usdTrend": true,
+      "usdGapPct": 7.83,
+      "btcTrend": false,
+      "btcGapPct": -2.22
+    },
+    {
+      "symbol": "HOME",
+      "rank": 263,
+      "price": 0.0189405699176558,
+      "usdTrend": false,
+      "usdGapPct": -13.52,
+      "btcTrend": false,
+      "btcGapPct": -21.76
+    },
+    {
+      "symbol": "BAN",
+      "rank": 264,
+      "price": 0.0702596746203377,
+      "usdTrend": false,
+      "usdGapPct": -15.55,
+      "btcTrend": false,
+      "btcGapPct": -23.36
+    },
+    {
+      "symbol": "GMX",
+      "rank": 265,
+      "price": 6.69162154234727,
+      "usdTrend": true,
+      "usdGapPct": 4.24,
+      "btcTrend": false,
+      "btcGapPct": -5.54
+    },
+    {
+      "symbol": "AXL",
+      "rank": 266,
+      "price": 0.0622818140152889,
+      "usdTrend": true,
+      "usdGapPct": 22.46,
+      "btcTrend": true,
+      "btcGapPct": 11.07
+    },
+    {
+      "symbol": "MOVE",
+      "rank": 267,
+      "price": 0.0189624338688869,
+      "usdTrend": false,
+      "usdGapPct": -3.42,
+      "btcTrend": false,
+      "btcGapPct": -12.5
+    },
+    {
+      "symbol": "INTL",
+      "rank": 268,
+      "price": 0.100918140724133,
+      "usdTrend": false,
+      "usdGapPct": -0.26,
+      "btcTrend": false,
+      "btcGapPct": -9.63
+    },
+    {
+      "symbol": "PLUME",
+      "rank": 269,
+      "price": 0.0120644213139022,
+      "usdTrend": true,
+      "usdGapPct": 12.55,
+      "btcTrend": true,
+      "btcGapPct": 2.15
+    },
+    {
+      "symbol": "PNUT",
+      "rank": 270,
+      "price": 0.0637358837990918,
+      "usdTrend": true,
+      "usdGapPct": 43.11,
+      "btcTrend": true,
+      "btcGapPct": 30.08
+    },
+    {
+      "symbol": "XPR",
+      "rank": 271,
+      "price": 0.00241132984023699,
+      "usdTrend": true,
+      "usdGapPct": 5.5,
+      "btcTrend": false,
+      "btcGapPct": -4.35
+    },
+    {
+      "symbol": "DOLA",
+      "rank": 272,
+      "price": 0.992105704285095,
+      "usdTrend": true,
+      "usdGapPct": 0.12,
+      "btcTrend": false,
+      "btcGapPct": -9.3
+    },
+    {
+      "symbol": "PUFF",
+      "rank": 273,
+      "price": 0.0745993074191875,
+      "usdTrend": false,
+      "usdGapPct": -0.73,
+      "btcTrend": false,
+      "btcGapPct": -10.07
+    },
+    {
+      "symbol": "BIO",
+      "rank": 274,
+      "price": 0.0293767131160414,
+      "usdTrend": true,
+      "usdGapPct": 46.72,
+      "btcTrend": true,
+      "btcGapPct": 33.44
+    },
+    {
+      "symbol": "ONT",
+      "rank": 275,
+      "price": 0.0828717283864314,
+      "usdTrend": true,
+      "usdGapPct": 35.5,
+      "btcTrend": true,
+      "btcGapPct": 22.89
+    },
+    {
+      "symbol": "NANO",
+      "rank": 276,
+      "price": 0.524056930514433,
+      "usdTrend": true,
+      "usdGapPct": 8.65,
+      "btcTrend": false,
+      "btcGapPct": -1.56
+    },
+    {
+      "symbol": "NMR",
+      "rank": 277,
+      "price": 9.06516053449718,
+      "usdTrend": true,
+      "usdGapPct": 18.45,
+      "btcTrend": true,
+      "btcGapPct": 7.54
+    },
+    {
+      "symbol": "NPC",
+      "rank": 278,
+      "price": 0.00807473310196858,
+      "usdTrend": true,
+      "usdGapPct": 2.46,
+      "btcTrend": false,
+      "btcGapPct": -7.01
+    },
+    {
+      "symbol": "KUB",
+      "rank": 279,
+      "price": 0.880805187819984,
+      "usdTrend": false,
+      "usdGapPct": -1.02,
+      "btcTrend": false,
+      "btcGapPct": -10.33
+    },
+    {
+      "symbol": "ZK",
+      "rank": 280,
+      "price": 0.0167744270086753,
+      "usdTrend": false,
+      "usdGapPct": -5.28,
+      "btcTrend": false,
+      "btcGapPct": -14.2
+    },
+    {
+      "symbol": "XVG",
+      "rank": 281,
+      "price": 0.00376085529645968,
+      "usdTrend": false,
+      "usdGapPct": -23.69,
+      "btcTrend": false,
+      "btcGapPct": -30.85
+    },
+    {
+      "symbol": "SUSHI",
+      "rank": 282,
+      "price": 0.219453336981409,
+      "usdTrend": true,
+      "usdGapPct": 9.75,
+      "btcTrend": false,
+      "btcGapPct": -0.46
+    },
+    {
+      "symbol": "KAVA",
+      "rank": 283,
+      "price": 0.0582493746983785,
+      "usdTrend": true,
+      "usdGapPct": 4.35,
+      "btcTrend": false,
+      "btcGapPct": -5.41
+    },
+    {
+      "symbol": "VELO",
+      "rank": 284,
+      "price": 0.00343240680101297,
+      "usdTrend": false,
+      "usdGapPct": -5.11,
+      "btcTrend": false,
+      "btcGapPct": -14.03
+    },
+    {
+      "symbol": "WMTX",
+      "rank": 285,
+      "price": 0.0717074940269396,
+      "usdTrend": false,
+      "usdGapPct": -4.82,
+      "btcTrend": false,
+      "btcGapPct": -13.63
+    },
+    {
+      "symbol": "FLOW",
+      "rank": 286,
+      "price": 0.037175381865287,
+      "usdTrend": true,
+      "usdGapPct": 3.24,
+      "btcTrend": false,
+      "btcGapPct": -6.39
+    },
+    {
+      "symbol": "EOS",
+      "rank": 287,
+      "price": 0.0845366015313918,
+      "usdTrend": true,
+      "usdGapPct": 7.46,
+      "btcTrend": false,
+      "btcGapPct": -2.55
+    },
+    {
+      "symbol": "DESO",
+      "rank": 288,
+      "price": 4.77639069827223,
+      "usdTrend": false,
+      "usdGapPct": -12.12,
+      "btcTrend": false,
+      "btcGapPct": -20.39
+    },
+    {
+      "symbol": "IRYS",
+      "rank": 289,
+      "price": 0.0297584357502097,
+      "usdTrend": true,
+      "usdGapPct": 44.02,
+      "btcTrend": true,
+      "btcGapPct": 30.99
+    },
+    {
+      "symbol": "ELF",
+      "rank": 290,
+      "price": 0.0825666682154395,
+      "usdTrend": true,
+      "usdGapPct": 4.14,
+      "btcTrend": false,
+      "btcGapPct": -5.61
+    },
+    {
+      "symbol": "VTHO",
+      "rank": 291,
+      "price": 0.000606256168994024,
+      "usdTrend": true,
+      "usdGapPct": 5.52,
+      "btcTrend": false,
+      "btcGapPct": -4.33
+    },
+    {
+      "symbol": "PCI",
+      "rank": 292,
+      "price": 0.0539479712358227,
+      "usdTrend": true,
+      "usdGapPct": 4.31,
+      "btcTrend": false,
+      "btcGapPct": -5.36
+    },
+    {
+      "symbol": "POPCAT",
+      "rank": 293,
+      "price": 0.0659711609408469,
+      "usdTrend": true,
+      "usdGapPct": 29.56,
+      "btcTrend": true,
+      "btcGapPct": 17.65
+    },
+    {
+      "symbol": "VVS",
+      "rank": 294,
+      "price": 0.00000131515405526196,
+      "usdTrend": false,
+      "usdGapPct": -6.52,
+      "btcTrend": false,
+      "btcGapPct": -15.32
+    },
+    {
+      "symbol": "CCD",
+      "rank": 295,
+      "price": 0.00502829060190472,
+      "usdTrend": false,
+      "usdGapPct": -2.09,
+      "btcTrend": false,
+      "btcGapPct": -11.35
+    },
+    {
+      "symbol": "BIGTIME",
+      "rank": 296,
+      "price": 0.0141938980526159,
+      "usdTrend": true,
+      "usdGapPct": 8.44,
+      "btcTrend": false,
+      "btcGapPct": -1.67
+    },
+    {
+      "symbol": "MOODENG",
+      "rank": 297,
+      "price": 0.0603490430457762,
+      "usdTrend": true,
+      "usdGapPct": 22.26,
+      "btcTrend": true,
+      "btcGapPct": 11.01
+    },
+    {
+      "symbol": "MOCA",
+      "rank": 298,
+      "price": 0.0145322562803431,
+      "usdTrend": true,
+      "usdGapPct": 4.22,
+      "btcTrend": false,
+      "btcGapPct": -5.56
+    },
+    {
+      "symbol": "DUAL",
+      "rank": 299,
+      "price": 0.00831817279628959,
+      "usdTrend": true,
+      "usdGapPct": 3.09,
+      "btcTrend": true,
+      "btcGapPct": 0.59
+    },
+    {
+      "symbol": "TRB",
+      "rank": 300,
+      "price": 21.4053619180429,
+      "usdTrend": true,
+      "usdGapPct": 37.16,
+      "btcTrend": true,
+      "btcGapPct": 24.59
+    },
+    {
+      "symbol": "REQ",
+      "rank": 301,
+      "price": 0.0716283898671768,
+      "usdTrend": true,
+      "usdGapPct": 8.05,
+      "btcTrend": false,
+      "btcGapPct": -1.99
+    },
+    {
+      "symbol": "MOG",
+      "rank": 302,
+      "price": 1.53787591944888e-7,
+      "usdTrend": true,
+      "usdGapPct": 2.87,
+      "btcTrend": false,
+      "btcGapPct": -6.76
+    },
+    {
+      "symbol": "HSK",
+      "rank": 303,
+      "price": 0.162965749478832,
+      "usdTrend": true,
+      "usdGapPct": 1.03,
+      "btcTrend": false,
+      "btcGapPct": -8.47
+    },
+    {
+      "symbol": "BSB",
+      "rank": 304,
+      "price": 0.251077381634116,
+      "usdTrend": true,
+      "usdGapPct": 99.57,
+      "btcTrend": true,
+      "btcGapPct": 81.83
+    },
+    {
+      "symbol": "SC",
+      "rank": 305,
+      "price": 0.00101020946963144,
+      "usdTrend": true,
+      "usdGapPct": 0.64,
+      "btcTrend": false,
+      "btcGapPct": -8.78
+    },
+    {
+      "symbol": "MEW",
+      "rank": 306,
+      "price": 0.00062826725479373,
+      "usdTrend": true,
+      "usdGapPct": 5.31,
+      "btcTrend": false,
+      "btcGapPct": -4.46
+    },
+    {
+      "symbol": "MANTRA",
+      "rank": 307,
+      "price": 0.011278037363944,
+      "usdTrend": false,
+      "usdGapPct": -14.51,
+      "btcTrend": false,
+      "btcGapPct": -22.31
+    },
+    {
+      "symbol": "TSLAX",
+      "rank": 308,
+      "price": 398.347849936036,
+      "usdTrend": true,
+      "usdGapPct": 5.2,
+      "btcTrend": false,
+      "btcGapPct": -4.68
+    },
+    {
+      "symbol": "WAVES",
+      "rank": 309,
+      "price": 0.436891302078759,
+      "usdTrend": false,
+      "usdGapPct": -0.55,
+      "btcTrend": false,
+      "btcGapPct": -9.91
+    },
+    {
+      "symbol": "ME",
+      "rank": 310,
+      "price": 0.11108610435919,
+      "usdTrend": true,
+      "usdGapPct": 2.11,
+      "btcTrend": false,
+      "btcGapPct": -7.42
+    },
+    {
+      "symbol": "ORCA",
+      "rank": 311,
+      "price": 0.95342265958079,
+      "usdTrend": true,
+      "usdGapPct": 5.46,
+      "btcTrend": false,
+      "btcGapPct": -4.34
+    },
+    {
+      "symbol": "LUX",
+      "rank": 312,
+      "price": 0.0012827622807676,
+      "usdTrend": true,
+      "usdGapPct": 40.29,
+      "btcTrend": true,
+      "btcGapPct": 27.89
+    },
+    {
+      "symbol": "XYO",
+      "rank": 313,
+      "price": 0.00375242005848972,
+      "usdTrend": false,
+      "usdGapPct": -2.46,
+      "btcTrend": false,
+      "btcGapPct": -11.66
+    },
+    {
+      "symbol": "CRCLX",
+      "rank": 314,
+      "price": 104.621295932228,
+      "usdTrend": true,
+      "usdGapPct": 1.46,
+      "btcTrend": false,
+      "btcGapPct": -7.87
+    },
+    {
+      "symbol": "CELO",
+      "rank": 315,
+      "price": 0.0884635559410454,
+      "usdTrend": true,
+      "usdGapPct": 10.94,
+      "btcTrend": true,
+      "btcGapPct": 0.6
+    },
+    {
+      "symbol": "ESP",
+      "rank": 316,
+      "price": 0.0775674463172354,
+      "usdTrend": false,
+      "usdGapPct": -17.08,
+      "btcTrend": false,
+      "btcGapPct": -24.99
+    },
+    {
+      "symbol": "OPEN",
+      "rank": 317,
+      "price": 0.226512535940527,
+      "usdTrend": true,
+      "usdGapPct": 37.37,
+      "btcTrend": true,
+      "btcGapPct": 24.83
+    },
+    {
+      "symbol": "FIDD",
+      "rank": 318,
+      "price": 0.999672368051689,
+      "usdTrend": false,
+      "usdGapPct": -0.01,
+      "btcTrend": false,
+      "btcGapPct": -9.41
+    },
+    {
+      "symbol": "ANKR",
+      "rank": 319,
+      "price": 0.00533718636457672,
+      "usdTrend": true,
+      "usdGapPct": 10.23,
+      "btcTrend": false,
+      "btcGapPct": -0.04
+    },
+    {
+      "symbol": "ROG",
+      "rank": 320,
+      "price": 0.25100961373343,
+      "usdTrend": true,
+      "usdGapPct": 0.35,
+      "btcTrend": false,
+      "btcGapPct": -9.08
+    },
+    {
+      "symbol": "XUSD",
+      "rank": 321,
+      "price": 0.999801906722684,
+      "usdTrend": false,
+      "usdGapPct": -0.01,
+      "btcTrend": false,
+      "btcGapPct": -9.41
+    },
+    {
+      "symbol": "USDKG",
+      "rank": 322,
+      "price": 0.999757562435632,
+      "usdTrend": false,
+      "usdGapPct": -0.02,
+      "btcTrend": false,
+      "btcGapPct": -9.42
+    },
+    {
+      "symbol": "SNT",
+      "rank": 323,
+      "price": 0.0103225152126575,
+      "usdTrend": true,
+      "usdGapPct": 4.58,
+      "btcTrend": false,
+      "btcGapPct": -5.21
+    },
+    {
+      "symbol": "PURR",
+      "rank": 324,
+      "price": 0.0827563412943677,
+      "usdTrend": true,
+      "usdGapPct": 2.96,
+      "btcTrend": false,
+      "btcGapPct": -6.5
+    },
+    {
+      "symbol": "AVNT",
+      "rank": 325,
+      "price": 0.147611306028047,
+      "usdTrend": false,
+      "usdGapPct": -0.1,
+      "btcTrend": false,
+      "btcGapPct": -9.48
+    },
+    {
+      "symbol": "SRX",
+      "rank": 326,
+      "price": 0.062958536926772,
+      "usdTrend": true,
+      "usdGapPct": 9.17,
+      "btcTrend": false,
+      "btcGapPct": -0.97
+    },
+    {
+      "symbol": "SUPER",
+      "rank": 327,
+      "price": 0.125494509671997,
+      "usdTrend": true,
+      "usdGapPct": 10.43,
+      "btcTrend": true,
+      "btcGapPct": 0.2
+    },
+    {
+      "symbol": "CSPR",
+      "rank": 328,
+      "price": 0.00308822003486028,
+      "usdTrend": false,
+      "usdGapPct": -0.37,
+      "btcTrend": false,
+      "btcGapPct": -9.72
+    },
+    {
+      "symbol": "MASK",
+      "rank": 329,
+      "price": 0.480926718342159,
+      "usdTrend": true,
+      "usdGapPct": 8.83,
+      "btcTrend": false,
+      "btcGapPct": -1.28
+    },
+    {
+      "symbol": "STG",
+      "rank": 330,
+      "price": 0.23754980267029,
+      "usdTrend": true,
+      "usdGapPct": 16.62,
+      "btcTrend": true,
+      "btcGapPct": 5.69
+    },
+    {
+      "symbol": "MERL",
+      "rank": 331,
+      "price": 0.0369118617845444,
+      "usdTrend": true,
+      "usdGapPct": 18.15,
+      "btcTrend": true,
+      "btcGapPct": 7.17
+    },
+    {
+      "symbol": "ALEO",
+      "rank": 332,
+      "price": 0.045140174627342,
+      "usdTrend": false,
+      "usdGapPct": -18.62,
+      "btcTrend": false,
+      "btcGapPct": -26.36
+    },
+    {
+      "symbol": "BURN",
+      "rank": 333,
+      "price": 3.55208023281226,
+      "usdTrend": false,
+      "usdGapPct": -22.27,
+      "btcTrend": false,
+      "btcGapPct": -29.68
+    },
+    {
+      "symbol": "USELESS",
+      "rank": 334,
+      "price": 0.048672928033829,
+      "usdTrend": true,
+      "usdGapPct": 28.27,
+      "btcTrend": true,
+      "btcGapPct": 16.59
+    },
+    {
+      "symbol": "PROVE",
+      "rank": 335,
+      "price": 0.245908336660677,
+      "usdTrend": false,
+      "usdGapPct": -3.16,
+      "btcTrend": false,
+      "btcGapPct": -12.3
+    },
+    {
+      "symbol": "RIF",
+      "rank": 336,
+      "price": 0.0449190692096807,
+      "usdTrend": true,
+      "usdGapPct": 24.23,
+      "btcTrend": true,
+      "btcGapPct": 12.84
+    },
+    {
+      "symbol": "IOTX",
+      "rank": 337,
+      "price": 0.00479445182847857,
+      "usdTrend": false,
+      "usdGapPct": -2.58,
+      "btcTrend": false,
+      "btcGapPct": -11.72
+    },
+    {
+      "symbol": "XVS",
+      "rank": 338,
+      "price": 2.97082686188054,
+      "usdTrend": true,
+      "usdGapPct": 4.68,
+      "btcTrend": false,
+      "btcGapPct": -5.11
+    },
+    {
+      "symbol": "LUNA",
+      "rank": 339,
+      "price": 0.0622022632888534,
+      "usdTrend": true,
+      "usdGapPct": 4.27,
+      "btcTrend": false,
+      "btcGapPct": -5.52
+    },
+    {
+      "symbol": "ORBS",
+      "rank": 340,
+      "price": 0.00906575014836649,
+      "usdTrend": false,
+      "usdGapPct": -4.41,
+      "btcTrend": false,
+      "btcGapPct": -13.46
+    },
+    {
+      "symbol": "BORA",
+      "rank": 341,
+      "price": 0.0376905590587733,
+      "usdTrend": true,
+      "usdGapPct": 2.89,
+      "btcTrend": false,
+      "btcGapPct": -6.75
+    },
+    {
+      "symbol": "SSV",
+      "rank": 342,
+      "price": 2.70919192175789,
+      "usdTrend": true,
+      "usdGapPct": 8.63,
+      "btcTrend": false,
+      "btcGapPct": -1.5
+    },
+    {
+      "symbol": "NEIRO",
+      "rank": 343,
+      "price": 0.0000936590601772131,
+      "usdTrend": true,
+      "usdGapPct": 43.86,
+      "btcTrend": true,
+      "btcGapPct": 30.86
+    },
+    {
+      "symbol": "KAITO",
+      "rank": 344,
+      "price": 0.479725176214241,
+      "usdTrend": true,
+      "usdGapPct": 23.71,
+      "btcTrend": true,
+      "btcGapPct": 12.26
+    },
+    {
+      "symbol": "ARDR",
+      "rank": 345,
+      "price": 0.0446985236506375,
+      "usdTrend": true,
+      "usdGapPct": 1.63,
+      "btcTrend": false,
+      "btcGapPct": -7.87
+    },
+    {
+      "symbol": "API3",
+      "rank": 346,
+      "price": 0.312948068637752,
+      "usdTrend": true,
+      "usdGapPct": 10.91,
+      "btcTrend": true,
+      "btcGapPct": 0.59
+    },
+    {
+      "symbol": "NOT",
+      "rank": 347,
+      "price": 0.00041344256508942,
+      "usdTrend": true,
+      "usdGapPct": 10.11,
+      "btcTrend": false,
+      "btcGapPct": -0.07
+    },
+    {
+      "symbol": "RPL",
+      "rank": 348,
+      "price": 2.03047537628088,
+      "usdTrend": true,
+      "usdGapPct": 11.3,
+      "btcTrend": true,
+      "btcGapPct": 0.97
+    },
+    {
+      "symbol": "ALT",
+      "rank": 349,
+      "price": 0.0075309772319123,
+      "usdTrend": true,
+      "usdGapPct": 7.29,
+      "btcTrend": false,
+      "btcGapPct": -2.67
+    },
+    {
+      "symbol": "DRV",
+      "rank": 350,
+      "price": 0.0877302114867212,
+      "usdTrend": true,
+      "usdGapPct": 10.43,
+      "btcTrend": true,
+      "btcGapPct": 0.51
+    },
+    {
+      "symbol": "ICX",
+      "rank": 351,
+      "price": 0.0406388756838548,
+      "usdTrend": true,
+      "usdGapPct": 11.93,
+      "btcTrend": true,
+      "btcGapPct": 1.53
+    },
+    {
+      "symbol": "FRAX",
+      "rank": 352,
+      "price": 0.451887239925085,
+      "usdTrend": false,
+      "usdGapPct": -10.66,
+      "btcTrend": false,
+      "btcGapPct": -19.06
+    },
+    {
+      "symbol": "G",
+      "rank": 353,
+      "price": 0.00399935509175754,
+      "usdTrend": true,
+      "usdGapPct": 8.05,
+      "btcTrend": false,
+      "btcGapPct": -1.87
+    },
+    {
+      "symbol": "RATS",
+      "rank": 354,
+      "price": 0.0000392547331601693,
+      "usdTrend": false,
+      "usdGapPct": -10.39,
+      "btcTrend": false,
+      "btcGapPct": -18.8
+    },
+    {
+      "symbol": "UMA",
+      "rank": 355,
+      "price": 0.481303487650128,
+      "usdTrend": true,
+      "usdGapPct": 14.43,
+      "btcTrend": true,
+      "btcGapPct": 3.78
+    },
+    {
+      "symbol": "APEX",
+      "rank": 356,
+      "price": 0.301739843952428,
+      "usdTrend": true,
+      "usdGapPct": 7.71,
+      "btcTrend": false,
+      "btcGapPct": -2.36
+    },
+    {
+      "symbol": "VENOM",
+      "rank": 357,
+      "price": 0.0197326711619559,
+      "usdTrend": false,
+      "usdGapPct": -19.86,
+      "btcTrend": false,
+      "btcGapPct": -27.66
+    },
+    {
+      "symbol": "BIRB",
+      "rank": 358,
+      "price": 0.144833320788043,
+      "usdTrend": true,
+      "usdGapPct": 0.85,
+      "btcTrend": false,
+      "btcGapPct": -8.58
+    },
+    {
+      "symbol": "PEOPLE",
+      "rank": 359,
+      "price": 0.00806708365032083,
+      "usdTrend": true,
+      "usdGapPct": 17.27,
+      "btcTrend": true,
+      "btcGapPct": 6.47
+    },
+    {
+      "symbol": "BAND",
+      "rank": 360,
+      "price": 0.233346132768875,
+      "usdTrend": true,
+      "usdGapPct": 8.27,
+      "btcTrend": false,
+      "btcGapPct": -1.79
+    },
+    {
+      "symbol": "1000SATS",
+      "rank": 361,
+      "price": 0.0000173499672004892,
+      "usdTrend": true,
+      "usdGapPct": 50.54,
+      "btcTrend": true,
+      "btcGapPct": 36.84
+    },
+    {
+      "symbol": "SATS",
+      "rank": 362,
+      "price": 1.73538453435102e-8,
+      "usdTrend": true,
+      "usdGapPct": 50.63,
+      "btcTrend": true,
+      "btcGapPct": 36.93
+    },
+    {
+      "symbol": "STORJ",
+      "rank": 363,
+      "price": 0.107535946217203,
+      "usdTrend": true,
+      "usdGapPct": 12.16,
+      "btcTrend": true,
+      "btcGapPct": 1.76
+    },
+    {
+      "symbol": "SOMI",
+      "rank": 364,
+      "price": 0.184980328109866,
+      "usdTrend": true,
+      "usdGapPct": 5.78,
+      "btcTrend": false,
+      "btcGapPct": -4.11
+    },
+    {
+      "symbol": "PUNDIX",
+      "rank": 365,
+      "price": 0.155208385700346,
+      "usdTrend": true,
+      "usdGapPct": 4.04,
+      "btcTrend": false,
+      "btcGapPct": -5.68
+    },
+    {
+      "symbol": "OMI",
+      "rank": 366,
+      "price": 0.000142173088305074,
+      "usdTrend": true,
+      "usdGapPct": 17.55,
+      "btcTrend": true,
+      "btcGapPct": 6.62
+    },
+    {
+      "symbol": "GIGGLE",
+      "rank": 367,
+      "price": 46.5320100220247,
+      "usdTrend": true,
+      "usdGapPct": 67.28,
+      "btcTrend": true,
+      "btcGapPct": 52.37
+    },
+    {
+      "symbol": "SUSD",
+      "rank": 368,
+      "price": 0.738942715024207,
+      "usdTrend": false,
+      "usdGapPct": -5.84,
+      "btcTrend": false,
+      "btcGapPct": -14.71
+    },
+    {
+      "symbol": "ZIG",
+      "rank": 369,
+      "price": 0.0286892041392922,
+      "usdTrend": false,
+      "usdGapPct": -13.37,
+      "btcTrend": false,
+      "btcGapPct": -21.54
+    },
+    {
+      "symbol": "GPS",
+      "rank": 370,
+      "price": 0.00928385020703951,
+      "usdTrend": true,
+      "usdGapPct": 12.41,
+      "btcTrend": true,
+      "btcGapPct": 1.89
+    },
+    {
+      "symbol": "SAPIEN",
+      "rank": 371,
+      "price": 0.0933385421338209,
+      "usdTrend": true,
+      "usdGapPct": 25,
+      "btcTrend": true,
+      "btcGapPct": 13.4
+    },
+    {
+      "symbol": "OSAK",
+      "rank": 372,
+      "price": 5.20473106430013e-8,
+      "usdTrend": true,
+      "usdGapPct": 48.7,
+      "btcTrend": true,
+      "btcGapPct": 35.29
+    },
+    {
+      "symbol": "RLC",
+      "rank": 373,
+      "price": 0.466028026520348,
+      "usdTrend": true,
+      "usdGapPct": 14.06,
+      "btcTrend": true,
+      "btcGapPct": 3.47
+    },
+    {
+      "symbol": "ILV",
+      "rank": 374,
+      "price": 4.89172486978711,
+      "usdTrend": true,
+      "usdGapPct": 27.28,
+      "btcTrend": true,
+      "btcGapPct": 15.62
+    },
+    {
+      "symbol": "SKL",
+      "rank": 375,
+      "price": 0.00754174693458355,
+      "usdTrend": true,
+      "usdGapPct": 15.89,
+      "btcTrend": true,
+      "btcGapPct": 5.08
+    },
+    {
+      "symbol": "APR",
+      "rank": 376,
+      "price": 0.176196861790664,
+      "usdTrend": true,
+      "usdGapPct": 14.11,
+      "btcTrend": true,
+      "btcGapPct": 3.94
+    },
+    {
+      "symbol": "POWR",
+      "rank": 377,
+      "price": 0.0693478019770866,
+      "usdTrend": true,
+      "usdGapPct": 8.32,
+      "btcTrend": false,
+      "btcGapPct": -1.74
+    },
+    {
+      "symbol": "POLYX",
+      "rank": 378,
+      "price": 0.0535369963715353,
+      "usdTrend": true,
+      "usdGapPct": 17.69,
+      "btcTrend": true,
+      "btcGapPct": 6.82
+    },
+    {
+      "symbol": "USDP",
+      "rank": 379,
+      "price": 0.999660669337816,
+      "usdTrend": false,
+      "usdGapPct": 0,
+      "btcTrend": false,
+      "btcGapPct": -9.4
+    },
+    {
+      "symbol": "IOST",
+      "rank": 380,
+      "price": 0.00116244976993095,
+      "usdTrend": true,
+      "usdGapPct": 3.96,
+      "btcTrend": false,
+      "btcGapPct": -5.75
+    },
+    {
+      "symbol": "HOLO",
+      "rank": 381,
+      "price": 0.0608256417391981,
+      "usdTrend": true,
+      "usdGapPct": 4.53,
+      "btcTrend": false,
+      "btcGapPct": -5.18
+    },
+    {
+      "symbol": "ONGAS",
+      "rank": 382,
+      "price": 0.0848725512299324,
+      "usdTrend": true,
+      "usdGapPct": 22.6,
+      "btcTrend": true,
+      "btcGapPct": 11.35
+    },
+    {
+      "symbol": "ELON",
+      "rank": 383,
+      "price": 4.14462599785703e-8,
+      "usdTrend": true,
+      "usdGapPct": 7.45,
+      "btcTrend": false,
+      "btcGapPct": -2.49
+    },
+    {
+      "symbol": "MEME",
+      "rank": 384,
+      "price": 0.000589911719033565,
+      "usdTrend": true,
+      "usdGapPct": 5.39,
+      "btcTrend": false,
+      "btcGapPct": -4.45
+    },
+    {
+      "symbol": "ARRR",
+      "rank": 385,
+      "price": 0.189416884613011,
+      "usdTrend": false,
+      "usdGapPct": -13.37,
+      "btcTrend": false,
+      "btcGapPct": -21.53
+    },
+    {
+      "symbol": "SNEK",
+      "rank": 386,
+      "price": 0.000518755302548995,
+      "usdTrend": true,
+      "usdGapPct": 9.42,
+      "btcTrend": false,
+      "btcGapPct": -0.82
+    },
+    {
+      "symbol": "ANIME",
+      "rank": 387,
+      "price": 0.00505388183665432,
+      "usdTrend": true,
+      "usdGapPct": 6.69,
+      "btcTrend": false,
+      "btcGapPct": -3.28
+    },
+    {
+      "symbol": "BOME",
+      "rank": 388,
+      "price": 0.000534504884940556,
+      "usdTrend": true,
+      "usdGapPct": 30.11,
+      "btcTrend": true,
+      "btcGapPct": 18.22
+    },
+    {
+      "symbol": "LAYER",
+      "rank": 389,
+      "price": 0.0891029152264048,
+      "usdTrend": true,
+      "usdGapPct": 6.96,
+      "btcTrend": false,
+      "btcGapPct": -3.03
+    },
+    {
+      "symbol": "UAI",
+      "rank": 390,
+      "price": 0.233684714633644,
+      "usdTrend": false,
+      "usdGapPct": -10.82,
+      "btcTrend": false,
+      "btcGapPct": -18.95
+    },
+    {
+      "symbol": "EWT",
+      "rank": 391,
+      "price": 0.444009414177024,
+      "usdTrend": false,
+      "usdGapPct": -5.24,
+      "btcTrend": false,
+      "btcGapPct": -14.18
+    },
+    {
+      "symbol": "IO",
+      "rank": 392,
+      "price": 0.125841082669297,
+      "usdTrend": true,
+      "usdGapPct": 16.93,
+      "btcTrend": true,
+      "btcGapPct": 6.05
+    },
+    {
+      "symbol": "AUCTION",
+      "rank": 393,
+      "price": 4.99617092873933,
+      "usdTrend": true,
+      "usdGapPct": 5.58,
+      "btcTrend": false,
+      "btcGapPct": -4.27
+    },
+    {
+      "symbol": "SOLV",
+      "rank": 394,
+      "price": 0.00516095816595976,
+      "usdTrend": true,
+      "usdGapPct": 30.79,
+      "btcTrend": true,
+      "btcGapPct": 18.71
+    },
+    {
+      "symbol": "SQD",
+      "rank": 395,
+      "price": 0.0337125586988137,
+      "usdTrend": false,
+      "usdGapPct": -1.33,
+      "btcTrend": false,
+      "btcGapPct": -10.57
+    },
+    {
+      "symbol": "CYBER",
+      "rank": 396,
+      "price": 0.549082403053678,
+      "usdTrend": true,
+      "usdGapPct": 4.28,
+      "btcTrend": false,
+      "btcGapPct": -5.44
+    },
+    {
+      "symbol": "PEAQ",
+      "rank": 397,
+      "price": 0.0170889646377344,
+      "usdTrend": true,
+      "usdGapPct": 16.84,
+      "btcTrend": true,
+      "btcGapPct": 5.89
+    },
+    {
+      "symbol": "CORE",
+      "rank": 398,
+      "price": 0.0307641080542058,
+      "usdTrend": false,
+      "usdGapPct": -47.04,
+      "btcTrend": false,
+      "btcGapPct": -52.14
+    },
+    {
+      "symbol": "BP",
+      "rank": 399,
+      "price": 0.144973636008781,
+      "usdTrend": true,
+      "usdGapPct": 1154.01,
+      "btcTrend": true,
+      "btcGapPct": 1122.56
+    },
+    {
+      "symbol": "WOO",
+      "rank": 400,
+      "price": 0.019580245790485,
+      "usdTrend": true,
+      "usdGapPct": 11.48,
+      "btcTrend": true,
+      "btcGapPct": 1.19
+    },
+    {
+      "symbol": "VANA",
+      "rank": 401,
+      "price": 1.43593690710742,
+      "usdTrend": true,
+      "usdGapPct": 6.07,
+      "btcTrend": false,
+      "btcGapPct": -3.81
+    },
+    {
+      "symbol": "PIPPIN",
+      "rank": 402,
+      "price": 0.0297735171799063,
+      "usdTrend": false,
+      "usdGapPct": -83.37,
+      "btcTrend": false,
+      "btcGapPct": -85.11
+    },
+    {
+      "symbol": "OCEAN",
+      "rank": 403,
+      "price": 0.146213465504224,
+      "usdTrend": true,
+      "usdGapPct": 17.32,
+      "btcTrend": true,
+      "btcGapPct": 6.55
+    },
+    {
+      "symbol": "PRO",
+      "rank": 404,
+      "price": 0.36593417390699,
+      "usdTrend": true,
+      "usdGapPct": 0.97,
+      "btcTrend": false,
+      "btcGapPct": -8.5
+    },
+    {
+      "symbol": "UCN",
+      "rank": 405,
+      "price": 350.288713826792,
+      "usdTrend": false,
+      "usdGapPct": -15.28,
+      "btcTrend": false,
+      "btcGapPct": -23.47
+    },
+    {
+      "symbol": "LON",
+      "rank": 406,
+      "price": 0.28968360666527,
+      "usdTrend": true,
+      "usdGapPct": 2.1,
+      "btcTrend": false,
+      "btcGapPct": -7.42
+    },
+    {
+      "symbol": "SWFTC",
+      "rank": 407,
+      "price": 0.00343074837673801,
+      "usdTrend": false,
+      "usdGapPct": -0.55,
+      "btcTrend": false,
+      "btcGapPct": -9.9
+    },
+    {
+      "symbol": "EDU",
+      "rank": 408,
+      "price": 0.0501881458276608,
+      "usdTrend": false,
+      "usdGapPct": -31.43,
+      "btcTrend": false,
+      "btcGapPct": -38.08
+    },
+    {
+      "symbol": "CTSI",
+      "rank": 409,
+      "price": 0.0366714570388615,
+      "usdTrend": true,
+      "usdGapPct": 33.39,
+      "btcTrend": true,
+      "btcGapPct": 21.19
+    },
+    {
+      "symbol": "BNT",
+      "rank": 410,
+      "price": 0.320873460094881,
+      "usdTrend": true,
+      "usdGapPct": 9.18,
+      "btcTrend": false,
+      "btcGapPct": -0.93
+    },
+    {
+      "symbol": "REZ",
+      "rank": 411,
+      "price": 0.00413296402257997,
+      "usdTrend": true,
+      "usdGapPct": 20.78,
+      "btcTrend": true,
+      "btcGapPct": 9.7
+    },
+    {
+      "symbol": "KNC",
+      "rank": 412,
+      "price": 0.144921420107249,
+      "usdTrend": true,
+      "usdGapPct": 6.04,
+      "btcTrend": false,
+      "btcGapPct": -3.93
+    },
+    {
+      "symbol": "MOVR",
+      "rank": 413,
+      "price": 2.47747226175139,
+      "usdTrend": true,
+      "usdGapPct": 99.17,
+      "btcTrend": true,
+      "btcGapPct": 81.1
+    },
+    {
+      "symbol": "PUMPCADE",
+      "rank": 414,
+      "price": 0.0219785165727562,
+      "usdTrend": false,
+      "usdGapPct": -25.18,
+      "btcTrend": false,
+      "btcGapPct": -26.27
+    },
+    {
+      "symbol": "ONE",
+      "rank": 415,
+      "price": 0.00244942068477905,
+      "usdTrend": true,
+      "usdGapPct": 7.55,
+      "btcTrend": false,
+      "btcGapPct": -2.51
+    },
+    {
+      "symbol": "XCH",
+      "rank": 416,
+      "price": 2.44366448301441,
+      "usdTrend": false,
+      "usdGapPct": -4.92,
+      "btcTrend": false,
+      "btcGapPct": -13.89
+    },
+    {
+      "symbol": "LA",
+      "rank": 417,
+      "price": 0.170089127483515,
+      "usdTrend": false,
+      "usdGapPct": -15.51,
+      "btcTrend": false,
+      "btcGapPct": -23.51
+    },
+    {
+      "symbol": "DEP",
+      "rank": 418,
+      "price": 0.00111472547980271,
+      "usdTrend": false,
+      "usdGapPct": -5.32,
+      "btcTrend": false,
+      "btcGapPct": -14.26
+    },
+    {
+      "symbol": "MATIC",
+      "rank": 419,
+      "price": 0.0901911296836322,
+      "usdTrend": false,
+      "usdGapPct": -4.6,
+      "btcTrend": false,
+      "btcGapPct": -13.64
+    },
+    {
+      "symbol": "QQQON",
+      "rank": 420,
+      "price": 649.61768468184,
+      "usdTrend": true,
+      "usdGapPct": 8.56,
+      "btcTrend": false,
+      "btcGapPct": -1.56
+    },
+    {
+      "symbol": "DAG",
+      "rank": 421,
+      "price": 0.00847655373542172,
+      "usdTrend": false,
+      "usdGapPct": -12.9,
+      "btcTrend": false,
+      "btcGapPct": -21.17
+    },
+    {
+      "symbol": "CARV",
+      "rank": 422,
+      "price": 0.0601931921339179,
+      "usdTrend": true,
+      "usdGapPct": 5.34,
+      "btcTrend": false,
+      "btcGapPct": -4.55
+    },
+    {
+      "symbol": "DKA",
+      "rank": 423,
+      "price": 0.00657942632913672,
+      "usdTrend": true,
+      "usdGapPct": 22.85,
+      "btcTrend": true,
+      "btcGapPct": 11.6
+    },
+    {
+      "symbol": "BREV",
+      "rank": 424,
+      "price": 0.135885433644795,
+      "usdTrend": true,
+      "usdGapPct": 7.26,
+      "btcTrend": false,
+      "btcGapPct": -2.74
+    },
+    {
+      "symbol": "STEEM",
+      "rank": 425,
+      "price": 0.0597918764783463,
+      "usdTrend": true,
+      "usdGapPct": 0.09,
+      "btcTrend": false,
+      "btcGapPct": -9.28
+    },
+    {
+      "symbol": "SCRT",
+      "rank": 426,
+      "price": 0.105261494993619,
+      "usdTrend": true,
+      "usdGapPct": 28.65,
+      "btcTrend": true,
+      "btcGapPct": 16.86
+    },
+    {
+      "symbol": "MANTA",
+      "rank": 427,
+      "price": 0.0706494699431857,
+      "usdTrend": true,
+      "usdGapPct": 8.48,
+      "btcTrend": false,
+      "btcGapPct": -1.58
+    },
+    {
+      "symbol": "PHA",
+      "rank": 428,
+      "price": 0.0385448673149961,
+      "usdTrend": true,
+      "usdGapPct": 8.02,
+      "btcTrend": false,
+      "btcGapPct": -1.95
+    },
+    {
+      "symbol": "BLAST",
+      "rank": 429,
+      "price": 0.000531901626307163,
+      "usdTrend": true,
+      "usdGapPct": 7.96,
+      "btcTrend": false,
+      "btcGapPct": -2.08
+    },
+    {
+      "symbol": "ABT",
+      "rank": 430,
+      "price": 0.294095258410449,
+      "usdTrend": true,
+      "usdGapPct": 27.67,
+      "btcTrend": true,
+      "btcGapPct": 16.12
+    },
+    {
+      "symbol": "ZENT",
+      "rank": 431,
+      "price": 0.00340585706184993,
+      "usdTrend": false,
+      "usdGapPct": -0.43,
+      "btcTrend": false,
+      "btcGapPct": -9.77
+    },
+    {
+      "symbol": "CVC",
+      "rank": 432,
+      "price": 0.0318451803141865,
+      "usdTrend": true,
+      "usdGapPct": 4.51,
+      "btcTrend": false,
+      "btcGapPct": -5.27
+    },
+    {
+      "symbol": "XPIN",
+      "rank": 433,
+      "price": 0.00141746791171544,
+      "usdTrend": true,
+      "usdGapPct": 8.56,
+      "btcTrend": false,
+      "btcGapPct": -1.44
+    },
+    {
+      "symbol": "USTC",
+      "rank": 434,
+      "price": 0.00587172885160115,
+      "usdTrend": true,
+      "usdGapPct": 21.36,
+      "btcTrend": true,
+      "btcGapPct": 10.09
+    },
+    {
+      "symbol": "YGG",
+      "rank": 435,
+      "price": 0.0435535213218708,
+      "usdTrend": true,
+      "usdGapPct": 14.25,
+      "btcTrend": true,
+      "btcGapPct": 3.67
+    },
+    {
+      "symbol": "LISTA",
+      "rank": 436,
+      "price": 0.0945219603222627,
+      "usdTrend": true,
+      "usdGapPct": 10.94,
+      "btcTrend": true,
+      "btcGapPct": 0.53
+    },
+    {
+      "symbol": "ETHW",
+      "rank": 437,
+      "price": 0.334081253143067,
+      "usdTrend": true,
+      "usdGapPct": 18.43,
+      "btcTrend": true,
+      "btcGapPct": 7.41
+    },
+    {
+      "symbol": "ARK",
+      "rank": 438,
+      "price": 0.179296002199933,
+      "usdTrend": true,
+      "usdGapPct": 4.53,
+      "btcTrend": false,
+      "btcGapPct": -5.23
+    },
+    {
+      "symbol": "LSK",
+      "rank": 439,
+      "price": 0.134226742353056,
+      "usdTrend": true,
+      "usdGapPct": 4.94,
+      "btcTrend": false,
+      "btcGapPct": -4.84
+    },
+    {
+      "symbol": "AIXBT",
+      "rank": 440,
+      "price": 0.0302196067581067,
+      "usdTrend": true,
+      "usdGapPct": 21.9,
+      "btcTrend": true,
+      "btcGapPct": 10.71
+    },
+    {
+      "symbol": "STRAX",
+      "rank": 441,
+      "price": 0.0140379048165019,
+      "usdTrend": true,
+      "usdGapPct": 2.95,
+      "btcTrend": false,
+      "btcGapPct": -6.7
+    },
+    {
+      "symbol": "FTRB",
+      "rank": 442,
+      "price": 0.00605825930068713,
+      "usdTrend": false,
+      "usdGapPct": -5.23,
+      "btcTrend": false,
+      "btcGapPct": -14.23
     },
     {
       "symbol": "POWER",
-      "rank": 483,
-      "price": 0.110024251789524,
+      "rank": 443,
+      "price": 0.0997819696910684,
       "usdTrend": false,
-      "usdGapPct": -59.09,
+      "usdGapPct": -57.59,
       "btcTrend": false,
-      "btcGapPct": -62.76
+      "btcGapPct": -62.48
     },
     {
-      "symbol": "DBR",
-      "rank": 484,
-      "price": 0.0135117528878148,
-      "usdTrend": false,
-      "usdGapPct": -13,
-      "btcTrend": false,
-      "btcGapPct": -18.91
-    },
-    {
-      "symbol": "MIRA",
-      "rank": 485,
-      "price": 0.0883411312365614,
+      "symbol": "MMT",
+      "rank": 444,
+      "price": 0.14028116109563,
       "usdTrend": true,
-      "usdGapPct": 7.05,
-      "btcTrend": false,
-      "btcGapPct": -0.17
-    },
-    {
-      "symbol": "KERNEL",
-      "rank": 486,
-      "price": 0.0814870809063612,
-      "usdTrend": false,
-      "usdGapPct": -9.1,
-      "btcTrend": false,
-      "btcGapPct": -15.24
-    },
-    {
-      "symbol": "ERA",
-      "rank": 487,
-      "price": 0.137237249594624,
-      "usdTrend": true,
-      "usdGapPct": 2.63,
-      "btcTrend": false,
-      "btcGapPct": -4.31
-    },
-    {
-      "symbol": "METIS",
-      "rank": 488,
-      "price": 3.51089725659384,
-      "usdTrend": true,
-      "usdGapPct": 13.28,
+      "usdGapPct": 17.07,
       "btcTrend": true,
-      "btcGapPct": 5.71
+      "btcGapPct": 6.28
+    },
+    {
+      "symbol": "LQTY",
+      "rank": 445,
+      "price": 0.329896124002534,
+      "usdTrend": true,
+      "usdGapPct": 16.39,
+      "btcTrend": true,
+      "btcGapPct": 5.58
+    },
+    {
+      "symbol": "PROM",
+      "rank": 446,
+      "price": 1.6339797235205,
+      "usdTrend": true,
+      "usdGapPct": 48.3,
+      "btcTrend": true,
+      "btcGapPct": 34.77
+    },
+    {
+      "symbol": "GUN",
+      "rank": 447,
+      "price": 0.0156189311498247,
+      "usdTrend": false,
+      "usdGapPct": -14.59,
+      "btcTrend": false,
+      "btcGapPct": -22.8
+    },
+    {
+      "symbol": "AGI",
+      "rank": 448,
+      "price": 0.011465260812858,
+      "usdTrend": false,
+      "usdGapPct": -0.23,
+      "btcTrend": false,
+      "btcGapPct": -9.52
+    },
+    {
+      "symbol": "FTM",
+      "rank": 449,
+      "price": 0.0471822986882204,
+      "usdTrend": true,
+      "usdGapPct": 9.83,
+      "btcTrend": false,
+      "btcGapPct": -0.31
+    },
+    {
+      "symbol": "IQ",
+      "rank": 450,
+      "price": 0.00113781842756512,
+      "usdTrend": true,
+      "usdGapPct": 2.37,
+      "btcTrend": false,
+      "btcGapPct": -7.2
+    },
+    {
+      "symbol": "UQC",
+      "rank": 451,
+      "price": 2.83107381683,
+      "usdTrend": true,
+      "usdGapPct": 0.28,
+      "btcTrend": false,
+      "btcGapPct": -9.14
+    },
+    {
+      "symbol": "MLK",
+      "rank": 452,
+      "price": 0.0526440965750839,
+      "usdTrend": true,
+      "usdGapPct": 0.7,
+      "btcTrend": false,
+      "btcGapPct": -8.75
+    },
+    {
+      "symbol": "BLUAI",
+      "rank": 453,
+      "price": 0.00964506882988847,
+      "usdTrend": true,
+      "usdGapPct": 42.26,
+      "btcTrend": true,
+      "btcGapPct": 29.54
+    },
+    {
+      "symbol": "PIXEL",
+      "rank": 454,
+      "price": 0.00863281051040866,
+      "usdTrend": true,
+      "usdGapPct": 10.4,
+      "btcTrend": true,
+      "btcGapPct": 0.43
+    },
+    {
+      "symbol": "FAI",
+      "rank": 455,
+      "price": 0.0034950241803715,
+      "usdTrend": false,
+      "usdGapPct": -29,
+      "btcTrend": false,
+      "btcGapPct": -35.59
+    },
+    {
+      "symbol": "MTL",
+      "rank": 456,
+      "price": 0.307828286678959,
+      "usdTrend": true,
+      "usdGapPct": 9.3,
+      "btcTrend": false,
+      "btcGapPct": -0.87
+    },
+    {
+      "symbol": "NYM",
+      "rank": 457,
+      "price": 0.0332951791130703,
+      "usdTrend": true,
+      "usdGapPct": 9.86,
+      "btcTrend": false,
+      "btcGapPct": -0.33
+    },
+    {
+      "symbol": "AERGO",
+      "rank": 458,
+      "price": 0.0563506194049063,
+      "usdTrend": true,
+      "usdGapPct": 3.47,
+      "btcTrend": false,
+      "btcGapPct": -6.22
+    },
+    {
+      "symbol": "LCX",
+      "rank": 459,
+      "price": 0.0329000523528481,
+      "usdTrend": false,
+      "usdGapPct": -21.62,
+      "btcTrend": false,
+      "btcGapPct": -29.04
+    },
+    {
+      "symbol": "SPYX",
+      "rank": 460,
+      "price": 713.325221935754,
+      "usdTrend": true,
+      "usdGapPct": 6.52,
+      "btcTrend": false,
+      "btcGapPct": -3.43
+    },
+    {
+      "symbol": "CLANKER",
+      "rank": 461,
+      "price": 26.7576604045978,
+      "usdTrend": false,
+      "usdGapPct": -0.13,
+      "btcTrend": false,
+      "btcGapPct": -9.43
+    },
+    {
+      "symbol": "DRIFT",
+      "rank": 462,
+      "price": 0.04201249270007,
+      "usdTrend": false,
+      "usdGapPct": -36.71,
+      "btcTrend": false,
+      "btcGapPct": -42.82
+    },
+    {
+      "symbol": "ERG",
+      "rank": 463,
+      "price": 0.329069221356766,
+      "usdTrend": true,
+      "usdGapPct": 6.6,
+      "btcTrend": false,
+      "btcGapPct": -3.36
+    },
+    {
+      "symbol": "COTI",
+      "rank": 464,
+      "price": 0.0153462084586876,
+      "usdTrend": true,
+      "usdGapPct": 19.15,
+      "btcTrend": true,
+      "btcGapPct": 8.15
+    },
+    {
+      "symbol": "USDCV",
+      "rank": 465,
+      "price": 0.998992275960405,
+      "usdTrend": false,
+      "usdGapPct": -0.04,
+      "btcTrend": false,
+      "btcGapPct": -9.44
+    },
+    {
+      "symbol": "SLP",
+      "rank": 466,
+      "price": 0.000683142588090166,
+      "usdTrend": true,
+      "usdGapPct": 15.52,
+      "btcTrend": true,
+      "btcGapPct": 4.81
+    },
+    {
+      "symbol": "C",
+      "rank": 467,
+      "price": 0.0766905932243329,
+      "usdTrend": true,
+      "usdGapPct": 21.35,
+      "btcTrend": true,
+      "btcGapPct": 10.04
+    },
+    {
+      "symbol": "WET",
+      "rank": 468,
+      "price": 0.116182023223264,
+      "usdTrend": true,
+      "usdGapPct": 6.92,
+      "btcTrend": false,
+      "btcGapPct": -2.97
+    },
+    {
+      "symbol": "METAL",
+      "rank": 469,
+      "price": 0.142224782711361,
+      "usdTrend": true,
+      "usdGapPct": 7.43,
+      "btcTrend": false,
+      "btcGapPct": -2.58
+    },
+    {
+      "symbol": "CTK",
+      "rank": 470,
+      "price": 0.188902950170784,
+      "usdTrend": true,
+      "usdGapPct": 11.43,
+      "btcTrend": true,
+      "btcGapPct": 1.03
+    },
+    {
+      "symbol": "VOW",
+      "rank": 471,
+      "price": 0.0251035248415442,
+      "usdTrend": false,
+      "usdGapPct": -1.49,
+      "btcTrend": false,
+      "btcGapPct": -10.71
+    },
+    {
+      "symbol": "TREE",
+      "rank": 472,
+      "price": 0.0693450575090098,
+      "usdTrend": true,
+      "usdGapPct": 7.37,
+      "btcTrend": false,
+      "btcGapPct": -2.64
+    },
+    {
+      "symbol": "ID",
+      "rank": 473,
+      "price": 0.0334751188977944,
+      "usdTrend": false,
+      "usdGapPct": -10.85,
+      "btcTrend": false,
+      "btcGapPct": -19.3
+    },
+    {
+      "symbol": "ALLO",
+      "rank": 474,
+      "price": 0.113353044951408,
+      "usdTrend": false,
+      "usdGapPct": -0.15,
+      "btcTrend": false,
+      "btcGapPct": -9.48
     },
     {
       "symbol": "FLUX",
+      "rank": 475,
+      "price": 0.0664631321224479,
+      "usdTrend": true,
+      "usdGapPct": 19.39,
+      "btcTrend": true,
+      "btcGapPct": 8.27
+    },
+    {
+      "symbol": "QANX",
+      "rank": 476,
+      "price": 0.0120431440886744,
+      "usdTrend": false,
+      "usdGapPct": -18.72,
+      "btcTrend": false,
+      "btcGapPct": -26.47
+    },
+    {
+      "symbol": "METIS",
+      "rank": 477,
+      "price": 3.93820656635708,
+      "usdTrend": true,
+      "usdGapPct": 26.16,
+      "btcTrend": true,
+      "btcGapPct": 14.52
+    },
+    {
+      "symbol": "CBK",
+      "rank": 478,
+      "price": 0.255305158196377,
+      "usdTrend": true,
+      "usdGapPct": 2.37,
+      "btcTrend": false,
+      "btcGapPct": -7.21
+    },
+    {
+      "symbol": "AGLD",
+      "rank": 479,
+      "price": 0.287087493184176,
+      "usdTrend": true,
+      "usdGapPct": 16.8,
+      "btcTrend": true,
+      "btcGapPct": 5.94
+    },
+    {
+      "symbol": "DOVU",
+      "rank": 480,
+      "price": 0.00254989172589236,
+      "usdTrend": false,
+      "usdGapPct": -26.84,
+      "btcTrend": false,
+      "btcGapPct": -33.88
+    },
+    {
+      "symbol": "APTM",
+      "rank": 481,
+      "price": 0.271274315834223,
+      "usdTrend": true,
+      "usdGapPct": 3.66,
+      "btcTrend": false,
+      "btcGapPct": -5.94
+    },
+    {
+      "symbol": "OSMO",
+      "rank": 482,
+      "price": 0.0348691543035165,
+      "usdTrend": true,
+      "usdGapPct": 7.81,
+      "btcTrend": false,
+      "btcGapPct": -2.26
+    },
+    {
+      "symbol": "AGIX",
+      "rank": 483,
+      "price": 0.098996989918105,
+      "usdTrend": true,
+      "usdGapPct": 8.4,
+      "btcTrend": false,
+      "btcGapPct": -1.57
+    },
+    {
+      "symbol": "EUL",
+      "rank": 484,
+      "price": 1.49895573170645,
+      "usdTrend": true,
+      "usdGapPct": 53.68,
+      "btcTrend": true,
+      "btcGapPct": 39.74
+    },
+    {
+      "symbol": "AUDIO",
+      "rank": 485,
+      "price": 0.024080073055936,
+      "usdTrend": true,
+      "usdGapPct": 27.67,
+      "btcTrend": true,
+      "btcGapPct": 15.75
+    },
+    {
+      "symbol": "XAN",
+      "rank": 486,
+      "price": 0.0091736071468172,
+      "usdTrend": true,
+      "usdGapPct": 10.66,
+      "btcTrend": true,
+      "btcGapPct": 0.61
+    },
+    {
+      "symbol": "CPOOL",
+      "rank": 487,
+      "price": 0.0257467327175641,
+      "usdTrend": true,
+      "usdGapPct": 16.13,
+      "btcTrend": true,
+      "btcGapPct": 5.35
+    },
+    {
+      "symbol": "DBR",
+      "rank": 488,
+      "price": 0.0134359493966839,
+      "usdTrend": false,
+      "usdGapPct": -13.2,
+      "btcTrend": false,
+      "btcGapPct": -21.4
+    },
+    {
+      "symbol": "USUAL",
       "rank": 489,
-      "price": 0.0626448215061802,
+      "price": 0.0146037009096929,
       "usdTrend": true,
-      "usdGapPct": 12.59,
-      "btcTrend": true,
-      "btcGapPct": 5.02
+      "usdGapPct": 7.75,
+      "btcTrend": false,
+      "btcGapPct": -2.29
     },
     {
-      "symbol": "EGL1",
+      "symbol": "ERA",
       "rank": 490,
-      "price": 0.0241279835041055,
-      "usdTrend": false,
-      "usdGapPct": -24.26,
+      "price": 0.139798597845564,
+      "usdTrend": true,
+      "usdGapPct": 4.65,
       "btcTrend": false,
-      "btcGapPct": -29.43
+      "btcGapPct": -5.16
     },
     {
-      "symbol": "ORDER",
+      "symbol": "MIRA",
       "rank": 491,
-      "price": 0.0611881853824994,
+      "price": 0.0902191341191962,
       "usdTrend": true,
-      "usdGapPct": 11.77,
-      "btcTrend": true,
-      "btcGapPct": 4.39
-    },
-    {
-      "symbol": "JCT",
-      "rank": 492,
-      "price": 0.00358692636415884,
-      "usdTrend": true,
-      "usdGapPct": 42.38,
-      "btcTrend": true,
-      "btcGapPct": 33.31
-    },
-    {
-      "symbol": "TAIKO",
-      "rank": 493,
-      "price": 0.121832319982255,
-      "usdTrend": true,
-      "usdGapPct": 0.68,
+      "usdGapPct": 9.76,
       "btcTrend": false,
-      "btcGapPct": -6.1
-    },
-    {
-      "symbol": "ADS",
-      "rank": 494,
-      "price": 0.594391386639104,
-      "usdTrend": true,
-      "usdGapPct": 6.76,
-      "btcTrend": false,
-      "btcGapPct": -0.32
-    },
-    {
-      "symbol": "W",
-      "rank": 495,
-      "price": 0.0129112795786795,
-      "usdTrend": false,
-      "usdGapPct": -19.14,
-      "btcTrend": false,
-      "btcGapPct": -24.72
-    },
-    {
-      "symbol": "BOBL2",
-      "rank": 496,
-      "price": 0.00837803849342182,
-      "usdTrend": true,
-      "usdGapPct": 36.14,
-      "btcTrend": true,
-      "btcGapPct": 27.32
-    },
-    {
-      "symbol": "QKC",
-      "rank": 497,
-      "price": 0.00319355972780198,
-      "usdTrend": true,
-      "usdGapPct": 2.47,
-      "btcTrend": false,
-      "btcGapPct": -4.44
+      "btcGapPct": -0.48
     },
     {
       "symbol": "AEVO",
-      "rank": 498,
-      "price": 0.0258899866460435,
+      "rank": 492,
+      "price": 0.0274419765072631,
       "usdTrend": true,
-      "usdGapPct": 8.22,
+      "usdGapPct": 14.34,
       "btcTrend": true,
-      "btcGapPct": 1.01
+      "btcGapPct": 3.73
     },
     {
-      "symbol": "LRC",
-      "rank": 499,
-      "price": 0.016588405667252,
-      "usdTrend": false,
-      "usdGapPct": -31.65,
-      "btcTrend": false,
-      "btcGapPct": -36.41
-    },
-    {
-      "symbol": "WAXP",
-      "rank": 500,
-      "price": 0.00689380804540813,
+      "symbol": "BOBL2",
+      "rank": 493,
+      "price": 0.00806928132392218,
       "usdTrend": true,
-      "usdGapPct": 5.64,
+      "usdGapPct": 30.16,
+      "btcTrend": true,
+      "btcGapPct": 18.37
+    },
+    {
+      "symbol": "KERNEL",
+      "rank": 494,
+      "price": 0.0844659188171256,
+      "usdTrend": false,
+      "usdGapPct": -5.72,
       "btcTrend": false,
-      "btcGapPct": -1.45
+      "btcGapPct": -14.58
+    },
+    {
+      "symbol": "TAIKO",
+      "rank": 495,
+      "price": 0.124891532560222,
+      "usdTrend": true,
+      "usdGapPct": 3.17,
+      "btcTrend": false,
+      "btcGapPct": -6.49
+    },
+    {
+      "symbol": "W",
+      "rank": 496,
+      "price": 0.0129677566516158,
+      "usdTrend": false,
+      "usdGapPct": -18.17,
+      "btcTrend": false,
+      "btcGapPct": -25.97
+    },
+    {
+      "symbol": "EGL1",
+      "rank": 497,
+      "price": 0.0236047181522891,
+      "usdTrend": false,
+      "usdGapPct": -25.22,
+      "btcTrend": false,
+      "btcGapPct": -32.31
+    },
+    {
+      "symbol": "QKC",
+      "rank": 498,
+      "price": 0.00330281340258222,
+      "usdTrend": true,
+      "usdGapPct": 6.01,
+      "btcTrend": false,
+      "btcGapPct": -3.9
+    },
+    {
+      "symbol": "ORDER",
+      "rank": 499,
+      "price": 0.0570946871868737,
+      "usdTrend": true,
+      "usdGapPct": 4.14,
+      "btcTrend": false,
+      "btcGapPct": -5.45
+    },
+    {
+      "symbol": "ADS",
+      "rank": 500,
+      "price": 0.612591359842707,
+      "usdTrend": true,
+      "usdGapPct": 9.68,
+      "btcTrend": false,
+      "btcGapPct": -0.47
     }
   ]
 }
